@@ -12,10 +12,10 @@ return (
                 <a href="#" className="text-2xl font-bold"> <Image src="/images/logo-zencorp.svg" width={249} height={40} alt="zencorp" /></a>
                 <p className='text-xs text-white w-9/12 '>At ZENCORP, we are committed to fostering growth and development in Africa&#39;s infrastructure, food, healthcare, and other key industries. By leveraging Africa&#39;s immense potential, we work with partners and clients to create a brighter future for the continent. </p>
             </div >
-            <div className='flex flex-row md:w-1/2'>
-            <div className=' md:w-1/2 m-2 p-8 items-center flex flex-col justify-self text-white '>
+            <div className='flex flex-row md:w-1/2 shrink'>
+            <div className=' md:w-1/2 m-2 p-2 items-center flex flex-col justify-self text-white '>
                 <ul >
-                    <li className='px-8 py-2 bg-[#287340]' >COMPANY</li>
+                    <li className='px-2 py-2 bg-[#287340]' >COMPANY</li>
                     <li><Link rel="stylesheet" href="/#" className="mx-2 p-6 hover:text-emerald-500 text-xs">HOME</Link></li>
             
                     <li><Link rel="stylesheet" href="/about" className="mx-2 p-6 hover:text-emerald-500 text-xs" >ABOUT</Link></li>
@@ -31,20 +31,20 @@ return (
 
             </div>
             
-            <div className=' md:w-1/2 m-2 p-8 items-center flex flex-col text-left  text-white'>
+            <div className=' md:w-1/2 m-2 p-2 items-center flex flex-col text-left  text-white'>
                 <ul>
-                    <li className='px-8 py-2 bg-[#287340]'>PRODUCTS</li>
-                    <li><Link rel="stylesheet" href="/products/copper" className="m-2 hover:text-emerald-500 text-xs">Copper Products & Ecosystem</Link></li>
+                    <li className='px-4 py-2 bg-[#287340]'>PRODUCTS</li>
+                    <li><Link rel="stylesheet" href="/products/copper" className="m-2 hover:text-emerald-500 text-xs">Copper Products</Link></li>
             
-                    <li><Link rel="stylesheet" href="/products/shipping" className="m-2 hover:text-emerald-500 text-xs" >Shipping logistics & warehousing</Link></li>
+                    <li><Link rel="stylesheet" href="/products/shipping" className="m-2 hover:text-emerald-500 text-xs" >Shipping logistics</Link></li>
             
-                    <li><Link rel="stylesheet" href="/products/investment" className="m-2 hovezr:text-emerald-500 text-xs" >Investment sourcing banking & kyc intelligence</Link></li>
+                    <li><Link rel="stylesheet" href="/products/investment" className="m-2 hovezr:text-emerald-500 text-xs" >Investment sourcing</Link></li>
                 
                     <li><Link rel="stylesheet" href="/products/medical" className="m-2 hover:text-emerald-500 text-xs" >Medical clinics & equipment</Link></li>
 
-                    <li><Link rel="stylesheet" href="/products/transportation" className="m-2 hover:text-emerald-500 text-xs" >Transportation consulting & vehicles</Link></li>
+                    <li><Link rel="stylesheet" href="/products/transportation" className="m-2 hover:text-emerald-500 text-xs" >Transportation consulting</Link></li>
             
-                    <li><Link rel="stylesheet" href="/products/interior" className="m-2 hover:text-emerald-500 text-xs" >Interior fitout & furnishings</Link></li>
+                    <li><Link rel="stylesheet" href="/products/interior" className="m-2 hover:text-emerald-500 text-xs" >Interior fitout</Link></li>
                 </ul>            
 
             </div>
