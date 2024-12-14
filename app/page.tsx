@@ -18,7 +18,7 @@ const Page = () => {
         return (
           <div className="p-4 flex flex-col sm:flex-row  mx-4 gap-14">
             <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
-                <h3 className="text-left text-2xl font-bold">Food Secure</h3>
+                <h3 className="text-left text-2xl font-bold">Food Security</h3>
 
                 <p className="text-left text-sm text-[#A3A3A3]">
                 At ZENCORP, food security is at the heart of our mission. 
@@ -44,7 +44,7 @@ const Page = () => {
         return (
           <div><div className="p-4 flex flex-col sm:flex-row mx-4 gap-14">
             <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
-              <h3 className="text-left text-2xl font-bold">Green Infrastructure</h3>
+              <h3 className="text-left text-2xl font-bold">Infrastructure</h3>
 
               <p className="text-left text-sm text-[#A3A3A3]"> 
               Building a greener tomorrow starts with reimagining how we construct the spaces we live and work in.
