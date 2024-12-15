@@ -7,13 +7,13 @@ const Footer = () => {
 return (
     <div >
         <NewsSection/>
-        <div className='flex flex-col md:flex-row bg-zencorp-green'>
-            <div className='m-2 p-8 flex flex-col items-center md:justify-center p-2 md:w-3/12 gap-4'>  
+        <div className='flex flex-col lg:flex-row bg-zencorp-green'>
+            <div className='m-2 p-8 flex flex-col items-center lg:justify-center p-2 lg:w-3/12 gap-4'>  
                 <a href="#" className="text-2xl font-bold"> <Image src="/images/logo-zencorp.svg" width={249} height={40} alt="zencorp" /></a>
                 <p className='text-xs text-white w-9/12 '>At ZENCORP, we are committed to fostering growth and development in Africa&#39;s infrastructure, food, healthcare, and other key industries. By leveraging Africa&#39;s immense potential, we work with partners and clients to create a brighter future for the continent. </p>
             </div >
-            <div className='flex flex-row md:w-1/2 shrink'>
-            <div className=' md:w-1/2 m-2 md:p-8 items-center flex flex-col justify-self text-white '>
+            <div className='flex flex-row lg:w-1/2 place-content-center items-start'>
+            <div className=' lg:w-1/2 m-2 md:p-8  flex flex-col justify-self text-white '>
                 <ul >
                     <li className='px-2 py-2 bg-[#287340]' >COMPANY</li>
                     <li><Link rel="stylesheet" href="/#" className="mx-2 p-6 hover:text-emerald-500 text-xs">HOME</Link></li>
@@ -31,7 +31,7 @@ return (
 
             </div>
             
-            <div className=' md:w-1/2 m-2 md:p-8 items-center flex flex-col text-left  text-white'>
+            <div className=' lg:w-1/2 m-2 md:p-8 items-center flex flex-col text-left  text-white'>
                 <ul>
                     <li className='px-4 py-2 bg-[#287340]'>PRODUCTS</li>
                     <li><Link rel="stylesheet" href="/products/copper" className="m-2 hover:text-emerald-500 text-xs">Copper Products</Link></li>
@@ -49,7 +49,7 @@ return (
 
             </div>
             </div>
-            <div className=' md:w-3/12 items-center md:items-start m-2 p-8 flex flex-col text-left  text-white'>
+            <div className=' lg:w-3/12 items-center lg:items-start m-2 p-8 flex flex-col text-left  text-white'>
                 
                     <p className='px-8 py-2 bg-[#287340]'>CONTACT</p>
                     <p className='m-2  text-xs'><span className='font-bold'>Address:</span> ZENCORP Trading CO. LLC</p>

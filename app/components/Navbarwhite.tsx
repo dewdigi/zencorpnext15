@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-white p-4 sm:p-6 relative">
+    <nav className="text-white p-4 md:p-6 relative">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="text-2xl font-bold">
@@ -25,7 +25,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex bg-emerald-50 p-4 rounded-md text-slate-600">
+        <div className="hidden lg:flex bg-emerald-50 p-4 rounded-md text-slate-600">
           <Link href="/#" className="mx-2 p-2 hover:text-emerald-500">HOME</Link>
           <Link href="/about" className="mx-2 p-2 hover:text-emerald-500">ABOUT</Link>
           
@@ -53,7 +53,7 @@ const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-emerald-500 focus:outline-none"
+          className="lg:hidden text-emerald-500 focus:outline-none"
         >
           {isMenuOpen ? (
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -67,20 +67,20 @@ const Navbar = () => {
         </button>
 
         {/* Contact Us Button */}
-        <button className="bg-emerald-50 text-emerald-500 m-2 p-4 hover:bg-emerald-800 rounded-md hidden md:block">
+        <button className="bg-emerald-50 text-emerald-500 m-2 p-4 hover:bg-emerald-800 rounded-md hidden lg:block">
           CONTACT US
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-full right-0 w-1/2 bg-emerald-50 text-slate-600 m-2 rounded-xl shadow-lg z-10 md:hidden">
-          <Link href="/#" className="block p-4 hover:text-emerald-500 hover:text-white hover:bg-Primary-1/70 rounded-sm">HOME</Link>
-          <Link href="/about" className="block p-4 hover:text-emerald-500 hover:text-white hover:bg-Primary-1/70 rounded-sm">ABOUT</Link>
+        <div className="absolute top-full right-0 w-1/2 bg-emerald-50 text-slate-600 m-2 rounded-xl shadow-lg z-10 lg:hidden">
+          <Link href="/#" className="block p-4 hover:text-emerald-500 hover:bg-Primary-1/70 rounded-sm">HOME</Link>
+          <Link href="/about" className="block p-4 hover:text-emerald-500 hover:bg-Primary-1/70 rounded-sm">ABOUT</Link>
           <div>
             <button
               onClick={toggleSubMenu}
-              className="block w-full text-left p-4 hover:text-emerald-500 hover:text-white hover:bg-Primary-1/70 rounded-sm"
+              className="block w-full text-left p-4 hover:text-emerald-500 hover:bg-Primary-1/70 rounded-sm"
             >
               PRODUCTS
               <svg
@@ -95,19 +95,19 @@ const Navbar = () => {
             </button>
             {isSubMenuOpen && (
               <div className="pl-4">
-                <Link href="/products/copper" className="block px-4 py-2 hover:text-white hover:bg-Secondary-2/70 rounded-sm">Copper Products</Link>
-                <Link href="/products/shipping" className="block px-4 py-2 hover:text-white hover:bg-Secondary-2/70 rounded-sm">Shipping Logistics</Link>
-                <Link href="/products/investment" className="block px-4 py-2 hover:text-white hover:bg-Secondary-2/70 rounded-sm">Investment Sourcing</Link>
-                <Link href="/products/medical" className="block px-4 py-2 hover:text-white hover:bg-Secondary-2/70 rounded-sm">Medical Clinics & Equipment</Link>
-                <Link href="/products/transportation" className="block px-4 py-2 hover:text-white hover:bg-Secondary-2/70 rounded-sm">Transportation Consulting</Link>
-                <Link href="/products/interior" className="block px-4 py-2 hover:text-white hover:bg-Secondary-2/70 rounded-sm">Interior Fitout</Link>
+                <Link href="/products/copper" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Copper Products</Link>
+                <Link href="/products/shipping" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Shipping Logistics</Link>
+                <Link href="/products/investment" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Investment Sourcing</Link>
+                <Link href="/products/medical" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Medical Clinics & Equipment</Link>
+                <Link href="/products/transportation" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Transportation Consulting</Link>
+                <Link href="/products/interior" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Interior Fitout</Link>
               </div>
             )}
           </div>
-          <Link href="/news" className="block p-4 hover:text-emerald-500 hover:text-white hover:bg-Primary-1/70 rounded-sm ">NEWS</Link>
-          <Link href="/blog" className="block p-4 hover:text-emerald-500 hover:text-white hover:bg-Primary-1/70 rounded-sm">BLOG</Link>
-          <Link href="/career" className="block p-4 hover:text-emerald-500 hover:text-white hover:bg-Primary-1/70 rounded-sm">CAREER</Link>
-          <Link href="/contact" className="block p-4 hover:text-emerald-500 hover:text-white hover:bg-Primary-1/70 rounded-sm">CONTACT</Link>
+          <Link href="/news" className="block p-4 hover:bg-Primary-1/70 rounded-sm ">NEWS</Link>
+          <Link href="/blog" className="block p-4 hover:bg-Primary-1/70 rounded-sm">BLOG</Link>
+          <Link href="/career" className="block p-4 hover:bg-Primary-1/70 rounded-sm">CAREER</Link>
+          <Link href="/contact" className="block p-4 hover:bg-Primary-1/70 rounded-sm">CONTACT</Link>
         </div>
       )}
     </nav>

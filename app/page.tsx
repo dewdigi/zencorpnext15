@@ -144,7 +144,7 @@ const Page = () => {
       } rounded-md`}
       onClick={() => setActiveTab("food")}
     >
-      Food Secure
+      Food Security
     </button>
     <button
       className={`m-2 p-4 text-xs sm:text-base ${
@@ -154,7 +154,7 @@ const Page = () => {
       } rounded-md`}
       onClick={() => setActiveTab("infrastructure")}
     >
-      Green Infrastructure
+      Infrastructure
     </button>
     <button
       className={`m-2 p-4 text-xs sm:text-base ${
