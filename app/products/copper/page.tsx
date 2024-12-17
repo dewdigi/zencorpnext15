@@ -57,7 +57,7 @@ const page = () => {
       </div>
 
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white'>
+      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl'>
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
         <h2 className='text-2xl md:text-left text-center'>Global Copper ecosystem</h2>
           <p className='md:text-left text-center'>Zencorp is a trading company that operates in selected value chains of the global copper ecosystem with our connections with the upstream mineral mining, mineral processing and raw material refining companies.  Zencorp also has distribution arrangements with selected downstream manufacturing companies.</p>
@@ -72,7 +72,7 @@ const page = () => {
       </div>
       
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white'>        
+      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>        
 
         <div className='p-4 m-2 md:w-1/2'>
          <Image src="/images/copper-11.png" width={961} height={761} alt="copper"/>
@@ -86,7 +86,7 @@ const page = () => {
         
       </div>
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white'>   
+      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>   
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
           <h2 className='text-2xl md:text-left text-center'>Primary Copper Minerals</h2>
@@ -101,7 +101,7 @@ const page = () => {
         
       </div>
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white'>        
+      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>        
 
         <div className='p-4 m-2 flex items-center md:w-1/2'>
          <Image src="/images/copper-13.png" width={961} height={761} alt="copper"/>
@@ -124,11 +124,11 @@ const page = () => {
          <Image src="/images/copper-14.png" width={751} height={500} alt="copper"/>
         </div>  
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white'>
+      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
           <h2 className='text-2xl md:text-left text-center'>Features of Copper Concentrates Trade</h2>
-          <p className='md:text-left text-center'>Copper concentrates are produced by the beneficiation, or upgrading, of copper ore. Where the copper mine and crushing plants are far away, copper ores will be transported from the mine to the crushing plants.  A typical copper concentrate would grade around 15% to 35% of copper content. Zencorp trades in copper concentrates from Africa, CIS countries, Chile, and Peru.
+          <p className='md:text-left text-center '>Copper concentrates are produced by the beneficiation, or upgrading, of copper ore. Where the copper mine and crushing plants are far away, copper ores will be transported from the mine to the crushing plants.  A typical copper concentrate would grade around 15% to 35% of copper content. Zencorp trades in copper concentrates from Africa, CIS countries, Chile, and Peru.
           <br></br><br></br>
           Copper concentrates are either smelted and refined in-house or sold to custom smelters. The concentrate may be smelted to produce blister copper for sale to a custom refinery, or the blister copper may be refined to cathode, which is then sold into the market.</p>
         </div>     
@@ -137,9 +137,10 @@ const page = () => {
          <Image src="/images/copper-15.png" width={961} height={761} alt="copper"/>
         </div>  
         
+      
       </div>
       <div className='flex justify-center'>
-      <button type='button' className='px-8 py-4 m-2 bg-Primary-1/70 rounded-md text-center text-Primary-1/10 hover:bg-Secondary-2/70'>Learn More</button>
+      {/**<button type='button' className='px-8 py-4 m-2 bg-Primary-1/70 rounded-md text-center text-Primary-1/10 hover:bg-Secondary-2/70'>Learn More</button> */}
       </div>
 
       
