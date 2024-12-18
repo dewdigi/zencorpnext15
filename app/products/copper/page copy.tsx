@@ -21,7 +21,8 @@ const page = () => {
               
             </h1>
             <p className="text-xl leading-24 my-4 font-normal text-center sm:text-left">
-            Zencorp is a trusted global player in the copper industry, seamlessly connecting the upstream, midstream, and downstream value chains. With over a decade of experience, we offer innovative solutions across mining, refining, manufacturing, and recycling to meet the diverse demands of industries worldwide.
+              Welcome to the Zen of business—where growth is nurtured, and <br></br>
+              sustainability is the essence of all our endeavors.
             </p>
             <br></br>
             <button className=" bg-emerald-500 sm:w-3/12 w-auto hover:bg-Secondary-2/70 hover:drop-shadow-xl p-4 rounded-md">
