@@ -52,7 +52,7 @@ const page = () => {
 
     <div className='flex flex-col bg-white p-8 gap-16 items-start lg:me-20 lg:rounded-r-xl lg:flex-row justify-center '> 
 
-    <div className='lg:w-1/2 flex flex-col gap-8 lg:px-40 lg:rounded-r-xl text-Secondary-2/70 hover:text-Secondary-2/10 lg:py-32 bg-white hover:bg-Primary-1/90'> 
+    <div className='lg:w-1/2 flex flex-col gap-8 lg:px-40 lg:rounded-r-xl text-gray-800 hover:text-Secondary-2/10 lg:py-32 bg-white hover:bg-Primary-1/90 lg:bg-Secondary-2/10'> 
       <h2 className='text-6xl font-bold  '> Vision </h2>
       <p className='text-md  font-normal  '> To be a beacon of sustainability and innovation, leading the way in global trade with solutions that transcend industries and uplift communities..</p>
    </div>
@@ -60,7 +60,7 @@ const page = () => {
    
     
 
-    <div className='lg:w-1/2 flex flex-col lg:px-40 lg:py-10 text-Secondary-2/70  hover:text-Secondary-2/10 lg:rounded-r-xl gap-8 bg-white hover:bg-Primary-1/90 '>
+    <div className='lg:w-1/2 flex flex-col lg:px-40 lg:py-10 text-gray-800  hover:text-Secondary-2/10 lg:rounded-r-xl gap-8 bg-white hover:bg-Primary-1/90 lg:bg-Primary-1/10 '>
     <h1 className='text-6xl font-bold  '> Mission </h1>
     <p className='text-md  font-normal text-accent-2/70 '> We commit to offering the highest quality products and services, tailored to meet the unique needs of our clients. Leveraging our expertise and strong partnerships with leading manufacturers and suppliers, we strive to exceed expectations while upholding the highest ethical standards. Our mission is also to foster sustainable development and social welfare in the communities where we operate.</p>
     </div>
