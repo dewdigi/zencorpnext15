@@ -48,7 +48,7 @@ const page = () => {
 
                         <div className="content mt-7">
                             <h5 className="title text-lg font-medium">Phone</h5>
-                            <p className="text-slate-400 dark:text-white/60 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                            <p className="text-slate-400 dark:text-white/60 mt-3">Need immediate assistance? Call us at:</p>
                             
                             <div className="mt-5">
                                 <Link href="tel:+97144516924" className="text-orange-500 hover:text-orange-500 after:bg-orange-500 transition duration-500">(04) 451 6924</Link>
@@ -66,7 +66,7 @@ const page = () => {
 
                         <div className="content mt-7">
                             <h5 className="title text-lg font-medium">Email</h5>
-                            <p className="text-slate-400 dark:text-white/60 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                            <p className="text-slate-400 dark:text-white/60 mt-3">Prefer to write to us? Drop us an email at:</p>
                             
                             <div className="mt-5">
                                 <Link href="mailto:contact@example.com" className="text-orange-500 hover:text-orange-500 after:bg-orange-500 transition duration-500">info@zencorp.ae</Link>
