@@ -138,24 +138,13 @@ const Page = () => {
   <div className="tabs flex flex-row sm:flex-row items-center justify-center sm:justify-center my-12 ">
     <button 
       className={`m-2 p-4 text-xs sm:text-base ${
-        activeTab === "food"
-          ? "bg-emerald-500 text-white"
-          : "bg-gray-400 hover:bg-gray-200"
-      } rounded-md`}
-      onClick={() => setActiveTab("food")}
-    >
-      Infrastructure
-    </button>
-    <button
-      className={`m-2 p-4 text-xs sm:text-base ${
         activeTab === "infrastructure"
           ? "bg-emerald-500 text-white"
           : "bg-gray-400 hover:bg-gray-200"
       } rounded-md`}
       onClick={() => setActiveTab("infrastructure")}
     >
-      
-      Healthcare
+      Infrastructure
     </button>
     <button
       className={`m-2 p-4 text-xs sm:text-base ${
@@ -164,6 +153,17 @@ const Page = () => {
           : "bg-gray-400 hover:bg-gray-200"
       } rounded-md`}
       onClick={() => setActiveTab("healthcare")}
+    >
+      
+      Healthcare
+    </button>
+    <button
+      className={`m-2 p-4 text-xs sm:text-base ${
+        activeTab === "food"
+          ? "bg-emerald-500 text-white"
+          : "bg-gray-400 hover:bg-gray-200"
+      } rounded-md`}
+      onClick={() => setActiveTab("food")}
     >
       
       Food Security
