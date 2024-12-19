@@ -135,22 +135,22 @@ const Page = () => {
   </div>
 
         {/* Tabs Navigation */}
-  <div className="tabs flex flex-row sm:flex-row items-center justify-center sm:justify-center my-12 ">
+  <div className="tabs flex flex-row sm:flex-row items-center gap-20 justify-center sm:justify-center my-12 ">
     <button 
-      className={`m-2 p-4 text-xs sm:text-base ${
+      className={`m-2 py-4 px-8 text-xs sm:text-base ${
         activeTab === "infrastructure"
-          ? "bg-emerald-500 text-white"
-          : "bg-gray-400 hover:bg-gray-200"
+          ? "bg-Primary-1/10 outline  outline-4 outline-Primary-1/90 text-black"
+          : "bg-Primary-1/10 outline  outline-4 outline-white drop-shadow-2xl hover:bg-gray-200"
       } rounded-md`}
       onClick={() => setActiveTab("infrastructure")}
     >
       Infrastructure
     </button>
     <button
-      className={`m-2 p-4 text-xs sm:text-base ${
+      className={`m-2 py-4 px-10 text-xs sm:text-base ${
         activeTab === "healthcare"
-          ? "bg-emerald-500 text-white"
-          : "bg-gray-400 hover:bg-gray-200"
+          ? "bg-Primary-1/10 outline  outline-4 outline-Primary-1/90 text-black"
+          : "bg-Primary-1/10 outline  outline-4 outline-white drop-shadow-2xl hover:bg-gray-200"
       } rounded-md`}
       onClick={() => setActiveTab("healthcare")}
     >
@@ -158,10 +158,10 @@ const Page = () => {
       Healthcare
     </button>
     <button
-      className={`m-2 p-4 text-xs sm:text-base ${
+      className={`m-2 py-4 px-8 text-xs sm:text-base ${
         activeTab === "food"
-          ? "bg-emerald-500 text-white"
-          : "bg-gray-400 hover:bg-gray-200"
+          ? "bg-Primary-1/10 outline  outline-4 outline-Primary-1/90 text-black"
+          : "bg-Primary-1/10 outline  outline-4 outline-white drop-shadow-2xl hover:bg-gray-200"
       } rounded-md`}
       onClick={() => setActiveTab("food")}
     >
