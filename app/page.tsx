@@ -135,7 +135,7 @@ const Page = () => {
   </div>
 
         {/* Tabs Navigation */}
-  <div className="tabs flex flex-row sm:flex-row items-center gap-20 justify-center sm:justify-center my-12 ">
+  <div className="tabs flex flex-row sm:flex-row items-center lg:gap-20 justify-center sm:justify-center my-12 ">
     <button 
       className={`m-2 py-4 px-8 text-xs sm:text-base ${
         activeTab === "infrastructure"
