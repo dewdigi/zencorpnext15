@@ -15,12 +15,12 @@ const page = () => {
       >
         <div>
           <Navbarwhite />
-          <div className="flex flex-col justify-center items-center my-32 lg:m-24 lg:my-32 p-6 lg:pb-28 text-white gap-22">
+          <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start my-32 lg:m-24 lg:my-32 p-6 lg:pb-28 text-white gap-22">
             <h1 className="text-5xl md:text-6xl leading-36 my-4 text-center sm:text-left">
               Copper <b>Ecosystem</b> <br />
               
             </h1>
-            <p className="text-xl leading-24 my-4 font-normal text-center sm:text-left">
+            <p className="text-xl leading-24 my-4 font-normal text-left">
             Welcome to Zencorp: Your Partner in the Copper Ecosystem
             </p>
             <p className='lg:mr-80 lg:text-left text-center'>Zencorp is a trusted global player in the copper industry, seamlessly connecting the upstream, midstream, and downstream value chains. With over a decade of experience, we offer innovative solutions across mining, refining, manufacturing, and recycling to meet the diverse demands of industries worldwide.</p>
@@ -65,7 +65,7 @@ const page = () => {
 
       <div className='md:m-10 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl'>
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-        <h2 className='text-2xl md:text-left text-center'>Our Expertise</h2>
+        <h2 className='text-2xl lg:text-left text-center'>Our Expertise</h2>
           <p className='md:text-left text-center'>Upstream Copper Raw Materials</p>
           <ul>
             <li>We source and trade:</li>
