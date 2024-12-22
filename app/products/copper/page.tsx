@@ -191,7 +191,7 @@ const page = () => {
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
           <h2 className='text-5xl font-bold md:text-left text-center'>Join the Copper Revolution</h2>
-          <p className='md:text-left text-center '>Whether you're in need of raw materials, finished products, or recycling solutions, Zencorp is your gateway to the complete copper ecosystem. Let’s shape a brighter, more sustainable future together.</p>
+          <p className='md:text-left text-center '>Whether you&#8217;re in need of raw materials, finished products, or recycling solutions, Zencorp is your gateway to the complete copper ecosystem. Let&#8217;s shape a brighter, more sustainable future together.</p>
         </div>     
 
         <div className='p-4 m-2 md:w-1/2'>
