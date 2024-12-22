@@ -48,6 +48,10 @@ const page = () => {
           
           </div>
 
+          
+
+          
+
           <div className='flex lg:w-1/2 p-8 items-center '>
           <Image
                 src="/images/copper-10.png"
@@ -86,7 +90,7 @@ const page = () => {
               </div>
             
               <div className='p-4 m-2 '>
-               <Image src="/images/copper-11.png" width={400 } height={400} alt="copper"/>
+               <Image src="/images/upstream.avif" width={600} height={600} alt="copper"/>
 
               </div>
             </div>
@@ -107,7 +111,7 @@ const page = () => {
               </div>
             
               <div className='p-4 m-2 '>
-               <Image src="/images/copper-11.png" width={400 } height={400} alt="copper"/>
+               <Image src="/images/upstream.jpg" width={800} height={800} alt="copper"/>
 
               </div>
             </div>

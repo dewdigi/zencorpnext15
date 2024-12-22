@@ -16,7 +16,7 @@ const Page = () => {
     switch (activeTab) {
       case "food":
         return (
-          <div className="p-4 flex flex-col sm:flex-row  mx-4 gap-14">
+          <div className="p-4 flex flex-col bg-gray-100 items-center sm:flex-row  mx-4 gap-14">
             <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
                 <h3 className="text-left text-2xl font-bold">Food Security</h3>
 
@@ -36,13 +36,14 @@ const Page = () => {
 
             </div>
             <div className="sm:w-1/2">
-              <Image className="rounded-xl drop-shadow-2xl" src="/images/foodsecure.webp" width={1000} height={1000} alt="food security"/>
+              <Image className="rounded-xl drop-shadow-2xl" src="/images/foodsecurity.jpg" width={1000} height={1000} alt="food security"/>
             </div>
           </div>
         );
       case "infrastructure":
         return (
-          <div><div className="p-4 flex flex-col sm:flex-row mx-4 gap-14">
+          <div>
+            <div className="p-4 flex flex-col bg-gray-100 items-center sm:flex-row mx-4 gap-14">
             <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
               <h3 className="text-left text-2xl font-bold">Infrastructure</h3>
 
@@ -60,7 +61,7 @@ const Page = () => {
 
             </div>
             <div className="sm:w-1/2">
-              <Image className="rounded-xl drop-shadow-2xl" src="/images/Green_Revolution.webp" width={1000} height={1000} alt="food security" />
+              <Image className="rounded-xl bg-white drop-shadow-2xl" style={{objectFit: "contain"}} src="/images/infrastructure.jpg" width={1000} height={1000} alt="infrastructure" />
             </div>
           </div>
             </div>
@@ -68,7 +69,7 @@ const Page = () => {
       case "healthcare":
         return (
           
-          <div><div className="p-4 flex flex-col sm:flex-row mx-4 gap-14">
+          <div><div className="p-4 flex flex-col bg-gray-100 items-center sm:flex-row mx-4 gap-14">
           <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
             <h3 className="text-left text-2xl font-bold">Healthcare</h3>
             <p className="text-left text-sm text-[#A3A3A3]">
@@ -80,7 +81,7 @@ const Page = () => {
 
           </div>
           <div className="sm:w-1/2">
-            <Image className="rounded-xl drop-shadow-2xl " src="/images/Healthcare.webp" width={1000} height={1000} alt="food security" />
+            <Image className="rounded-xl drop-shadow-2xl " src="/images/healthcare.jpg" width={1000} height={1000} alt="Healthcare" />
           </div>
         </div>
           </div>
