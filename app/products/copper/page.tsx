@@ -70,9 +70,9 @@ const page = () => {
             <h4 className='text-xl lg:text-left text-center'>From Mine to Market: Comprehensive Copper Solutions</h4>
           </div>
 
-          <div className='flex flex-row gap-8 '>
-            <div className='flex flex-col w-1/2 bg-gray-100 p-8 rounded-2xl '>
-              <div className='p-8'> 
+          <div className='flex lg:flex-row flex-col gap-8 '>
+            <div className='flex flex-col lg:w-1/2 bg-gray-100 p-8 rounded-2xl '>
+              <div className='lg:p-8'> 
                 <p className='text-xl md:text-left text-center font-bold'>Upstream Copper Raw Materials</p>
                 <p className='text-lg py-2'>We source and trade:</p>
                 <div className='p-4 bg-white rounded-2xl'>
@@ -92,8 +92,8 @@ const page = () => {
             </div>
 
 
-            <div className='flex flex-col w-1/2 bg-gray-100 p-8 rounded-2xl '>
-              <div className='p-8'> 
+            <div className='flex flex-col lg:w-1/2 bg-gray-100 p-8 rounded-2xl '>
+              <div className='lg:p-8'> 
                 <p className='text-xl md:text-left text-center font-bold'>Downstream Copper Products</p>
                 <p className='text-lg py-2'>Our partnerships extend to manufacturers and distributors of:</p>
                 <div className='p-4 bg-white rounded-2xl'>
@@ -159,19 +159,20 @@ const page = () => {
         
       </div>
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>        
+      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 '>        
 
         <div className='p-4 m-2 flex items-center md:w-1/2'>
          <Image src="/images/copper-13.png" width={961} height={761} alt="copper"/>
         </div>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-        <h2 className='text-2xl md:text-left text-center'>Copper Ores</h2>
-        <h3 className='text-xl md:text-left text-center'>Copper Mines</h3>
-        <p className='md:text-left text-center'>Copper ores are produced through the process of mining where large copper mineral bearing stones are crushed using jaw crushers to produce smaller size ores.  The dirt in the ore is washed and the graded materials are collected at a single location through a conveyor belts.  
-          <br></br>
-          <br></br>
-          Copper ores of different sizes and grades based on the average copper content is traded.  Zencorp facilitates trading of copper ores among the neighbourhood beneficiation plants.   A typical copper ore would have approximately 0.7% to 5% copper content.  Copper concentrates are produced from copper ores.</p>
+        <h2 className='text-5xl md:text-left text-center font-bold'>Why Choose Zencorp?</h2>
+        <ul className='list-disc'>
+        <li><p>Global Reach: Operations spanning MENA, Asia, Europe, and Africa.</p> </li>
+        <li><p>Sustainability Focus: Prioritizing recycling and eco-friendly practices.</p></li>
+        <li><p>Quality Assurance: Compliance with international standards for long-term partnerships. </p></li>
+        <li><p>Customer-Centric Approach: Tailored solutions to meet your specific needs. </p></li>
+        </ul>
         </div>
 
         
@@ -185,10 +186,8 @@ const page = () => {
       <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-          <h2 className='text-2xl md:text-left text-center'>Features of Copper Concentrates Trade</h2>
-          <p className='md:text-left text-center '>Copper concentrates are produced by the beneficiation, or upgrading, of copper ore. Where the copper mine and crushing plants are far away, copper ores will be transported from the mine to the crushing plants.  A typical copper concentrate would grade around 15% to 35% of copper content. Zencorp trades in copper concentrates from Africa, CIS countries, Chile, and Peru.
-          <br></br><br></br>
-          Copper concentrates are either smelted and refined in-house or sold to custom smelters. The concentrate may be smelted to produce blister copper for sale to a custom refinery, or the blister copper may be refined to cathode, which is then sold into the market.</p>
+          <h2 className='text-5xl font-bold md:text-left text-center'>Join the Copper Revolution</h2>
+          <p className='md:text-left text-center '>Whether you're in need of raw materials, finished products, or recycling solutions, Zencorp is your gateway to the complete copper ecosystem. Let’s shape a brighter, more sustainable future together.</p>
         </div>     
 
         <div className='p-4 m-2 md:w-1/2'>
