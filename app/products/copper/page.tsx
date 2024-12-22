@@ -20,7 +20,7 @@ const page = () => {
               Copper <b>Ecosystem</b> <br />
               
             </h1>
-            <p className="text-xl leading-24 my-4 font-normal text-left">
+            <p className="text-xl leading-24 my-4 font-normal text-center lg:text-left">
             Welcome to Zencorp: Your Partner in the Copper Ecosystem
             </p>
             <p className='lg:mr-80 lg:text-left text-center'>Zencorp is a trusted global player in the copper industry, seamlessly connecting the upstream, midstream, and downstream value chains. With over a decade of experience, we offer innovative solutions across mining, refining, manufacturing, and recycling to meet the diverse demands of industries worldwide.</p>
@@ -34,7 +34,7 @@ const page = () => {
         
       </div>
 
-      <div className='flex lg:flex-row flex-col lg:gap-20 lg:m-20 items-center justify-center'>
+      <div className='flex lg:flex-row flex-col lg:gap-20 lg:m-20 items-center  justify-center'>
           <div className='lg:w-1/2'>
           <div className='flex flex-col gap-8 p-12'>
           <p className='font-normal text-sm text-accent-3/30 '>Products & Services</p>
@@ -63,31 +63,60 @@ const page = () => {
       </div>
 
 
-      <div className='md:m-10 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl'>
-        <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-        <h2 className='text-2xl lg:text-left text-center'>Our Expertise</h2>
-          <p className='md:text-left text-center'>Upstream Copper Raw Materials</p>
-          <ul>
-            <li>We source and trade:</li>
-            <li>Copper Ores: Mined from top locations like Africa and processed into concentrates.</li>
-            <li>Copper Concentrates: Graded at 15-35% copper content for smelting and refining.</li>
-            <li>Copper Blister: Produced at 90-95% purity for manufacturing copper anodes.</li>
-            <li>Copper Cathodes: Electrolytic copper (99.99% pure) traded globally</li>
-          </ul>
-          <p className='md:text-left text-center'>Downstream Copper Products</p>
-          <ul>
-            <li>Our partnerships extend to manufacturers and distributors of:</li>
-            <li>Copper Ores: Mined from top locations like Africa and processed into concentrates.</li>
-            <li>Copper Concentrates: Graded at 15-35% copper content for smelting and refining.</li>
-            <li>Copper Blister: Produced at 90-95% purity for manufacturing copper anodes.</li>
-            <li>Copper Cathodes: Electrolytic copper (99.99% pure) traded globally</li>
-          </ul>
+      <div className='md:m-10 m-8 flex flex-col sm:flex-row md:gap-4 bg-Primary-1/10 rounded-[20px]'>
+        <div className='md:p-20 p-4 m-2 gap-8 flex flex-col justify-center'>
+          <div className='flex gap-4 flex-col'>
+            <h2 className='text-5xl font-bold lg:text-left text-center'>Our Expertise</h2>
+            <h4 className='text-xl lg:text-left text-center'>From Mine to Market: Comprehensive Copper Solutions</h4>
+          </div>
+
+          <div className='flex flex-row gap-8 '>
+            <div className='flex flex-col w-1/2 bg-gray-100 p-8 rounded-2xl '>
+              <div className='p-8'> 
+                <p className='text-xl md:text-left text-center font-bold'>Upstream Copper Raw Materials</p>
+                <p className='text-lg py-2'>We source and trade:</p>
+                <div className='p-4 bg-white rounded-2xl'>
+                 <ul className='list-disc p-2 mx-2 ' >             
+                   <li ><span className='font-bold py-2 '>Copper Ores: </span> <span className='text-sm'>Mined from top locations like Africa and processed into concentrates.</span></li>
+                   <li><span className='font-bold py-2'>Copper Concentrates: </span> <span className='text-sm'>Graded at 15-35% copper content for smelting and refining. </span></li>
+                   <li ><span className='font-bold py-2'>Copper Blister: </span> <span className='text-sm'>Produced at 90-95% purity for manufacturing copper anodes.</span></li>
+                   <li><span className='font-bold py-2'>Copper Cathodes: </span> <span className='text-sm'>Electrolytic copper (99.99% pure) traded globally</span></li>
+                 </ul> 
+                 </div>
+              </div>
+            
+              <div className='p-4 m-2 '>
+               <Image src="/images/copper-11.png" width={400 } height={400} alt="copper"/>
+
+              </div>
+            </div>
+
+
+            <div className='flex flex-col w-1/2 bg-gray-100 p-8 rounded-2xl '>
+              <div className='p-8'> 
+                <p className='text-xl md:text-left text-center font-bold'>Downstream Copper Products</p>
+                <p className='text-lg py-2'>Our partnerships extend to manufacturers and distributors of:</p>
+                <div className='p-4 bg-white rounded-2xl'>
+                 <ul className='list-disc p-2 mx-2' >             
+                   <li><span className='font-bold py-2'>Copper Rods:  </span> <span className='text-sm'>Electrolytic Tough Pitch (ETP) and Oxygen-Free Copper (OFC) rods in various sizes for electrical and industrial applications.</span></li>
+                   <li><span className='font-bold py-2'>Copper Wires: </span> <span className='text-sm'>From fine domestic wires to heavy-duty armoured cables.</span></li>
+                   <li><span className='font-bold py-2'>Copper Extrusions:  </span> <span className='text-sm'>Including busbars, strips, and profiles for transformers, switchgears, and other electrical systems.</span></li>
+                   <li><span className='font-bold py-2'>Ultra-High Purity Copper:  </span> <span className='text-sm'>6N copper (99.9999%) for critical applications in semiconductors, solar cells, and medical devices.</span></li>
+                 </ul> 
+                 </div>
+              </div>
+            
+              <div className='p-4 m-2 '>
+               <Image src="/images/copper-11.png" width={400 } height={400} alt="copper"/>
+
+              </div>
+            </div>
+
+
+          </div>
         </div>
 
-        <div className='p-4 m-2 md:w-1/2'>
-         <Image src="/images/copper-11.png" width={961} height={761} alt="copper"/>
-
-        </div>
+        
 
         
       </div>
@@ -100,19 +129,27 @@ const page = () => {
         </div>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-          <h2 className='text-2xl md:text-left text-center'>Copper Mining</h2>
-          <p className='md:text-left text-center'>With more than ten years’ experience in the copper ecosystem, Zencorp facilitate investments on copper mines, copper minerals trading – copper ores, copper concentrates, copper blister/ Pregnant Leach Solutions, Copper anodes, Solvent extraction and Electrowinning.  Finally Zencorp also trade in copper cathode of various LME brands and LME equivalent qualities</p>
+          <h2 className='text-5xl font-bold md:text-left text-center'>Recycling Copper for a Sustainable Future</h2>
+          <p className='md:text-left text-center'>Zencorp is committed to environmental stewardship. We recover and recycle end-of-life copper products and factory waste, contributing to a circular economy. With the infrastructure to handle large volumes, we aim to recover 20% of copper raw materials that would otherwise end up in landfills.</p>
         </div>
 
         
       </div>
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>   
+      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white rounded-2xl '>   
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-          <h2 className='text-2xl md:text-left text-center'>Primary Copper Minerals</h2>
-          <h3 className='text-xl md:text-left text-center'>Copper Mines</h3>
-          <p className='md:text-left text-center'>Primary Copper minerals are extracted from copper mines after geological studies in relation to estimated copper content in the selected mines.  The greenish copper oxide will be found approximately up to 10 meters deep from the surface of the copper mine and copper sulphides will be found below 10 meters in the copper mine.  Large copper bearing rocks are blasted and crushed to copper ores.    Zencorp trades in copper ores specially from Africa.</p>
+          <h2 className='text-5xl font-bold md:text-left text-center'>Industries We Serve</h2>
+          
+          <p className='md:text-left text-center'>Zencorp supplies copper products to a wide range of sectors, including:</p>
+          <div className='p-4 bg-white rounded-2xl'>
+                 <ul className='list-disc p-2 mx-2' >             
+                   <li><span className='font-bold py-2'>Power Systems & Utilities:   </span> <span className='text-sm'>Serving giants like ABB, Siemens, and GE.</span></li>
+                   <li><span className='font-bold py-2'>Electric Vehicles: </span> <span className='text-sm'>Supporting EV innovation with advanced materials.</span></li>
+                   <li><span className='font-bold py-2'>Semiconductors and Electronics:  </span> <span className='text-sm'>Delivering ultra-high purity copper for precision applications.</span></li>
+                   <li><span className='font-bold py-2'>Construction:  </span> <span className='text-sm'>Providing durable copper solutions for wiring and infrastructure.</span></li>
+                 </ul> 
+                 </div>
         </div>     
 
         <div className='p-4 m-2 md:w-1/2'>
