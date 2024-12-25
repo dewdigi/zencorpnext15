@@ -221,6 +221,77 @@ const ShippingAndLogistics = () => {
           </div>
         </div>
       </div>
+            {/* Why Choose ZenCorp Section */}
+      <div className="my-12 px-6">
+        <h2 className="text-3xl font-bold text-center mb-6">Why Choose ZenCorp Shipping & Logistics?</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg">
+            <h3 className="font-semibold text-xl">Global Network</h3>
+            <p className="text-center">Partnerships with carriers, ports, and warehouses for seamless connectivity.</p>
+          </div>
+          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg">
+            <h3 className="font-semibold text-xl">Technology-Driven Solutions</h3>
+            <p className="text-center">Real-time tracking and data-driven insights for optimization.</p>
+          </div>
+          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg">
+            <h3 className="font-semibold text-xl">Tailored Services</h3>
+            <p className="text-center">Customizable logistics plans for businesses of all sizes.</p>
+          </div>
+          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg">
+            <h3 className="font-semibold text-xl">Sustainability Commitment</h3>
+            <p className="text-center">Eco-friendly logistics practices and packaging.</p>
+          </div>
+          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg">
+            <h3 className="font-semibold text-xl">24/7 Support</h3>
+            <p className="text-center">Dedicated team for issue resolution and proactive communication.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* How We Add Value Section */}
+      <div className="my-12 px-6 bg-gray-100 p-8 rounded-lg">
+        <h2 className="text-3xl font-bold text-center mb-6">How We Add Value</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg">
+            <h3 className="font-semibold text-xl">Cost Efficiency</h3>
+            <p className="text-center">Optimized logistics solutions to reduce expenses.</p>
+          </div>
+          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg">
+            <h3 className="font-semibold text-xl">Reliability</h3>
+            <p className="text-center">Timely and secure delivery of goods.</p>
+          </div>
+          <div className="flex flex-col items-center p-6 border border-gray-200 rounded-lg">
+            <h3 className="font-semibold text-xl">Scalability</h3>
+            <p className="text-center">Flexible services to grow with your business.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Our Process Section */}
+      <div className="my-12 px-6">
+        <h2 className="text-3xl font-bold text-center mb-6">Our Process</h2>
+        <ol className="list-decimal pl-6 space-y-4">
+          <li><strong>Consultation:</strong> Understanding your logistics requirements and business goals.</li>
+          <li><strong>Planning:</strong> Designing a customized logistics plan.</li>
+          <li><strong>Implementation:</strong> Executing the plan with attention to detail.</li>
+          <li><strong>Monitoring:</strong> Real-time updates and performance tracking.</li>
+          <li><strong>Optimization:</strong> Refining logistics operations for maximum efficiency.</li>
+        </ol>
+      </div>
+
+      {/* Get Started with ZenCorp Logistics Section */}
+      <div className="my-12 px-6 text-center bg-gray-100 p-8 rounded-lg">
+        <h2 className="text-3xl font-bold mb-6">Get Started with ZenCorp Logistics</h2>
+        <p className="mb-6">Ready to optimize your supply chain and streamline your logistics operations? Let ZenCorp Trading Co. LLC be your trusted partner for all your shipping and logistics needs.</p>
+        <p className="mb-2"><strong>Email:</strong> <a href="mailto:info@zencorp.ae" className="text-blue-600">info@zencorp.ae</a></p>
+        <p className="mb-2"><strong>Phone:</strong> +971 (04) 451 6924</p>
+        <p className="mb-2"><strong>Address:</strong> A2205, The Four A Block, Al Nahda-1, Dubai, UAE</p>
+        <p className="mb-6"><strong>Website:</strong> <a href="https://zencorp.ae" className="text-blue-600">https://zencorp.ae</a></p>
+      </div>
+
+
+
+
 
       {/* Footer */}
       <Footer />
