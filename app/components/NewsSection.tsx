@@ -33,7 +33,7 @@ const NewsSection = () => {
                 <button type="button" className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ARTICLES</button>
                 <p className='text-xs'>Date: Dec-1-2024</p>                
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur. </p>
+              <h4>The Role of Zencorp in the Global Copper Ecosystem</h4>              
               <p className='text-xs text-Primary-1/80 hover:text-gray-600'>Read More</p>
             </div>
 
@@ -43,7 +43,8 @@ const NewsSection = () => {
                 <button type="button" className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ARTICLES</button>
                 <p className='text-xs'>Date: Dec-1-2024</p>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur. </p>
+              <h4>Why Copper is Key to a Sustainable Future</h4>
+              
               <p className='text-xs text-Primary-1/80 hover:text-gray-600'>Read More</p>
             </div>
 
@@ -53,7 +54,8 @@ const NewsSection = () => {
                 <button type="button" className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ARTICLES</button>
                 <p className='text-xs'>Date: Dec-1-2024</p>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur. </p>
+              <h4>High-Purity Copper: The Future of Precision Applications</h4>
+              
               <p className='text-xs text-Primary-1/80 hover:text-gray-600'>Read More</p>
             </div>
           </div>
