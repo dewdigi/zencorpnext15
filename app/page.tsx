@@ -18,20 +18,17 @@ const Page = () => {
         return (
           <div className="p-4 flex flex-col bg-gray-100 items-center sm:flex-row  mx-4 gap-14">
             <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
-                <h3 className="text-left text-2xl font-bold">Food Security</h3>
+                <h3 className="text-left text-2xl font-bold">Committed to Building a Food-Secure Future for Africa
+                </h3>
 
                 <p className="text-left text-sm text-[#A3A3A3]">
-                At ZENCORP, food security is at the heart of our mission. 
-                By leveraging innovative farming techniques such as precision agriculture,
-                vertical farming, and hydroponics, we ensure that food production is efficient,     
-                sustainable, and scalable.
+                At Zencorp, we are driven by a mission to enhance food security and 
+                empower communities across Africa. With our expertise in agricultural 
+                supply chains and market access, we collaborate closely with farmers to
+                 provide high-quality inputs, advanced technology, and capacity-building
+                  initiatives that boost productivity and sustainability.
                 </p>
-                <p className="text-left text-sm text-[#A3A3A3]">
-                Our cutting-edge technologies not only maximize yield but also minimize 
-                environmental impact, promoting a harmonious balance between nature and agriculture.
-                Through these advancements, we aim to meet the growing global demand for food while
-                preserving the planet for future generations.
-                </p>
+                
                 <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Read More</button>
 
             </div>
@@ -45,17 +42,22 @@ const Page = () => {
           <div>
             <div className="p-4 flex flex-col bg-gray-100 items-center sm:flex-row mx-4 gap-14">
             <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
-              <h3 className="text-left text-2xl font-bold">Infrastructure</h3>
+              <h3 className="text-left text-2xl font-bold">Driving Growth Through Infrastructure and Resource Development
+
+              </h3>
 
               <p className="text-left text-sm text-[#A3A3A3]"> 
-              Building a greener tomorrow starts with reimagining how we construct the spaces we live and work in.
-              At ZENCORP, we are committed to eco-friendly construction practices that minimize environmental impact
-              while maximizing efficiency and sustainability. By incorporating sustainable materials, energy-efficient
-              designs, and green building techniques, we ensure that every project contributes to a healthier planet.
+              Zencorp connects Africa to global markets by enhancing physical infrastructure that boosts productivity and
+               fosters sustainable economic growth. By improving transportation, energy, and water systems, we serve as a
+                catalyst for economic activity, empowering communities and advancing Africa&#8217;s economies.
               </p>
               
-              <p className="text-left text-sm text-[#A3A3A3]"> From reducing waste during construction to optimizing buildings for long-term energy savings, 
-                we aim to set new standards in environmentally responsible development.
+              <p className="text-left text-sm text-[#A3A3A3]"> In addition, Zencorp leverages Africa&#8217;s rich resources in
+                 metals and minerals, creating value through responsible sourcing, processing, and trade. Our efforts
+                  focus on sustainable mining practices, supply chain transparency, and supporting industries that drive
+                   innovation and infrastructure development. By integrating resource development with economic progress,
+                    Zencorp strengthens Africa&#8217;s position in the global economy while ensuring long-term environmental and
+                     social responsibility.
               </p>
               <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Read More</button>
 
@@ -71,11 +73,14 @@ const Page = () => {
           
           <div><div className="p-4 flex flex-col bg-gray-100 items-center sm:flex-row mx-4 gap-14">
           <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
-            <h3 className="text-left text-2xl font-bold">Healthcare</h3>
+            <h3 className="text-left text-2xl font-bold">Transforming Healthcare Access Across Africa
+            </h3>
             <p className="text-left text-sm text-[#A3A3A3]">
-            Zencorp is redefining healthcare by combining advanced technology with compassionate care to bridge the gap in access and quality for underserved communities. 
-            <br></br> <br></br>Our innovative solutions focus on delivering reliable, efficient, and patient-centered services that empower individuals and enhance well-being. 
-            <br></br> <br></br> By addressing critical healthcare challenges with cutting-edge tools and a human touch, we are committed to creating healthier, more resilient communities worldwide.
+            At Zencorp, we are committed to making quality healthcare accessible and affordable for all. 
+            By partnering with governments, healthcare providers, and communities, we address critical challenges 
+            in access, affordability, and quality of care. Through innovative solutions and strategic collaborations,
+             we strive to build stronger healthcare systems that deliver effective, equitable, and sustainable healthcare
+              across Africa. Together, we are paving the way for healthier communities and a brighter future.
             </p>
             <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Read More</button>
 
