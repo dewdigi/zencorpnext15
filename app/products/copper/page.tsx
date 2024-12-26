@@ -52,9 +52,9 @@ const page = () => {
 
           
 
-          <div className='flex lg:w-1/2 p-8 items-center '>
+          <div className='flex lg:w-1/2 p-8 items-center rounded-2xl'>
           <Image
-                src="/images/copper-10.png"
+                src="/images/copper-products.jpg"
                 width={600}
                 height={600}
                 alt="copper image"
@@ -129,7 +129,7 @@ const page = () => {
       <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>        
 
         <div className='p-4 m-2 md:w-1/2'>
-         <Image src="/images/copper-11.png" width={961} height={761} alt="copper"/>
+         <Image src="/images/resize-sorting-metal.png" width={961} height={761} alt="copper"/>
         </div>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
@@ -156,8 +156,8 @@ const page = () => {
                  </div>
         </div>     
 
-        <div className='p-4 m-2 md:w-1/2'>
-         <Image src="/images/copper-12.png" width={961} height={761} alt="copper"/>
+        <div className='p-4 m-2 md:w-1/2 flex items-center justify-center'>
+         <Image src="/images/ev-car.jpg" width={961} height={761} alt="copper"/>
         </div>    
 
         
@@ -166,7 +166,7 @@ const page = () => {
       <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 '>        
 
         <div className='p-4 m-2 flex items-center md:w-1/2'>
-         <Image src="/images/copper-13.png" width={961} height={761} alt="copper"/>
+         <Image src="/images/africa-map.jpg" width={961} height={761} alt="copper"/>
         </div>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
@@ -183,8 +183,8 @@ const page = () => {
       </div>
 
 
-      <div className='px-4 m-6 flex items-center bg-Secondary-2/20 justify-center '>
-         <Image src="/images/copper-14.png" width={751} height={500} alt="copper"/>
+      <div className=' flex items-center bg-Secondary-2/20 justify-center '>
+         <Image src="/images/african-women-laptop1.jpg" width={1600} height={300} alt="copper"/>
         </div>  
 
       <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>
@@ -195,7 +195,7 @@ const page = () => {
         </div>     
 
         <div className='p-4 m-2 md:w-1/2'>
-         <Image src="/images/copper-15.png" width={961} height={761} alt="copper"/>
+         <Image src="/images/father-carry.jpg" width={961} height={761} alt="copper"/>
         </div>  
         
       
