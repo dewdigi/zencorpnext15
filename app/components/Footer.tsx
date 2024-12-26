@@ -8,14 +8,14 @@ return (
     <div >
         <NewsSection/>
         <div className='flex flex-col lg:flex-row bg-Primary-1/100'>
-            <div className='m-2 p-8 flex flex-col items-center lg:justify-start p-2 lg:w-3/12 gap-4'>  
+            <div className='m-2 p-8 flex flex-col items-center lg:justify-start p-2 lg:w-1/2 gap-4'>  
                 <a href="#" className="text-2xl font-bold"> <Image src="/images/logo-zencorp.svg" width={249} height={40} alt="zencorp" /></a>
                 <p className='text-xs text-white lg:w-9/12 lg:text-left text-center'>At ZENCORP, we are committed to fostering growth and development in Africa&#39;s infrastructure, food, healthcare, and other key industries. By leveraging Africa&#39;s immense potential, we work with partners and clients to create a brighter future for the continent. </p>
             </div >
             <div className='flex flex-row lg:w-1/2 place-content-center items-start'>
-            <div className=' lg:w-1/2 m-2 md:p-8 bg-Primary-1/90 rounded-md  flex flex-col justify-self text-white '>
+            <div className=' lg:w-1/2 m-2 md:p-8  rounded-md  flex flex-col justify-self text-white '>
                 
-                <ul className='bg-Primary-1/90 p-4 rounded-md'>
+                <ul className=' p-4 rounded-md'>
                     <li className='p-2 rounded-md bg-Primary-1/90' >COMPANY</li>
                     
                     <li><Link rel="stylesheet" href="/" className="mx-2   hover:text-emerald-500 text-xs">HOME</Link></li>
@@ -33,22 +33,22 @@ return (
 
             </div>
             
-            <div className=' lg:w-1/2 m-2 md:p-8 bg-Primary-1/90 rounded-md items-center flex flex-col  text-left  text-white'>
+            <div className=' lg:w-1/2 m-2 md:p-8  rounded-md items-start  flex flex-col  text-left  text-white'>
                 <ul className=' p-4 rounded-md'>
-                    <li className='px-2 py-2 bg-[#287340]'>PRODUCTS</li>
+                    <li className='px-2 py-2 rounded-md bg-[#287340]'>PRODUCTS</li>
                     <li><Link rel="stylesheet" href="/products/copper" className="m-2  hover:text-emerald-500 text-xs">Copper Ecosystem</Link></li>
             
                     <li><Link rel="stylesheet" href="/products/shipping" className="m-2 hover:text-emerald-500 text-xs" >Shipping & Logistics</Link></li>
             
                     <li><Link rel="stylesheet" href="/products/investment" className="m-2  hovezr:text-emerald-500 text-xs" >Investment & Finance</Link></li>
                 
-                    <li><Link rel="stylesheet" href="/products/medical" className="m-2  hover:text-emerald-500 text-xs" >Healthcare Accessibility & Equipment</Link></li>
+                    <li><Link rel="stylesheet" href="/products/medical" className="m-2  hover:text-emerald-500 text-xs" >Healthcare Accessibility</Link></li>
                                         
                 </ul>            
 
             </div>
             </div>
-            <div className=' lg:w-3/12 items-center bg-Primary-1/90 rounded-md lg:items-start m-2 p-8 flex flex-col text-left  text-white'>
+            <div className=' lg:w-3/12 items-center rounded-md lg:items-start m-2 p-8 flex flex-col text-left  text-white'>
                 
                     <p className='px-8 rounded-lg py-2 bg-[#287340]'>CONTACT</p>
                     <p className='m-2 text-xs text-center lg:text-left'><span className='font-bold'>Address:</span> ZENCORP Trading CO. LLC</p>
