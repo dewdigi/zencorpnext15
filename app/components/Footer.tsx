@@ -43,10 +43,7 @@ return (
                     <li><Link rel="stylesheet" href="/products/investment" className="m-2  hovezr:text-emerald-500 text-xs" >Investment & Finance</Link></li>
                 
                     <li><Link rel="stylesheet" href="/products/medical" className="m-2  hover:text-emerald-500 text-xs" >Healthcare Accessibility & Equipment</Link></li>
-                    <li className='text-Primary-1/90'> .</li>
-                    <li className='text-Primary-1/90'> .</li>
-
-                    
+                                        
                 </ul>            
 
             </div>
