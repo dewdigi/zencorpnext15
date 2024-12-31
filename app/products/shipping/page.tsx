@@ -61,7 +61,7 @@ const ShippingAndLogistics = () => {
     <div className="w-1/4 flex flex-col gap-4 bg-Secondary-2/10 p-4 rounded-xl">
       {/* Vertical Tabs for Core Services */}
       <button
-        onClick={() => handleCoreTabClick('core-services', '/images/core-services.jpg')}
+        onClick={() => handleCoreTabClick('core-services', '/images/african-american.jpg')}
         className={`py-3 px-6 text-left rounded-lg ${activeCoreTab === 'core-services' ? 'bg-emerald-500 text-white' : 'bg-gray-200'}`}
       >
         Freight Transportation
@@ -73,25 +73,25 @@ const ShippingAndLogistics = () => {
         Warehousing & Distribution
       </button>
       <button
-        onClick={() => handleCoreTabClick('customs-clearance', '/images/customs-clearance.jpg')}
+        onClick={() => handleCoreTabClick('customs-clearance', '/images/african_customs.JPG')}
         className={`py-3 px-6 text-left rounded-lg ${activeCoreTab === 'customs-clearance' ? 'bg-emerald-500 text-white' : 'bg-gray-200'}`}
       >
         Customs Clearance
       </button>
       <button
-        onClick={() => handleCoreTabClick('supply-chain', '/images/supply-chain.jpg')}
+        onClick={() => handleCoreTabClick('supply-chain', '/images/warehoue-2.jpg')}
         className={`py-3 px-6 text-left rounded-lg ${activeCoreTab === 'supply-chain' ? 'bg-emerald-500 text-white' : 'bg-gray-200'}`}
       >
         Supply Chain Solutions
       </button>
       <button
-        onClick={() => handleCoreTabClick('specialized-cargo', '/images/specialized-cargo.jpg')}
+        onClick={() => handleCoreTabClick('specialized-cargo', '/images/black_girl_warehouse.jpg')}
         className={`py-3 px-6 text-left rounded-lg ${activeCoreTab === 'specialized-cargo' ? 'bg-emerald-500 text-white' : 'bg-gray-200'}`}
       >
         Specialized Cargo Services
       </button>
       <button
-        onClick={() => handleCoreTabClick('ecommerce-logistics', '/images/ecommerce-logistics.jpg')}
+        onClick={() => handleCoreTabClick('ecommerce-logistics', '/images/ecommerce.jpg')}
         className={`py-3 px-6 text-left rounded-lg ${activeCoreTab === 'ecommerce-logistics' ? 'bg-emerald-500 text-white' : 'bg-gray-200'}`}
       >
         E-commerce Logistics
@@ -225,7 +225,7 @@ const ShippingAndLogistics = () => {
       Construction
     </button>
     <button
-      onClick={() => handleIndustryTabClick('retail', '/images/retail.jpg')}
+      onClick={() => handleIndustryTabClick('retail', '/images/commerce.jpg')}
       className={`py-3 px-6 text-left rounded-lg ${activeIndustryTab === 'retail' ? 'bg-emerald-500 text-white' : 'bg-gray-200'}`}
     >
       Retail & E-commerce
@@ -237,7 +237,7 @@ const ShippingAndLogistics = () => {
       Automotive
     </button>
     <button
-      onClick={() => handleIndustryTabClick('fmcg', '/images/fmcg.jpg')}
+      onClick={() => handleIndustryTabClick('fmcg', '/images/fncg.jpg')}
       className={`py-3 px-6 text-left rounded-lg ${activeIndustryTab === 'fmcg' ? 'bg-emerald-500 text-white' : 'bg-gray-200'}`}
     >
       FMCG
@@ -334,7 +334,7 @@ const ShippingAndLogistics = () => {
       </div>
 
       {/* Our Process Section */}
-      <div className="my-12 px-6">
+      <div className="my-12 lg:m-32 px-6  p-20 rounded-2xl">
         <h2 className="text-3xl font-bold text-center mb-6">Our Process</h2>
         <ol className="list-decimal pl-6 space-y-4">
           <li><strong>Consultation:</strong> Understanding your logistics requirements and business goals.</li>
@@ -348,7 +348,8 @@ const ShippingAndLogistics = () => {
       {/* Get Started with ZenCorp Logistics Section */}
       <div className="my-12 px-6 text-center bg-gray-100 p-8 rounded-lg">
         <h2 className="text-3xl font-bold mb-6">Get Started with ZenCorp Logistics</h2>
-        <p className="mb-6">Ready to optimize your supply chain and streamline your logistics operations? Let ZenCorp Trading Co. LLC be your trusted partner for all your shipping and logistics needs.</p>
+        <p className="mb-6">Ready to optimize your supply chain and streamline your logistics operations?
+          <br></br> Let ZenCorp Trading Co. LLC be your trusted partner for all your shipping and logistics needs.</p>
         <p className="mb-2"><strong>Email:</strong> <a href="mailto:info@zencorp.ae" className="text-blue-600">info@zencorp.ae</a></p>
         <p className="mb-2"><strong>Phone:</strong> +971 (04) 451 6924</p>
         <p className="mb-2"><strong>Address:</strong> A2205, The Four A Block, Al Nahda-1, Dubai, UAE</p>
