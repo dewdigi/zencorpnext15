@@ -26,9 +26,9 @@ const NewsSection = () => {
           </div>
         </div>
           */}
-          <div className='flex md:flex-row flex-col gap-12 Items-start md:w-full'>
+          <div className='flex md:flex-row flex-col gap-12 Items-start justify-start md:w-full'>
             <div className='flex flex-col gap-4 Items-center justify-center w-full md:w-2/6 md:m-2 md:p-2'>
-              <Image className='rounded-xl flex items-center' src='/images/foodsecure.webp' width={290} height={283} alt='blogimage'></Image>
+              <Image className='rounded-xl flex items-center' src='/images/copper-wire.jpg' width={350} height={283} alt='blogimage'></Image>
               <div className='flex flex-row flex-wrap mb-4 justify-between items-center'> 
                 <button type="button" className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ARTICLES</button>
                 <p className='text-xs'>Date: Dec-1-2024</p>                
@@ -38,7 +38,7 @@ const NewsSection = () => {
             </div>
 
             <div className='flex flex-col gap-4 Items-center justify-center w-full md:w-2/6 md:m-2 md:p-2'>
-              <Image className='rounded-xl' src='/images/foodsecure.webp' width={279} height={283} alt='blogimage'></Image>
+              <Image className='rounded-xl' src='/images/sustainwindmill.jpg' width={350} height={283} alt='blogimage'></Image>
               <div className='flex flex-row flex-wrap mb-4 justify-between items-center'> 
                 <button type="button" className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ARTICLES</button>
                 <p className='text-xs'>Date: Dec-1-2024</p>
@@ -49,7 +49,7 @@ const NewsSection = () => {
             </div>
 
             <div className='flex flex-col gap-4 Items-center justify-center w-full md:w-2/6 md:m-2 md:p-2'>
-              <Image className='rounded-xl' src='/images/foodsecure.webp' width={279} height={283} alt='blogimage'></Image>
+              <Image className='rounded-xl' src='/images/copper-pipes.JPG' width={350} height={283} alt='blogimage'></Image>
               <div className='flex flex-row  flex-wrap mb-4 justify-between items-center'> 
                 <button type="button" className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ARTICLES</button>
                 <p className='text-xs'>Date: Dec-1-2024</p>
