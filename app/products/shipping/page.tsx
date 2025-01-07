@@ -29,15 +29,19 @@ const ShippingAndLogistics = () => {
         className="min-v-screen bg-cover bg-center bg-no-repeat rounded-bl-[100px]"
         style={{ backgroundImage: `url("${dynamicImage}")` }}
       >
-        <div>
+        <div className='backdrop-blur-sm  bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black rounded-bl-[100px]'>
           <Navbarwhite />
-          <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start my-32 lg:m-24 lg:my-32 p-6 lg:pb-28 text-white gap-22">
+          <div className="flex flex-col gap-8 lg:justify-start justify-center items-center lg:items-start my-32 lg:m-24 lg:my-32 p-6 lg:pb-28 text-white gap-22">
             <h1 className="text-5xl md:text-6xl leading-36 my-4 text-center sm:text-left">
               <b>Shipping & Logistics Services</b>
             </h1>
             <p className='lg:mr-80 lg:text-left text-center'>
               At ZenCorp Trading Co. LLC, we understand that efficient shipping and logistics are critical to the success of any business. Our specialized Shipping & Logistics Division is dedicated to delivering tailored transportation and supply chain solutions that meet the dynamic demands of businesses across the Middle East and Africa. With a commitment to reliability, speed, and cost-effectiveness, we ensure that your goods are transported safely and on time.
             </p>
+
+            <button className=" bg-emerald-500 sm:w-3/12 lg:w-auto w-1/2 hover:bg-Secondary-2/70 hover:drop-shadow-xl p-4 rounded-md">
+              CONTACT US
+            </button> 
           </div>
         </div>
       </div>
