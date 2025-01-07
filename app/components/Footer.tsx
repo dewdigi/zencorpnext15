@@ -56,7 +56,7 @@ return (
 
             </div>
             </div>
-            <div className=' lg:w-3/12 items-center rounded-md lg:items-start m-2 lg:px-4 lg:py-8 flex flex-col text-left  text-white'>
+            <div className=' lg:w-3/12  items-center rounded-md lg:items-start m-2 lg:px-4 lg:py-8 flex flex-col text-left  text-white'>
                 
                     <p className='px-8 rounded-lg py-2 bg-[#287340] lg:text-left'>CONTACT</p>
                     <p className='m-2 text-xs text-center lg:text-left'><span className='font-bold'>Address: </span> </p>

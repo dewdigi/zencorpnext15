@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const NewsSection = () => {
   return (
-    <div className='flex flex-col gap-8 mx-4 lg:mx-28 my-24 p-8 bg-white rounded-3xl drop-shadow-2xl'>
+    <div className='flex flex-col gap-8 mx-4 lg:mx-28 my-24 p-8 bg-white rounded-3xl drop-shadow-2xl dark:text-gray-800'>
 
       <h3 className='font-normal text-4xl'>Latest <span className='text-zencorp-green underline'>News</span> from Zencorp</h3>
       <div className='flex flex-col md:flex-row gap-12'>

@@ -9,39 +9,17 @@ const dynamicImage = "/images/hero-img.jpg";
 
 const Page = () => {
   // State to manage the active tab
-  const [activeTab, setActiveTab] = useState("food");
+  const [activeTab, setActiveTab] = useState("infrastructure");
 
   // Function to render content based on the active tab
   const renderTabContent = () => {
     switch (activeTab) {
-      case "food":
-        return (
-          <div className="p-4 flex flex-col bg-gray-100 items-center sm:flex-row  mx-4 gap-14">
-            <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
-                <h3 className="text-left text-2xl font-bold">Committed to Building a Food-Secure Future for Africa
-                </h3>
-
-                <p className="text-left text-sm text-[#A3A3A3]">
-                At Zencorp, we are driven by a mission to enhance food security and 
-                empower communities across Africa. With our expertise in agricultural 
-                supply chains and market access, we collaborate closely with farmers to
-                 provide high-quality inputs, advanced technology, and capacity-building
-                  initiatives that boost productivity and sustainability.
-                </p>
-                
-                <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Read More</button>
-
-            </div>
-            <div className="sm:w-1/2">
-              <Image className="rounded-xl drop-shadow-2xl" src="/images/foodsecurity.jpg" width={1000} height={1000} alt="food security"/>
-            </div>
-          </div>
-        );
+      
       case "infrastructure":
         return (
           <div>
-            <div className="p-4 flex flex-col bg-gray-100 items-center sm:flex-row mx-4 gap-14">
-            <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
+            <div className="p-4 flex flex-col bg-gray-100 rounded-xl items-center sm:flex-row mx-4 gap-10">
+            <div className="flex flex-col gap-4 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
               <h3 className="text-left text-2xl font-bold">Driving Growth Through Infrastructure and Resource Development
 
               </h3>
@@ -59,7 +37,7 @@ const Page = () => {
                     Zencorp strengthens Africa&#8217;s position in the global economy while ensuring long-term environmental and
                      social responsibility.
               </p>
-              <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Read More</button>
+              <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white  rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-Primary-1/100 dark:text-gray-300 dark:border-gray-600 dark:hover:text-gray-800 dark:hover:bg-gray-300">Read More</button>
 
             </div>
             <div className="sm:w-1/2">
@@ -71,8 +49,8 @@ const Page = () => {
       case "healthcare":
         return (
           
-          <div><div className="p-4 flex flex-col bg-gray-100 items-center sm:flex-row mx-4 gap-14">
-          <div className="flex flex-col gap-8 p-8 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
+          <div><div className="p-4 flex flex-col bg-gray-100 rounded-xl items-center sm:flex-row mx-4 gap-14">
+          <div className="flex flex-col gap-8 p-8 bg-white h-96 rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
             <h3 className="text-left text-2xl font-bold">Transforming Healthcare Access Across Africa
             </h3>
             <p className="text-left text-sm text-[#A3A3A3]">
@@ -82,13 +60,37 @@ const Page = () => {
              we strive to build stronger healthcare systems that deliver effective, equitable, and sustainable healthcare
               across Africa. Together, we are paving the way for healthier communities and a brighter future.
             </p>
-            <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Read More</button>
+            <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white  rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-Primary-1/100 dark:text-gray-300 dark:border-gray-600 dark:hover:text-gray-800 dark:hover:bg-gray-300">Read More</button>
 
           </div>
           <div className="sm:w-1/2">
             <Image className="rounded-xl drop-shadow-2xl " src="/images/healthcare.jpg" width={1000} height={1000} alt="Healthcare" />
           </div>
         </div>
+          </div>
+        );
+
+        case "food":
+        return (
+          <div className="p-4 flex flex-col bg-gray-100 rounded-xl items-center sm:flex-row  mx-4 gap-14">
+            <div className="flex flex-col gap-8 p-8 h-96 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
+                <h3 className="text-left text-2xl font-bold">Committed to Building a Food-Secure Future for Africa
+                </h3>
+
+                <p className="text-left text-sm text-[#A3A3A3]">
+                At Zencorp, we are driven by a mission to enhance food security and 
+                empower communities across Africa. With our expertise in agricultural 
+                supply chains and market access, we collaborate closely with farmers to
+                 provide high-quality inputs, advanced technology, and capacity-building
+                  initiatives that boost productivity and sustainability.
+                </p>
+                
+                <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white  rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-Primary-1/100 dark:text-gray-300 dark:border-gray-600 dark:hover:text-gray-800 dark:hover:bg-gray-300">Read More</button>
+
+            </div>
+            <div className="sm:w-1/2">
+              <Image className="rounded-xl drop-shadow-2xl" src="/images/foodsecurity.jpg" width={1000} height={1000} alt="food security"/>
+            </div>
           </div>
         );
       default:
@@ -124,11 +126,11 @@ const Page = () => {
       {/* Tabs Section */}
       <div className="m-2 sm:m-24 flex flex-col justify-center text-center text-gray-800">
   <div className="m-12 gap-32">
-    <h2 className="font-bold text-3xl sm:text-5xl">
+    <h2 className="font-bold text-3xl sm:text-5xl dark:text-gray-300">
       Partnering for a <span className="text-emerald-800">Sustainable</span> Africa
     </h2>
     <br />
-    <p className="font-normal">
+    <p className="font-normal dark:text-gray-300">
       At ZENCORP, we are committed to fostering growth and development in
       Africa&#8217;s infrastructure, food, healthcare, and other key
       industries. By leveraging Africa&#8217;s immense potential, we work

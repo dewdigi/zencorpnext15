@@ -41,14 +41,14 @@ const page = () => {
 
       <div className='flex lg:flex-row flex-col lg:gap-20 lg:m-20 items-center  justify-center'>
           <div className='lg:w-1/2'>
-          <div className='flex flex-col gap-8 p-12'>
+          <div className='flex flex-col gap-8 p-12 '>
           <p className='font-normal text-sm text-accent-3/30 '>Products & Services</p>
-          <h2 className='font-bold text-3xl md:text-5xl  text-accent-3/100'>Why Choose <span className='text-Primary-1/70 underline'>Zencorp?</span>Building Materials</h2>
+          <h2 className='font-bold text-3xl md:text-5xl dark:text-white  text-accent-3/100'>Why Choose <span className='text-Primary-1/70 underline'>Zencorp?</span>Building Materials</h2>
           
           </div>
           
           <div className=' px-10 lg:px-12'> 
-          <ol className='list-decimal font-normal text-md text-accent-3/70 '>
+          <ol className='list-decimal font-normal text-md text-accent-3/70 dark:text-white '>
             <li>High-Quality Products: Tested to meet industry standards for durability and reliability.
 
 
@@ -94,7 +94,7 @@ const page = () => {
       </div>
 
 
-      <div className='md:m-10 m-8 flex flex-col sm:flex-row md:gap-4 bg-Primary-1/10 rounded-[20px]'>
+      <div className='md:m-10 m-8 flex flex-col sm:flex-row md:gap-4 bg-Primary-1/10 rounded-[20px] dark:text-gray-800'>
         <div className='md:p-20 p-4 m-2 gap-8 flex flex-col justify-center'>
           <div className='flex gap-4 flex-col'>
             <h2 className='text-5xl font-bold lg:text-left text-center'>Our Expertise</h2>
@@ -167,7 +167,7 @@ const page = () => {
         
       </div>
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white rounded-2xl '>   
+      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white rounded-2xl dark:text-gray-800 '>   
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
           <h2 className='text-5xl font-bold md:text-left text-center'>Industries We Serve</h2>
