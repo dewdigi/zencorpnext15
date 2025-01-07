@@ -10,7 +10,7 @@ const page = () => {
       
 
       <div className='flex flex-col items-center m-8 gap-6'>
-                      <h1 className='text-6xl font-bold text-Secondary-2/70'> Interior </h1>
+                      <h1 className='text-6xl font-bold text-Secondary-2/70'> Building Materials </h1>
                       <h2 className='text-4xl'> Coming Soon </h2>
                       <Image src='/images/maintenance.jpg' width={751} height={400} alt='maintenance' ></Image>
                       </div>

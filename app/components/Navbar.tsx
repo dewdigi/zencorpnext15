@@ -36,11 +36,12 @@ const Navbar = () => {
             </Link>
             <div className="absolute left-0 top-full hidden group-hover:block bg-emerald-50 text-slate-600 shadow-xl rounded-md w-96">
               <Link href="/products/copper" className="block px-4 py-2 hover:text-emerald-500">Copper Ecosystem</Link>
-              <Link href="/products/shipping" className="block px-4 py-2 hover:text-emerald-500">Shipping & Logistics</Link>
+              <Link href="/products/building" className="block px-4 py-2 hover:text-emerald-500">Building Materials</Link>
               <Link href="/products/investment" className="block px-4 py-2 hover:text-emerald-500">Investment & Finance</Link>
               <Link href="/products/medical" className="block px-4 py-2 hover:text-emerald-500">Healthcare Accessibility & Equipment</Link>
-              
-              
+              <Link href="/products/shipping" className="block px-4 py-2 hover:text-emerald-500">Shipping & Logistics</Link>
+
+                            
             </div>
           </div>
           
@@ -97,6 +98,7 @@ const Navbar = () => {
               <div className="pl-4">
                 <Link href="/products/copper" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Copper Ecosystem</Link>
                 <Link href="/products/shipping" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Shipping & Logistics</Link>
+                <Link href="/products/building" className="block px-4 py-2 hover:text-emerald-500">Building Materials</Link>
                 <Link href="/products/investment" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Investment & Finance</Link>
                 <Link href="/products/medical" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Healthcare Accessibility & Equipment</Link>
                 
