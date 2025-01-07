@@ -2,7 +2,7 @@ import React from 'react'
 
 import Footer from '@/app/components/Footer';
 import Navbarwhite from '@/app/components/Navbarwhite';
-const dynamicImage = "/images/Copper-Heading-Page.png";
+const dynamicImage = "/images/gold_coins.jpg";
 
 import Image from 'next/image';
 
