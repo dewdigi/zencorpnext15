@@ -8,7 +8,7 @@ return (
     <div >
         <NewsSection/>
         <div className='flex flex-col lg:flex-row bg-Primary-1/100'>
-            <div className='m-2 p-8 flex flex-col items-center lg:justify-start p-2 lg:w-1/2 gap-4'>  
+            <div className='m-2 p-8 flex flex-col items-center lg:items-start lg:justify-start p-2 lg:w-1/2 gap-4'>  
                 <a href="#" className="text-2xl font-bold"> <Image src="/images/logo-zencorp.svg" width={249} height={40} alt="zencorp" /></a>
                 <p className='text-xs text-white lg:w-9/12 lg:text-left text-center'>At ZENCORP, we are committed to fostering growth and development in Africa&#39;s infrastructure, food, healthcare, and other key industries. By leveraging Africa&#39;s immense potential, we work with partners and clients to create a brighter future for the continent. </p>
             </div >
@@ -43,7 +43,12 @@ return (
                     <li><Link rel="stylesheet" href="/products/investment" className="m-2  hovezr:text-emerald-500 text-xs" >Investment & Finance</Link></li>
                 
                     <li><Link rel="stylesheet" href="/products/medical" className="m-2  hover:text-emerald-500 text-xs" >Healthcare Accessibility</Link></li>
+                    
                     <li><Link rel="stylesheet" href="/products/building" className="m-2  hover:text-emerald-500 text-xs" >Building Materials</Link></li>
+
+                    <li><Link rel="stylesheet" href="/products/building" className="m-2  hover:text-emerald-500 text-xs" >Hospitality Supplies</Link></li>
+
+                    <li><Link rel="stylesheet" href="/products/building" className="m-2  hover:text-emerald-500 text-xs" >FMCG</Link></li>
                                         
                 </ul>            
 
@@ -53,8 +58,9 @@ return (
                 
                     <p className='px-8 rounded-lg py-2 bg-[#287340]'>CONTACT</p>
                     <p className='m-2 text-xs text-center lg:text-left'><span className='font-bold'>Address:</span> ZENCORP Trading CO. LLC</p>
-                        <p className='lg:ms-16 text-xs text-center lg:text-left'>A2205, The Four A Block</p>
-                        <p className='lg:ms-16 text-xs text-center lg:text-left'>Al Nahda-1, Dubai, UAE</p>
+                        <p className='lg:ms-16 text-xs text-center lg:text-left'>No.8, Bin Dasmal Building</p>
+                        <p className='lg:ms-16 text-xs text-center lg:text-left'>Mezanine Floor, Al Garhoud,</p>
+                        <p className='lg:ms-16 text-xs text-center lg:text-left'>Airport Road, Dubai, UAE.</p>
                         <p className='lg:ms-16 my-2 text-xs text-center lg:text-left'><span className='font-bold'>TRN:</span> 100315782100003 </p>
                         <button type="button" className="px-5 py-2.5 my-4 text-sm w-9/12 font-medium text-white flex items-center bg-Secondary-2/70 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-telephone" viewBox="0 0 16 16">

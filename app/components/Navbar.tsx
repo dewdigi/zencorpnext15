@@ -40,6 +40,8 @@ const Navbar = () => {
               <Link href="/products/investment" className="block px-4 py-2 hover:text-emerald-500">Investment & Finance</Link>
               <Link href="/products/medical" className="block px-4 py-2 hover:text-emerald-500">Healthcare Accessibility & Equipment</Link>
               <Link href="/products/shipping" className="block px-4 py-2 hover:text-emerald-500">Shipping & Logistics</Link>
+              <Link href="/products/medical" className="block px-4 py-2 hover:text-emerald-500">Hospitality Supplies</Link>
+                <Link href="/products/medical" className="block px-4 py-2 hover:text-emerald-500">FMCG</Link>
 
                             
             </div>
@@ -101,6 +103,9 @@ const Navbar = () => {
                 <Link href="/products/building" className="block px-4 py-2 hover:text-emerald-500">Building Materials</Link>
                 <Link href="/products/investment" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Investment & Finance</Link>
                 <Link href="/products/medical" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Healthcare Accessibility & Equipment</Link>
+                <Link href="/products/medical" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">Hospitality Supplies</Link>
+                <Link href="/products/medical" className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm">FMCG</Link>
+                
                 
                 
               </div>
