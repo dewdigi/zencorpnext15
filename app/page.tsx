@@ -102,12 +102,12 @@ const Page = () => {
     <div>
       {/* Hero Section */}
       <div
-  className="min-h-screen bg-cover bg-center bg-no-repeat"
+  className="min-h-screen bg-cover bg-center bg-no-repeat pt-44"
   style={{ backgroundImage: `url("${dynamicImage}")` }}
 >
   <div>
     <Navbar />
-    <div className="m-6 sm:m-12 p-6 text-white gap-6 flex flex-col items-center sm:items-start">
+    <div className="m-2 sm:m-12 p-6 text-white gap-6 flex flex-col items-center sm:items-start">
       <h1 className="text-4xl sm:text-6xl leading-snug sm:leading-tight my-4 text-center sm:text-left">
         Sustainable <b>Solutions</b> <br />
         for a Changing World.

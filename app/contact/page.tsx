@@ -13,11 +13,7 @@ const page = () => {
     <div>
       <Navbar/>
       
-      
-
-      
-
-                            <section className="relative table w-full py-32 lg:py-40 bg-no-repeat bg-top bg-cover" style={{backgroundImage:"url('/images/about-1.jpg')"}}>
+      <section className="relative table w-full py-32 lg:py-40 bg-no-repeat bg-top bg-cover" style={{backgroundImage:"url('/images/about-1.jpg')"}}>
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black"></div>
             <div className="container relative">
                 <div className="grid grid-cols-1 pb-8 text-center mt-10">

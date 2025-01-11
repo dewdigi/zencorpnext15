@@ -11,19 +11,14 @@ const dynamicImage = "/images/about-1.jpg";
 const page = () => {
   return (
 
-    <div className='' >
+    <div >
       
-    <div className="min-v-screen bg-cover bg-center bg-no-repeat "
+    <div className="min-h-screen bg-cover bg-center bg-no-repeat "
       style={{ backgroundImage: `url("${dynamicImage}")` }}>
+        <Navbar />
+        <div className='backdrop-blur-2xl  bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black '>
 
-      
-
-    <div className='backdrop-blur-2xl  bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black '>
-
-      
-    <Navbar />
-
-    <div className='flex flex-col lg:m-20 mx-10 my-8 md:p-10 '>   
+    <div className='flex flex-col py-20 lg:py-40 lg:px-20'>   
 
     <div className='flex flex-col p-8 gap-8 items-center lg:flex-row justify-center '> 
     <div className='lg:w-1/2 p-4 flex flex-col gap-8'>
