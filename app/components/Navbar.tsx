@@ -80,12 +80,7 @@ const Navbar = () => {
               >
                 Building Materials
               </Link>
-              <Link
-                href="/products/investment"
-                className="block px-4 py-2 hover:text-emerald-500"
-              >
-                Investment & Finance
-              </Link>
+              
               <Link
                 href="/products/healthcare_accessibility"
                 className="block px-4 py-2 hover:text-emerald-500"
@@ -229,12 +224,7 @@ const Navbar = () => {
                 >
                   Building Materials
                 </Link>
-                <Link
-                  href="/products/investment"
-                  className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
-                >
-                  Investment & Finance
-                </Link>
+               
                 <Link
                   href="/products/healthcare_accessibility"
                   className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"

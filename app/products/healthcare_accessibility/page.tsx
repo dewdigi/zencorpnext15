@@ -15,22 +15,21 @@ const page = () => {
       >
         <div className='backdrop-blur-sm bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black rounded-bl-[100px]'>
           <Navbarwhite />
-          <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start my-32 lg:m-24 lg:my-32 p-6 lg:pb-28 text-white gap-22">
+          <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start my-0 py-32 lg:m-24 lg:my-0 lg:py-60 p-6 lg:pb-28 text-white gap-22">
             <h1 className="text-5xl md:text-6xl leading-36 my-4 text-center sm:text-left">
               Healthcare Accessibility <b> & Equipment</b> <br />
               
             </h1>
             <p className="text-xl leading-24 my-4 font-normal text-center lg:text-left">
-            Welcome to Zencorp: Your Partner in the Copper Ecosystem
+            Bridging Healthcare Gaps in Africa & the Middle East with Reliable Solutions
             </p>
-            <p className='lg:mr-80 lg:text-left text-center'>Zencorp is a trusted global player in the copper industry, seamlessly connecting the upstream, midstream, and downstream value chains. With over a decade of experience, we offer innovative solutions across mining, refining, manufacturing, and recycling to meet the diverse demands of industries worldwide.</p>
+            <p className='lg:mr-80 lg:text-left text-center'>At ZenCorp Trading Co. LLC, we are committed to improving healthcare accessibility in Africa and the Middle East. With a vision to bridge the gap in healthcare infrastructure, we provide high-quality medical equipment and essential healthcare supplies to regions where they are needed most. Our solutions are tailored to meet the unique needs of healthcare providers, ensuring that communities gain access to reliable and life-saving medical resources.</p>
             <br></br>
             <button className=" bg-emerald-500 sm:w-3/12 lg:w-auto w-1/2 hover:bg-Secondary-2/70 hover:drop-shadow-xl p-4 rounded-md">
               CONTACT US
             </button>            
           </div>
         </div>
-
         
       </div>
 
@@ -203,11 +202,6 @@ const page = () => {
       <div className='flex justify-center'>
       {/**<button type='button' className='px-8 py-4 m-2 bg-Primary-1/70 rounded-md text-center text-Primary-1/10 hover:bg-Secondary-2/70'>Learn More</button> */}
       </div>
-
-      
-
-
-
     <Footer/>
     </div>
   )
