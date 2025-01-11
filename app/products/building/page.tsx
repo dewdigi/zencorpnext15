@@ -40,7 +40,7 @@ const page = () => {
         
       </div>
 
-      <div className='flex lg:flex-row flex-col lg:gap-20 lg:m-20 items-center  justify-center'>
+      <div className='flex lg:flex-row flex-col lg:gap-20 lg:m-20 items-center lg:py-20  justify-center'>
           <div className='lg:w-1/2'>
           <div className='flex flex-col gap-8 p-12 '>
           <p className='font-normal text-sm text-accent-3/30 '>Products & Services</p>
@@ -49,28 +49,14 @@ const page = () => {
           </div>
           
           <div className=' px-10 lg:px-12'> 
-          <ol className='list-decimal font-normal text-md text-accent-3/70 dark:text-white '>
-            <li>High-Quality Products: Tested to meet industry standards for durability and reliability.
-
-
-            </li>
-            <li>
-            Diverse Range: Specialized tools and equipment for every construction need.
-
-            </li>
-            <li>
-            Expert Guidance: Tailored advice from professionals.
-
-            </li>
-            <li>
-            Sustainability Focus: Eco-friendly solutions to reduce waste and environmental impact.
-
-            </li>
-            <li>
-            Affordable Pricing: Premium quality at competitive prices.
-
-            </li>
-          </ol>
+          <ul className='list-disc font-normal text-md text-accent-3/70 dark:text-white px-2 leading-6'>
+            <li className='dark:text-gray-400'><span className='font-bold dark:text-gray-300'>High-Quality Products:</span> Tested to meet industry standards for durability and reliability.</li>
+            <li className='dark:text-gray-400'><span className='font-bold dark:text-gray-300'>Diverse Range:</span> Specialized tools and equipment for every construction need.</li>
+            <li className='dark:text-gray-400'><span className='font-bold dark:text-gray-300'>Expert Guidance:</span> Tailored advice from professionals.</li>
+            <li className='dark:text-gray-400'><span className='font-bold dark:text-gray-300'>Sustainability Focus:</span> Eco-friendly solutions to reduce waste and environmental impact.</li>
+            <li className='dark:text-gray-400'><span className='font-bold dark:text-gray-300'>Affordable Pricing:</span> Premium quality at competitive prices.</li>
+            
+          </ul>
           </div>
 
           
@@ -98,51 +84,233 @@ const page = () => {
       <div className='md:m-10 m-8 flex flex-col sm:flex-row md:gap-4 bg-Primary-1/10 rounded-[20px] dark:text-gray-800'>
         <div className='md:p-20 p-4 m-2 gap-8 flex flex-col justify-center'>
           <div className='flex gap-4 flex-col'>
-            <h2 className='text-5xl font-bold lg:text-left text-center'>Our Expertise</h2>
-            <h4 className='text-xl lg:text-left text-center'>From Mine to Market: Comprehensive Copper Solutions</h4>
+            <h2 className='text-5xl font-bold lg:text-left text-center'>Our Product Portfolio</h2>
+            
+          </div>
+
+          <div className='flex lg:flex-row flex-col gap-8 leading-10 '>
+            
+            <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
+              <div className='lg:p-2 '> 
+                <p className='text-xl text-left font-bold'>1. Concrete Equipment and Tools</p>
+                
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                   <li><span className='text-sm'>Mixers</span></li>
+                   <li><span className='text-sm'>Vibrators</span></li>
+                   <li><span className='text-sm'>Trowels</span></li>
+                   <li><span className='text-sm'>Screeds</span></li>                   
+                 </ul> 
+                 </div>
+                 
+              </div>             
+            </div>
+
+            <div className='flex flex-col lg:w-1/2 bg-Secondary-2/10 p-4 rounded-2xl '>
+              <div className='lg:p-2'> 
+                <p className='text-xl text-left font-bold'>2. Hand Tools</p>
+                
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                   <li><span className='text-sm'>Hammers and Mallets</span></li>
+                   <li><span className='text-sm'>Wrenches and Screwdrivers</span></li>
+                   <li><span className='text-sm'>Measuring Tools</span></li>
+                   <li><span className='text-sm'>Cutting Tools</span></li>                   
+                 </ul> 
+                 </div>
+                 
+              </div>             
+            </div>
+
+            <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
+              <div className='lg:p-2'> 
+                <p className='text-xl text-left font-bold'>3. Masonry Equipment</p>
+                
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                   <li><span className='text-sm'>Brick Laying Tools</span></li>
+                   <li><span className='text-sm'>Mortar Mixers</span></li>
+                   <li><span className='text-sm'>Plastering Tools</span></li>
+                   <li><span className='text-sm'>Scaffolding Systems</span></li>                   
+                 </ul> 
+                 </div>
+                 
+              </div>             
+            </div>
+
+            <div className='flex flex-col lg:w-1/2 bg-Secondary-2/10 p-4 rounded-2xl '>
+              <div className='lg:p-2'> 
+                <p className='text-xl text-left font-bold'>4. Ceiling Work Tools and Equipment</p>
+                
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                   <li><span className='text-sm'>Suspension Systems</span></li>
+                   <li><span className='text-sm'>Drywall Tools</span></li>
+                   <li><span className='text-sm'>Lifting Equipment</span></li>
+                   <li><span className='text-sm'>Sanding Tools</span></li>                   
+                 </ul> 
+                 </div>
+                 
+              </div>             
+            </div>
+
+            <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
+              <div className='lg:p-2'> 
+                <p className='text-xl text-left font-bold'>5. Electrical Tools and Equipment</p>
+                
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                   <li><span className='text-sm'>Cabling Tools</span></li>
+                   <li><span className='text-sm'>Power Drills and Drivers</span></li>
+                   <li><span className='text-sm'>Testing Devices</span></li>
+                   <li><span className='text-sm'>Lighting Solutions</span></li>                   
+                 </ul> 
+                 </div>
+                 
+              </div>             
+            </div>
+             
+
+
+            
+
+
           </div>
 
           <div className='flex lg:flex-row flex-col gap-8 '>
-            <div className='flex flex-col lg:w-1/2 bg-gray-100 p-8 rounded-2xl '>
-              <div className='lg:p-8'> 
-                <p className='text-xl md:text-left text-center font-bold'>Upstream Copper Raw Materials</p>
-                <p className='text-lg py-2'>We source and trade:</p>
-                <div className='p-4 bg-white rounded-2xl'>
-                 <ul className='list-disc p-2 mx-2 ' >             
-                   <li ><span className='font-bold py-2 '>Copper Ores: </span> <span className='text-sm'>Mined from top locations like Africa and processed into concentrates.</span></li>
-                   <li><span className='font-bold py-2'>Copper Concentrates: </span> <span className='text-sm'>Graded at 15-35% copper content for smelting and refining. </span></li>
-                   <li ><span className='font-bold py-2'>Copper Blister: </span> <span className='text-sm'>Produced at 90-95% purity for manufacturing copper anodes.</span></li>
-                   <li><span className='font-bold py-2'>Copper Cathodes: </span> <span className='text-sm'>Electrolytic copper (99.99% pure) traded globally</span></li>
+            
+            <div className='flex flex-col lg:w-1/2  bg-Secondary-2/10  p-4 rounded-2xl '>
+              <div className='lg:p-2'> 
+                <p className='text-xl text-left font-bold py-3'>6. Flooring Products</p>
+                <hr></hr>
+                   <br />
+                
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                   <li><span className='font-bold '>Tiles: </span><span className='text-sm'>Ceramic, porcelain, and vinyl tiles.</span></li>
+                   <br />
+                   <hr></hr>
+                   <br />
+                   <li><span className='font-bold'>Adhesives and Grouts: </span><span className='text-sm'>High-strength bonding materials.</span></li>
+                   <br />
+                   <hr></hr>
+                   <br />
+                  <li><span className='font-bold'>Floor Preparation Tools: </span><span className='text-sm'>Levelers and underlayment solutions.</span></li>
+                                  
                  </ul> 
                  </div>
-              </div>
-            
-              <div className='p-4 m-2 '>
-               <Image src="/images/upstream.avif" width={600} height={600} alt="copper"/>
-
-              </div>
+                 
+              </div>             
             </div>
 
-
-            <div className='flex flex-col lg:w-1/2 bg-gray-100 p-8 rounded-2xl '>
-              <div className='lg:p-8'> 
-                <p className='text-xl md:text-left text-center font-bold'>Downstream Copper Products</p>
-                <p className='text-lg py-2'>Our partnerships extend to manufacturers and distributors of:</p>
-                <div className='p-4 bg-white rounded-2xl'>
-                 <ul className='list-disc p-2 mx-2' >             
-                   <li><span className='font-bold py-2'>Copper Rods:  </span> <span className='text-sm'>Electrolytic Tough Pitch (ETP) and Oxygen-Free Copper (OFC) rods in various sizes for electrical and industrial applications.</span></li>
-                   <li><span className='font-bold py-2'>Copper Wires: </span> <span className='text-sm'>From fine domestic wires to heavy-duty armoured cables.</span></li>
-                   <li><span className='font-bold py-2'>Copper Extrusions:  </span> <span className='text-sm'>Including busbars, strips, and profiles for transformers, switchgears, and other electrical systems.</span></li>
-                   <li><span className='font-bold py-2'>Ultra-High Purity Copper:  </span> <span className='text-sm'>6N copper (99.9999%) for critical applications in semiconductors, solar cells, and medical devices.</span></li>
+            <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
+              <div className='lg:p-2'> 
+                <p className='text-xl text-left font-bold py-3'>7. Sanitary Products</p>
+                <hr></hr>
+                   <br />
+                
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                 
+                 
+                   
+                <li><span className='font-bold'>Fixtures: </span><span className='text-sm'>Wash basins, toilets, and urinals.</span></li>
+                <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Faucets and Shower Systems: </span><span className='text-sm'>Durable and stylish options.</span></li>  
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Plumbing Accessories: </span><span className='text-sm'>Pipes, fittings, and traps.</span></li>               
                  </ul> 
                  </div>
-              </div>
-            
-              <div className='p-4 m-2 '>
-               <Image src="/images/upstream.jpg" width={800} height={800} alt="copper"/>
-
-              </div>
+                 
+              </div>             
             </div>
+
+            <div className='flex flex-col lg:w-1/2 bg-Secondary-2/10 p-4 rounded-2xl '>
+              <div className='lg:p-2'> 
+                <p className='text-xl text-left font-bold py-3'>8. Finishing and Décor Products</p>
+                
+                   <hr></hr>
+                   <br />
+                
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                 <li><span className='font-bold'>Paints and Coatings: </span><span className='text-sm'>Interior and exterior finishes.</span></li>
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Wall Panels: </span><span className='text-sm'>Decorative and acoustic panels.</span></li>
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Moldings and Trims: </span><span className='text-sm'>Stylish additions for any décor.</span></li>
+                                    
+                 </ul> 
+                 </div>
+                 
+              </div>             
+            </div>
+
+            <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
+              <div className='lg:p-2'> 
+                <p className='text-xl text-left font-bold py-3'>9. Plumbing Products</p>
+                <hr></hr>
+                   <br />
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                 <li><span className='font-bold'>Pipes and Fittings: </span><span className='text-sm'>High-quality PVC, CPVC, and PPR pipes.</span></li>
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Valves: </span><span className='text-sm'>Ball valves, gate valves, and check valves.</span></li>
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Water Heaters:  </span><span className='text-sm'>Energy-efficient heaters for residential and commercial use.</span></li>
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Pumps:  </span><span className='text-sm'>Submersible and pressure booster pumps.</span></li>
+                                    
+                 </ul> 
+                 </div>
+                 
+              </div>             
+            </div>
+
+            <div className='flex flex-col lg:w-1/2 bg-Secondary-2/10 p-4 rounded-2xl '>
+              <div className='lg:p-2'> 
+                <p className='text-xl text-left font-bold py-3'>10. HVAC Products</p>
+                <hr></hr>
+                   <br />
+                <div >
+                 <ul className='list-disc p-2 mx-2'>             
+                 <li><span className='font-bold'>Air Conditioning Systems:  </span><span className='text-sm'>Split, central, and ducted units.</span></li>
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Ventilation Solutions:   </span><span className='text-sm'>Fans, exhaust systems, and ducts.</span></li>
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Insulation Materials:   </span><span className='text-sm'>Thermal and acoustic insulation for HVAC systems.</span></li>
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Thermostats and Controls:   </span><span className='text-sm'>Advanced controls for efficient climate management.</span></li>
+                 
+                 </ul> 
+                 </div>
+                 
+              </div>             
+            </div>
+             
+
+
+            
 
 
           </div>
@@ -154,15 +322,29 @@ const page = () => {
       </div>
       
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>        
+      <div className='lg:mx-20 lg:my-40 m-8 flex flex-col sm:flex-row md:gap-2 rounded-xl '>        
 
-        <div className='p-4 m-2 md:w-1/2'>
-         <Image src="/images/resize-sorting-metal.png" width={961} height={761} alt="copper"/>
-        </div>
+        
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-          <h2 className='text-5xl font-bold md:text-left text-center'>Recycling Copper for a Sustainable Future</h2>
-          <p className='md:text-left text-center'>Zencorp is committed to environmental stewardship. We recover and recycle end-of-life copper products and factory waste, contributing to a circular economy. With the infrastructure to handle large volumes, we aim to recover 20% of copper raw materials that would otherwise end up in landfills.</p>
+          <h2 className='text-5xl font-bold md:text-left text-center'>Prominent Brands We Supply</h2>
+          <p className='md:text-left text-center'>Zencorp partners with globally trusted and renowned brands to deliver exceptional quality and reliability:</p>
+        </div>
+
+        <div className='flex flex-col gap-4'>
+
+        <div className='flex flex-row gap-2'>
+          <div className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div>  <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/> </div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div>
+        </div>
+
+        <div className='flex flex-row gap-2'>
+          <div className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div>
+        </div>
+
+        <div className='flex flex-row gap-2'>
+          <div className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div>
+        </div>
+
         </div>
 
         
@@ -176,10 +358,10 @@ const page = () => {
           <p className='md:text-left text-center'>Zencorp supplies copper products to a wide range of sectors, including:</p>
           <div className='p-4 bg-white rounded-2xl'>
                  <ul className='list-disc p-2 mx-2' >             
-                   <li><span className='font-bold py-2'>Power Systems & Utilities:   </span> <span className='text-sm'>Serving giants like ABB, Siemens, and GE.</span></li>
-                   <li><span className='font-bold py-2'>Electric Vehicles: </span> <span className='text-sm'>Supporting EV innovation with advanced materials.</span></li>
-                   <li><span className='font-bold py-2'>Semiconductors and Electronics:  </span> <span className='text-sm'>Delivering ultra-high purity copper for precision applications.</span></li>
-                   <li><span className='font-bold py-2'>Construction:  </span> <span className='text-sm'>Providing durable copper solutions for wiring and infrastructure.</span></li>
+                   <li><span className='font-bold py-2'>Residential Construction:   </span> <span className='text-sm'>For durable and elegant homes.</span></li>
+                   <li><span className='font-bold py-2'>Commercial Projects: </span> <span className='text-sm'>Reliable tools for complex needs.</span></li>
+                   <li><span className='font-bold py-2'>Industrial Development:  </span> <span className='text-sm'>Advanced equipment for large-scale projects.</span></li>
+                   <li><span className='font-bold py-2'>Infrastructure Projects:  </span> <span className='text-sm'>Specialized tools for roads, bridges, and public works.</span></li>
                  </ul> 
                  </div>
         </div>     
@@ -198,13 +380,8 @@ const page = () => {
         </div>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-        <h2 className='text-5xl md:text-left text-center font-bold'>Why Choose Zencorp?</h2>
-        <ul className='list-disc'>
-        <li><p>Global Reach: Operations spanning MENA, Asia, Europe, and Africa.</p> </li>
-        <li><p>Sustainability Focus: Prioritizing recycling and eco-friendly practices.</p></li>
-        <li><p>Quality Assurance: Compliance with international standards for long-term partnerships. </p></li>
-        <li><p>Customer-Centric Approach: Tailored solutions to meet your specific needs. </p></li>
-        </ul>
+        <h2 className='text-5xl md:text-left text-center font-bold'>Our Commitment to Excellence</h2>
+        <p>Zencorp delivers innovation and sustainability to simplify construction processes, transforming the industry into a more efficient and eco-friendly space.</p>
         </div>
 
         
@@ -215,19 +392,7 @@ const page = () => {
          <Image src="/images/african-women-laptop1.jpg" width={1600} height={300} alt="copper"/>
         </div>  
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>
-
-        <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-          <h2 className='text-5xl font-bold md:text-left text-center'>Join the Copper Revolution</h2>
-          <p className='md:text-left text-center '>Whether you&#8217;re in need of raw materials, finished products, or recycling solutions, Zencorp is your gateway to the complete copper ecosystem. Let&#8217;s shape a brighter, more sustainable future together.</p>
-        </div>     
-
-        <div className='p-4 m-2 md:w-1/2'>
-         <Image src="/images/father-carry.jpg" width={961} height={761} alt="copper"/>
-        </div>  
-        
       
-      </div>
       <div className='flex justify-center'>
       {/**<button type='button' className='px-8 py-4 m-2 bg-Primary-1/70 rounded-md text-center text-Primary-1/10 hover:bg-Secondary-2/70'>Learn More</button> */}
       </div>
