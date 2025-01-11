@@ -125,7 +125,7 @@ const page = () => {
       </div>
 
       <div className=" rounded-2xl min-v-screen bg-cover bg-center bg-no-repeat rounded-bl-[100px]"
-        style={{ backgroundImage: `url("${dynamicImage}")` }}>
+        style={{ backgroundImage: `url("${dynamicImage1}")` }}>
           
         <div className='py-12 lg:p-32 px-6 p-20 backdrop-blur-xl bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black rounded-bl-[100px]'>
 
