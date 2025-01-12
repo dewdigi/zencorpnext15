@@ -24,7 +24,7 @@ const page = () => {
             <p className="text-xl leading-24 my-4 font-normal text-center lg:text-left">
             Elevate Hospitality Excellence
             </p>
-            <p className='lg:mr-80 lg:text-left text-center'>Welcome to Zencorp Trading's Hospitality Supplies, your one-stop destination for premium-quality products designed to elevate guest experiences and streamline operations in the hospitality industry. Whether you're managing a luxury hotel, an intimate boutique resort, or a bustling restaurant, our curated collection of hospitality supplies ensures your establishment meets the highest standards of comfort, efficiency, and elegance.</p>
+            <p className='lg:mr-80 lg:text-left text-center'>Welcome to Zencorp Trading&apos;s Hospitality Supplies, your one-stop destination for premium-quality products designed to elevate guest experiences and streamline operations in the hospitality industry. Whether you&apos;re managing a luxury hotel, an intimate boutique resort, or a bustling restaurant, our curated collection of hospitality supplies ensures your establishment meets the highest standards of comfort, efficiency, and elegance.</p>
             <br></br>
             <button className=" bg-emerald-500 sm:w-3/12 lg:w-auto w-1/2 hover:bg-Secondary-2/70 hover:drop-shadow-xl p-4 rounded-md">
               CONTACT US
@@ -103,7 +103,7 @@ const page = () => {
                    <br />
                    <hr></hr>
                    <br />
-                  <li><span className='font-bold'>Decor & Furnishings: </span><span className='text-sm'>Curtains, cushions, and elegant furniture that enhance your room's ambiance.</span></li>
+                  <li><span className='font-bold'>Decor & Furnishings: </span><span className='text-sm'>Curtains, cushions, and elegant furniture that enhance your room&apos;s ambiance.</span></li>
                                   
                  </ul> 
                  </div>
@@ -114,7 +114,7 @@ const page = () => {
             <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
                 <p className='text-xl text-left font-bold py-3'>2. Food & Beverage Supplies</p>
-                <p>Equip your dining areas and kitchens with premium products that cater to your guests' culinary experiences:</p>
+                <p>Equip your dining areas and kitchens with premium products that cater to your guests&apos; culinary experiences:</p>
                 <hr></hr>
                    <br />
                 

@@ -24,7 +24,7 @@ const page = () => {
             <p className="text-xl leading-24 my-4 font-normal text-center lg:text-left">
             High-Quality Consumer Goods Delivered with Excellence and Efficiency
             </p>
-            <p className=' lg:text-left text-center'>Welcome to Zencorp Trading's FMCG Division, your trusted partner for sourcing high-quality, fast-moving consumer goods. From essential daily items to premium packaged goods, we offer a wide range of FMCG products tailored to meet the needs of retailers, wholesalers, and distributors. With an emphasis on quality, affordability, and timely delivery, we ensure your business stays competitive and your customers stay satisfied.</p>
+            <p className=' lg:text-left text-center'>Welcome to Zencorp Trading&apos;s FMCG Division, your trusted partner for sourcing high-quality, fast-moving consumer goods. From essential daily items to premium packaged goods, we offer a wide range of FMCG products tailored to meet the needs of retailers, wholesalers, and distributors. With an emphasis on quality, affordability, and timely delivery, we ensure your business stays competitive and your customers stay satisfied.</p>
             <br></br>
             <button className=" bg-emerald-500 sm:w-3/12 lg:w-auto w-1/2 hover:bg-Secondary-2/70 hover:drop-shadow-xl p-4 rounded-md">
               CONTACT US
@@ -123,7 +123,7 @@ const page = () => {
             <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
                 <p className='text-xl text-left font-bold py-3'>2. Personal Care Products</p>
-                <p>Enhance your customers' daily routines with premium personal care items:</p>
+                <p>Enhance your customers&apos; daily routines with premium personal care items:</p>
                 <hr></hr>
                    <br />
                 
