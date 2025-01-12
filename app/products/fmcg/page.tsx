@@ -166,12 +166,16 @@ const page = () => {
                  <br />
                    <hr></hr>
                    <br />
-                 <li><span className='font-bold'>Cleaning Products: </span><span className='text-sm'>Environmentally friendly detergents and sanitizers.</span></li>
+                 <li><span className='font-bold'>Paper Products: </span><span className='text-sm'>Tissue rolls, paper towels, and napkins.</span></li>
                  <br />
                    <hr></hr>
                    <br />
-                 <li><span className='font-bold'>Waste Management: </span><span className='text-sm'>Trash bins and recycling solutions.</span></li>
-                                    
+                 <li><span className='font-bold'>Air Fresheners: </span><span className='text-sm'>Sprays, plug-ins, and candles for fresh environments.</span></li>
+
+                 <br />
+                   <hr></hr>
+                   <br />
+                 <li><span className='font-bold'>Kitchen Supplies: </span><span className='text-sm'>Aluminum foil, cling film, and storage bags.</span></li>
                  </ul> 
                  </div>
                  
@@ -180,26 +184,24 @@ const page = () => {
 
             <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
-                <p className='text-xl text-left font-bold py-3'>4. Front Desk & Lobby Supplies</p>
-                <p>Ensure seamless guest interactions with high-quality reception essentials:</p>
+                <p className='text-xl text-left font-bold py-3'>4. Baby & Child Care</p>
+                <p>Provide families with safe and reliable products for their little ones:</p>
                 <hr></hr>
                    <br />
                 <div >
                  <ul className='list-disc p-2 mx-2'>             
-                 <li><span className='font-bold'>Signage & Displays: </span><span className='text-sm'>Clear and professional signs, menus, and digital displays.</span></li>
+                 <li><span className='font-bold'>Baby Food: </span><span className='text-sm'>Formula, purees, and snacks.</span></li>
                  <br />
                    <hr></hr>
                    <br />
-                 <li><span className='font-bold'>Stationery: </span><span className='text-sm'>Custom-branded pens, notepads, and brochures.</span></li>
+                 <li><span className='font-bold'>Baby Care Products: </span><span className='text-sm'>Diapers, wipes, powders, and lotions.</span></li>
                  <br />
                    <hr></hr>
                    <br />
-                 <li><span className='font-bold'>Waiting Area Furnishings:  </span><span className='text-sm'>Comfortable seating, decorative plants, and lighting solutions.</span></li>
+                 <li><span className='font-bold'>Toys & Accessories:  </span><span className='text-sm'>Safe, educational, and engaging toys.</span></li>
                  <br />
                    <hr></hr>
                    <br />
-                 
-                                    
                  </ul> 
                  </div>
                  
@@ -208,33 +210,28 @@ const page = () => {
 
             <div className='flex flex-col lg:w-1/2 bg-Secondary-2/10 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
-                <p className='text-xl text-left font-bold py-3'>5. Uniforms & Staff Supplies</p>
-                <p>Present a cohesive and professional image with our range of staff attire:</p>
+                <p className='text-xl text-left font-bold py-3'>5. Health & Wellness</p>
+                <p>Support healthy lifestyles with our range of wellness products:</p>
                 <hr></hr>
                    <br />
                 <div >
                  <ul className='list-disc p-2 mx-2'>             
-                 <li><span className='font-bold'>Uniforms:  </span><span className='text-sm'>Stylish and functional uniforms for housekeeping, kitchen, and front office staff.</span></li>
+                 <li><span className='font-bold'>Vitamins & Supplements: </span><span className='text-sm'>Essential nutrients for all age groups.</span></li>
                  <br />
                    <hr></hr>
                    <br />
-                 <li><span className='font-bold'>Name Badges:   </span><span className='text-sm'>Personalized name tags for clear identification.</span></li>
+                 <li><span className='font-bold'>Health Drinks: </span><span className='text-sm'>Energy drinks, protein powders, and herbal teas.</span></li>
                  <br />
                    <hr></hr>
                    <br />
-                 <li><span className='font-bold'>Shoes & Accessories:   </span><span className='text-sm'>Comfortable and durable options for long shifts.</span></li>
+                 <li><span className='font-bold'>Over-the-Counter Products: </span><span className='text-sm'>Pain relievers, antiseptics, and first-aid supplies.</span></li>
                 
-                 </ul> 
+                 </ul>
                  </div>
                  
               </div>             
             </div>
-            </div>
-             
-
-
-            
-
+            </div>        
           </div>
           </div>
         </div>
@@ -245,32 +242,21 @@ const page = () => {
       </div>
       
 
-      <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>        
-
-        <div className='p-4 m-2 md:w-1/2'>
-         <Image src="/images/resize-sorting-metal.png" width={961} height={761} alt="copper"/>
-        </div>
-
-        <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-          <h2 className='text-5xl font-bold md:text-left text-center'>Recycling Copper for a Sustainable Future</h2>
-          <p className='md:text-left text-center'>Zencorp is committed to environmental stewardship. We recover and recycle end-of-life copper products and factory waste, contributing to a circular economy. With the infrastructure to handle large volumes, we aim to recover 20% of copper raw materials that would otherwise end up in landfills.</p>
-        </div>
-
-        
-      </div>
+      
 
       <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white rounded-2xl '>   
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center dark:text-gray-800'>
           <h2 className='text-5xl font-bold md:text-left text-center'>Industries We Serve</h2>
           
-          <p className='md:text-left text-center'>Zencorp supplies copper products to a wide range of sectors, including:</p>
+          <p className='md:text-left text-center'>Our FMCG products cater to a wide range of businesses, including:</p>
           <div className='p-4 bg-white rounded-2xl'>
-                 <ul className='list-disc p-2 mx-2' >             
-                   <li><span className='font-bold py-2'>Power Systems & Utilities:   </span> <span className='text-sm'>Serving giants like ABB, Siemens, and GE.</span></li>
-                   <li><span className='font-bold py-2'>Electric Vehicles: </span> <span className='text-sm'>Supporting EV innovation with advanced materials.</span></li>
-                   <li><span className='font-bold py-2'>Semiconductors and Electronics:  </span> <span className='text-sm'>Delivering ultra-high purity copper for precision applications.</span></li>
-                   <li><span className='font-bold py-2'>Construction:  </span> <span className='text-sm'>Providing durable copper solutions for wiring and infrastructure.</span></li>
+                 <ul className='list-disc p-2 mx-2'>
+                   <li><span className='font-bold py-2'>Supermarkets and Hypermarkets  </span> </li>
+                   <li><span className='font-bold py-2'>Convenience Stores </span></li>
+                   <li><span className='font-bold py-2'>Wholesalers and Distributors  </span> </li>
+                   <li><span className='font-bold py-2'>Online Retailers  </span> </li>
+                   <li><span className='font-bold py-2'>Cafés and Restaurants  </span> </li>
                  </ul> 
                  </div>
         </div>     
@@ -289,13 +275,8 @@ const page = () => {
         </div>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-        <h2 className='text-5xl md:text-left text-center font-bold'>Why Choose Zencorp?</h2>
-        <ul className='list-disc'>
-        <li><p>Global Reach: Operations spanning MENA, Asia, Europe, and Africa.</p> </li>
-        <li><p>Sustainability Focus: Prioritizing recycling and eco-friendly practices.</p></li>
-        <li><p>Quality Assurance: Compliance with international standards for long-term partnerships. </p></li>
-        <li><p>Customer-Centric Approach: Tailored solutions to meet your specific needs. </p></li>
-        </ul>
+        <h2 className='text-5xl md:text-left text-center font-bold'>Why FMCG Matters to Your Business</h2>
+        <p>Fast-moving consumer goods are essential for daily life and play a vital role in driving consumer loyalty and satisfaction. With Zencorp Trading as your FMCG partner, you gain access to a steady supply of products that match evolving market demands, ensuring your business stays ahead of the competition.</p>
         </div>
 
         
@@ -309,8 +290,9 @@ const page = () => {
       <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl '>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
-          <h2 className='text-5xl font-bold md:text-left text-center'>Join the Copper Revolution</h2>
-          <p className='md:text-left text-center '>Whether you&#8217;re in need of raw materials, finished products, or recycling solutions, Zencorp is your gateway to the complete copper ecosystem. Let&#8217;s shape a brighter, more sustainable future together.</p>
+          <h2 className='text-5xl font-bold md:text-left text-center'>Partner With Us</h2>
+          <p className='md:text-left text-center '>At Zencorp Trading, we understand the dynamic nature of the FMCG market. We work closely with you to understand your specific requirements and deliver solutions that add value to your business.</p>
+          <p className='md:text-left text-center '> Whether you&#41;re looking to expand your product range or optimize your supply chain, Zencorp Trading is here to help. Let us be your partner in growth and success.</p>
         </div>     
 
         <div className='p-4 m-2 md:w-1/2'>
@@ -322,11 +304,7 @@ const page = () => {
       <div className='flex justify-center'>
       {/**<button type='button' className='px-8 py-4 m-2 bg-Primary-1/70 rounded-md text-center text-Primary-1/10 hover:bg-Secondary-2/70'>Learn More</button> */}
       </div>
-
       
-
-
-
     <Footer/>
     </div>
   )
