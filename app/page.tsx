@@ -50,7 +50,7 @@ const Page = () => {
         return (
           
           <div><div className="p-4 flex flex-col bg-gray-100 rounded-xl items-center sm:flex-row mx-4 gap-14">
-          <div className="flex flex-col gap-8 p-8 bg-white h-96 rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
+          <div className="flex flex-col gap-8 p-8 bg-white lg:h-96 rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
             <h3 className="text-left text-2xl font-bold">Transforming Healthcare Access Across Africa
             </h3>
             <p className="text-left text-sm text-[#A3A3A3]">
@@ -73,7 +73,7 @@ const Page = () => {
         case "food":
         return (
           <div className="p-4 flex flex-col bg-gray-100 rounded-xl items-center sm:flex-row  mx-4 gap-14">
-            <div className="flex flex-col gap-8 p-8 h-96 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
+            <div className="flex flex-col gap-8 p-8 lg:h-96 bg-white rounded-xl justify-center drop-shadow-2xl sm:w-1/2">
                 <h3 className="text-left text-2xl font-bold">Committed to Building a Food-Secure Future for Africa
                 </h3>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Footer from '@/app/components/Footer';
-import Navbarwhite from '@/app/components/Navbarwhite';
+import Navbar from '@/app/components/Navbar';
 const dynamicImage = "/images/building_materials.jpg";
 
 import Image from 'next/image';
@@ -13,7 +13,7 @@ const page = () => {
         className="min-v-screen bg-cover  bg-center bg-no-repeat rounded-bl-[100px]"
         style={{ backgroundImage: `url("${dynamicImage}")` }}
       >
-        <Navbarwhite />
+        <Navbar />
         <div className='backdrop-blur-sm bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black rounded-bl-[100px]'>
           
           <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start py-32 my-0 lg:m-24 lg:my-0 lg:py-60 p-6 lg:pb-28 text-white gap-22">

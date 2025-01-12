@@ -1,3 +1,6 @@
+"use client";
+
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -65,19 +68,20 @@ return (
                         <p className='lg:mx-2 text-xs text-center lg:text-left'>Mezanine Floor, Al Garhoud,</p>
                         <p className='lg:mx-2 text-xs text-center lg:text-left'>Airport Road, Dubai, UAE.</p>
                         <p className='lg:mx-2 my-2 text-xs text-center lg:text-left'><span className='font-bold'>TRN:</span> 100315782100003 </p>
-                        <button type="button" className="px-5 py-2.5 my-4 text-sm  font-medium text-white flex items-center bg-Secondary-2/70 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        
+            <button type="button" className="px-5 py-2.5 my-4 text-sm  font-medium text-white flex items-center bg-Secondary-2/70 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-Secondary-2/70 dark:hover:bg-Primary-1/70 dark:focus:ring-blue-800" onClick={() => window.location.href = 'tel:+971564466924'}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-telephone" viewBox="0 0 16 16">
                     <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
                     </svg> &nbsp;
-                    +971 5644 66924 
-                </button>
-                <button type="button" className="px-5 py-2.5 text-sm  font-medium text-white inline-flex items-center bg-Secondary-2/70 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    +971 5644 66924
+            </button>
+            <button type="button" className="px-5 py-2.5 text-sm  font-medium text-white inline-flex items-center bg-Secondary-2/70 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-Secondary-2/70 dark:hover:bg-Primary-1/70 dark:focus:ring-blue-800" onClick={() => window.location.href = 'mailto:example@example.com?subject=Inquiry&body=Hello, I would like to know more about...'}>
                     <svg className="w-3.5 h-3.5 text-white me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
                     <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
                     <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
                     </svg> &nbsp;
                     info@zencorp.ae
-                </button>  
+            </button>  
 
             </div>
         </div>
