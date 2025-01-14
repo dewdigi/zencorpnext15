@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Footer from '@/app/components/Footer';
-import Navbarwhite from '@/app/components/Navbarwhite';
+import Navbar from '@/app/components/Navbar';
 const dynamicImage = "/images/gold_coins.jpg";
 
 import Image from 'next/image';

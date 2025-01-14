@@ -68,7 +68,7 @@ const page = () => {
 
           <div className='flex lg:w-1/2 p-8 items-center rounded-2xl'>
           <Image
-                src="/images/copper-products.jpg"
+                src="/images/building_materials.jpg"
                 width={600}
                 height={600}
                 alt="copper image"
@@ -334,10 +334,9 @@ const page = () => {
         <div className='flex flex-col gap-4 lg:w-1/2'>
 
         <div className='flex flex-row gap-2 flex-wrap items-center justify-center '>
-          <div className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div>  <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/> </div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div>
-          <div className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div>
-          <div className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div>
-
+          <div className='bg-white p-2'> <Image src='/images/bosch.png' width={100} height={100} alt='bosch'/></div>  <div  className='bg-white p-2'> <Image src='/images/makita.png' width={100} height={100} alt='Makita'/> </div> <div  className='bg-white p-2'><Image src='/images/stanley.svg' width={100} height={100} alt='Stanley'/></div> <div  className='bg-white  p-2'> <Image src='/images/DeWalt_Logo1.svg' width={100} height={100} alt='DeWalt'/></div> <div  className='bg-white p-2'> <Image src='/images/Husqvarna1.jpg' width={100} height={100} alt='Husqvarna'/></div>
+          <div className='bg-white p-2'> <Image src='/images/HILTI-3.png' width={100} height={100} alt='Hilti'/></div>  <div  className='bg-white p-2'> <Image src='/images/fluke.jpg' width={100} height={100} alt='Fluke'/> </div> <div  className='bg-white p-2'><Image src='/images/kleintools.jpg' width={100} height={100} alt='Klein Tools'/></div> <div  className='bg-white  p-2'> <Image src='/images/Milwaukee_Logo.svg' width={100} height={100} alt='Milwaukee'/></div> <div  className='bg-white p-2'> <Image src='/images/Greenlee_logo.svg' width={100} height={100} alt='Greenlee'/></div>
+          <div className='bg-white p-2'> <Image src='/images/armstrong.avif' width={100} height={100} alt='Armstrong'/></div>  <div  className='bg-white p-2'> <Image src='/images/wacker-neuson.svg' width={100} height={100} alt='Wacker Neuson'/> </div> <div  className='bg-white p-2'><Image src='/images/marshalltown-primary.png' width={100} height={100} alt='Marshalltown'/></div> <div  className='bg-white  p-2'> <Image src='/images/PERI_Logo_2021.svg' width={100} height={100} alt='PERI'/></div> <div  className='bg-white p-2'> <Image src='/images/Layher_Logo.svg' width={100} height={100} alt='Layher'/></div>
         </div>        
 
         </div>
@@ -362,7 +361,7 @@ const page = () => {
         </div>     
 
         <div className='p-4 m-2 md:w-1/2 flex items-center justify-center'>
-         <Image src="/images/ev-car.jpg" width={961} height={761} alt="copper"/>
+         <Image src="/images/zencorp-Construction.png" width={961} height={761} alt="copper"/>
         </div>    
 
         

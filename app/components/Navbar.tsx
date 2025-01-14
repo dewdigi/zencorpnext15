@@ -170,13 +170,13 @@ const Navbar = () => {
         <div className="absolute top-full right-0 w-3/4 bg-emerald-50 text-slate-600 m-2 rounded-xl shadow-lg z-10 lg:hidden">
           <Link
             href="/#"
-            className="block p-4 hover:text-emerald-500 hover:bg-Primary-1/70 rounded-sm"
+            className="block p-4 hover:text-slate-600 hover:bg-Primary-1/70 rounded-sm"
           >
             HOME
           </Link>
           <Link
             href="/about"
-            className="block p-4 hover:text-emerald-500 hover:bg-Primary-1/70 rounded-sm"
+            className="block p-4 hover:text-slate-600 hover:bg-Primary-1/70 rounded-sm"
           >
             ABOUT
           </Link>
@@ -184,7 +184,7 @@ const Navbar = () => {
             {/* Products Submenu */}
             <button
               onClick={toggleSubMenu}
-              className="block w-full text-left p-4 hover:text-emerald-500 hover:bg-Primary-1/70 rounded-sm"
+              className="block w-full text-left p-4 hover:text-slate-600 hover:bg-Primary-1/70 rounded-sm"
             >
               PRODUCTS
               <svg
@@ -220,7 +220,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/products/building"
-                  className="block px-4 py-2 hover:text-emerald-500"
+                  className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
                 >
                   Building Materials
                 </Link>

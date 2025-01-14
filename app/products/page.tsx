@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Footer from '@/app/components/Footer';
-import Navbarwhite from '@/app/components/Navbarwhite';
+import Navbar from '@/app/components/Navbar';
 const dynamicImage = "/images/Copper-Heading-Page.png";
 
 import Image from 'next/image';
@@ -14,7 +14,7 @@ const page = () => {
         style={{ backgroundImage: `url("${dynamicImage}")` }}
       >
         <div>
-          <Navbarwhite />
+          <Navbar />
           <div className="flex flex-col justify-center my-32 sm:m-32 p-10 text-white gap-22">
             <h1 className="text-5xl md:text-6xl leading-36 my-4 text-center sm:text-left">
               Copper <b>Solutions</b> <br />

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Footer from '@/app/components/Footer';
-import Navbarwhite from '@/app/components/Navbarwhite';
+import Navbar from '@/app/components/Navbar';
 const dynamicImage = "/images/hospitality_services.jpg";
 
 import Image from 'next/image';
@@ -13,10 +13,10 @@ const page = () => {
         className="min-v-screen bg-cover bg-center bg-no-repeat rounded-bl-[100px]"
         style={{ backgroundImage: `url("${dynamicImage}")` }}
       >
-        <Navbarwhite />
+        <Navbar />
         <div className='backdrop-blur-sm bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black rounded-bl-[100px]'>
           
-          <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start my-32 lg:m-24 lg:my-0 lg:py-60 p-6 lg:pb-28 text-white gap-22">
+          <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start py-32 lg:m-24 lg:my-0 lg:py-60 p-6 lg:pb-28 text-white gap-22">
             <h1 className="text-5xl md:text-6xl leading-36 my-4 text-center sm:text-left">
               Hospitality<b> Supplies</b> <br />
               
@@ -81,20 +81,19 @@ const page = () => {
             
           </div>
 
-          <div className='flex lg:flex-row flex-col gap-8 leading-6 '>
+          <div className='flex lg:flex-row flex-row flex-wrap gap-8 leading-6 '>
             
             
-          <div className='flex lg:flex-col flex-col gap-10 '>
-            <div className='flex lg:flex-row gap-8 '>
+          
             <div className='flex flex-col lg:w-1/2  bg-Secondary-2/10  p-4 rounded-2xl '>
-              <div className='lg:p-2'> 
-                <p className='text-xl text-left font-bold py-3'>1. Guest Room Essentials</p>
-                <p>Create a sanctuary of comfort for your guests with our thoughtfully designed room supplies: </p>
-                <hr></hr>
+                <div className='lg:p-2'> 
+                  <p className='text-xl text-left font-bold py-3'>1. Guest Room Essentials</p>
+                  <p>Create a sanctuary of comfort for your guests with our thoughtfully designed room supplies: </p>
+                  <hr></hr>
                    <br />
                 
-                <div >
-                 <ul className='list-disc p-2 mx-2'>             
+                  <div >
+                  <ul className='list-disc p-2 mx-2'>             
                    <li><span className='font-bold '>Bedding & Linens: </span><span className='text-sm'>Luxurious sheets, duvets, pillowcases, and mattress protectors.</span></li>
                    <br />
                    <hr></hr>
@@ -108,8 +107,9 @@ const page = () => {
                  </ul> 
                  </div>
                  
-              </div>             
-            </div>
+              </div> 
+              </div>              
+           
 
             <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
@@ -141,8 +141,8 @@ const page = () => {
                  
               </div>             
             </div>
-            </div>
-            <div className='flex lg:flex-row gap-8 '>
+            
+            
             <div className='flex flex-col lg:w-1/2 bg-Secondary-2/10 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
                 <p className='text-xl text-left font-bold py-3'>3. Cleaning & Maintenance Suppliess</p>
@@ -220,13 +220,13 @@ const page = () => {
                  
               </div>             
             </div>
-            </div>
+            
              
 
 
             
 
-          </div>
+          
           </div>
         </div>
 

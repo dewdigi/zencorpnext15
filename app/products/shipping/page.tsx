@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Footer from '@/app/components/Footer';
-import Navbarwhite from '@/app/components/Navbarwhite';
+import Navbar from '@/app/components/Navbar';
 const dynamicImage = "/images/shipping.jpg";
 const dynamicImage1 = "/images/shipping.jpg";
 
@@ -14,10 +14,10 @@ const page = () => {
         className="min-v-screen bg-cover bg-center bg-no-repeat rounded-bl-[100px]"
         style={{ backgroundImage: `url("${dynamicImage}")` }}
       >
-        <Navbarwhite />
+        <Navbar />
         <div className='backdrop-blur-sm bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black rounded-bl-[100px]'>
           
-          <div className="flex flex-col gap-8 lg:justify-start justify-center items-center lg:items-start my-32 lg:m-24 lg:my-0 lg:py-80  p-6 lg:pb-28 text-white gap-22">
+          <div className="flex flex-col gap-8 lg:justify-start justify-center items-center lg:items-start py-32 lg:m-24 lg:my-0 lg:py-80  p-6 lg:pb-28 text-white gap-22">
             <h1 className="text-5xl md:text-6xl leading-36 my-4 text-center sm:text-left">
               <b>Shipping & Logistics Services</b>
             </h1>
@@ -33,7 +33,7 @@ const page = () => {
         
       </div>
 
-      <div className='flex lg:flex-row flex-col lg:m-32 gap-32'>
+      <div className='flex lg:flex-row flex-col lg:m-32 m-12 lg:gap-32'>
               <div className=' lg:w-1/2  p-14 flex flex-col gap-4  p-4 rounded-xl justify-center'>
                 <h2 className='text-5xl font-bold text-Primary-1/70'>Our Mission</h2>
                 <p>Our mission is to enable seamless trade and commerce by providing innovative logistics solutions that enhance connectivity and reduce operational complexity. Through strategic partnerships and cutting-edge technology, we strive to optimize supply chains, ensuring our clients can focus on their core business activities.</p>
@@ -49,10 +49,10 @@ const page = () => {
 
       <div className='flex lg:w-1/2 p-8 items-center rounded-2xl'>
         <Image
-                src="/images/copper-products.jpg"
+                src="/images/warehoue-2.jpg"
                 width={600}
                 height={600}
-                alt="copper image"
+                alt="zencorp warehouse"
               />
         </div>
 
@@ -96,14 +96,14 @@ const page = () => {
         </div>
 
         <div className='lg:my-20 p-4 m-2 md:w-1/2'>
-         <Image src="/images/resize-sorting-metal.png" width={961} height={761} alt="copper"/>
+         <Image src="/images/warehousing.jpg" width={961} height={761} alt="zencorp warehouse"/>
         </div>
       </div>
 
       <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 rounded-xl bg-white rounded-2xl dark:text-gray-700'>  
 
         <div className='p-4 m-2 md:w-1/2 flex items-center justify-center'>
-         <Image src="/images/ev-car.jpg" width={961} height={761} alt="copper"/>
+         <Image src="/images/shipping12.jpg" width={961} height={761} alt="copper"/>
         </div>     
 
         <div className='md:p-20 lg:py-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>
@@ -130,7 +130,7 @@ const page = () => {
           
         <div className='py-12 lg:p-32 px-6 p-20 backdrop-blur-xl bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black rounded-bl-[100px]'>
 
-          <h2 className="text-5xl font-bold text-center mb-6">How We Add Value</h2>
+          <h2 className="text-5xl font-bold text-center mb-6">How We <span className='text-Primary-2'>Add</span> Value</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="flex flex-col items-center py-32 px-12 border border-gray-200 rounded-lg gap-6">
               <h3 className="font-semibold text-xl">Cost Efficiency</h3>
