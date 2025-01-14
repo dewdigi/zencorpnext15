@@ -34,7 +34,7 @@ const page = () => {
         
       </div>
 
-      <div className='flex lg:flex-row flex-col lg:gap-20 lg:m-20 items-center  justify-center'>
+      <div className='flex lg:flex-row flex-col lg:gap-4 lg:m-20 items-center  justify-center flex-wrap'>
           <div className='lg:w-1/2'>
           <div className='flex flex-col gap-8 p-12'>
           <p className='font-normal text-sm text-accent-3/30 '>Products & Services</p>

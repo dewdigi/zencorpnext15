@@ -62,7 +62,7 @@ const page = () => {
 
           <div className='flex lg:w-1/2 p-8 items-center rounded-2xl'>
           <Image
-                src="/images/copper-products.jpg"
+                src="/images/hospitality-6.jpg"
                 width={600}
                 height={600}
                 alt="copper image"
@@ -74,18 +74,18 @@ const page = () => {
           
       </div>
 
-      <div className='md:m-10 m-8 flex flex-col sm:flex-row md:gap-4 bg-Primary-1/10 rounded-[20px] dark:text-gray-800'>
-        <div className='md:p-20 p-4 m-2 gap-8 flex flex-col justify-center'>
-          <div className='flex gap-4 flex-col'>
+      <div className='md:m-10 m-8 flex flex-row sm:flex-row md:gap-4 bg-Primary-1/10 rounded-[20px] dark:text-gray-800'>
+        <div className='md:p-20 p-4 m-2 gap-8 flex lg:flex-row flex-col justify-center'>
+          <div className='flex gap-4 '>
             <h2 className='text-5xl font-bold lg:text-left text-center'>Our Product Portfolio</h2>
             
           </div>
 
-          <div className='flex lg:flex-row flex-row flex-wrap gap-8 leading-6 '>
+          <div className='flex lg:flex-row flex-row flex-wrap  leading-6 '>
             
             
-          
-            <div className='flex flex-col lg:w-1/2  bg-Secondary-2/10  p-4 rounded-2xl '>
+            
+            <div className='flex flex-col lg:w-1/2 my-4 bg-Secondary-2/10  p-4 rounded-2xl '>
                 <div className='lg:p-2'> 
                   <p className='text-xl text-left font-bold py-3'>1. Guest Room Essentials</p>
                   <p>Create a sanctuary of comfort for your guests with our thoughtfully designed room supplies: </p>
@@ -111,7 +111,7 @@ const page = () => {
               </div>              
            
 
-            <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
+            <div className='flex flex-col lg:w-1/2 my-4 bg-Primary-1/20 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
                 <p className='text-xl text-left font-bold py-3'>2. Food & Beverage Supplies</p>
                 <p>Equip your dining areas and kitchens with premium products that cater to your guests&apos; culinary experiences:</p>
@@ -143,7 +143,8 @@ const page = () => {
             </div>
             
             
-            <div className='flex flex-col lg:w-1/2 bg-Secondary-2/10 p-4 rounded-2xl '>
+            
+            <div className='flex flex-col lg:w-1/2 my-4 bg-Secondary-2/10 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
                 <p className='text-xl text-left font-bold py-3'>3. Cleaning & Maintenance Suppliess</p>
                 <p>Maintain pristine environments with our efficient cleaning solutions:</p>
@@ -169,7 +170,7 @@ const page = () => {
               </div>             
             </div>
 
-            <div className='flex flex-col lg:w-1/2 bg-Primary-1/20 p-4 rounded-2xl '>
+            <div className='flex flex-col lg:w-1/2 my-4 bg-Primary-1/20 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
                 <p className='text-xl text-left font-bold py-3'>4. Front Desk & Lobby Supplies</p>
                 <p>Ensure seamless guest interactions with high-quality reception essentials:</p>
@@ -197,7 +198,7 @@ const page = () => {
               </div>             
             </div>
 
-            <div className='flex flex-col lg:w-1/2 bg-Secondary-2/10 p-4 rounded-2xl '>
+            <div className='flex flex-col lg:w-1/2 my-4 bg-Secondary-2/10 p-4 rounded-2xl '>
               <div className='lg:p-2'> 
                 <p className='text-xl text-left font-bold py-3'>5. Uniforms & Staff Supplies</p>
                 <p>Present a cohesive and professional image with our range of staff attire:</p>
@@ -259,7 +260,7 @@ const page = () => {
         </div>     
 
         <div className='p-4 m-2 md:w-1/2 flex items-center justify-center'>
-         <Image src="/images/ev-car.jpg" width={961} height={761} alt="copper"/>
+         <Image src="/images/hospitality-5.jpg" width={961} height={761} alt="copper"/>
         </div>    
 
         
@@ -268,7 +269,7 @@ const page = () => {
       <div className='md:m-20 m-8 flex flex-col sm:flex-row md:gap-4 '>        
 
         <div className='p-4 m-2 flex items-center md:w-1/2'>
-         <Image src="/images/africa-map.jpg" width={961} height={761} alt="copper"/>
+         <Image src="/images/hospitality-3.jpg" width={961} height={761} alt="copper"/>
         </div>
 
         <div className='md:p-20 p-4 m-2 gap-4 md:w-1/2 flex flex-col justify-center'>

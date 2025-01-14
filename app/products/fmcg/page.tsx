@@ -63,7 +63,7 @@ const page = () => {
       
                 <div className='flex lg:w-1/2 p-8 items-center rounded-2xl'>
                 <Image
-                      src="/images/copper-products.jpg"
+                      src="/images/fmcg-3.jpg"
                       width={600}
                       height={600}
                       alt="copper image"
@@ -262,7 +262,7 @@ const page = () => {
         </div>     
 
         <div className='p-4 m-2 md:w-1/2 flex items-center justify-center'>
-         <Image src="/images/ev-car.jpg" width={961} height={761} alt="copper"/>
+         <Image src="/images/fmcg-2.jpg" width={961} height={761} alt="copper"/>
         </div>    
 
         
