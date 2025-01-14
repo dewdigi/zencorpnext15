@@ -14,7 +14,7 @@ const page = () => {
         style={{ backgroundImage: `url("${dynamicImage}")` }}
       >
         <div className='backdrop-blur-sm bg-gradient-to-b from-Secondary-2/60/[.2] via-Secondary-2/80/[.6] to-black rounded-bl-[100px]'>
-          <Navbarwhite />
+          <Navbar />
           <div className="flex flex-col lg:justify-start justify-center items-center lg:items-start my-32 lg:m-24 lg:my-32 p-6 lg:pb-28 text-white gap-22">
             <h1 className="text-5xl md:text-6xl leading-36 my-4 text-center sm:text-left">
               Investment & <b> Finance</b> <br />
