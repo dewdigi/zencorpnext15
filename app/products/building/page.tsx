@@ -331,19 +331,14 @@ const page = () => {
           <p className='md:text-left text-center'>Zencorp partners with globally trusted and renowned brands to deliver exceptional quality and reliability:</p>
         </div>
 
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 lg:w-1/2'>
 
-        <div className='flex flex-row gap-2'>
+        <div className='flex flex-row gap-2 flex-wrap items-center justify-center '>
           <div className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div>  <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/> </div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div>
-        </div>
-
-        <div className='flex flex-row gap-2'>
           <div className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div>
-        </div>
+          <div className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'> <Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div>
 
-        <div className='flex flex-row gap-2'>
-          <div className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div> <div  className='bg-white p-10'><Image src='/images/' width={40} height={40} alt='bosch'/></div>
-        </div>
+        </div>        
 
         </div>
 

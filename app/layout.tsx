@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Zencorp",
-  description: "A Sustainable solutions",
+  description: "Sustainable solutions",
 };
 
 export default function RootLayout({
