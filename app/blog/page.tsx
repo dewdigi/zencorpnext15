@@ -1,99 +1,158 @@
-import React from 'react';
-import PostCard from '@/app/components/posts/PostsCard'; // PostCard component
 import { client } from '@/lib/contentful/client';
+import ContentfulImage from '@/app/components/ui/ContentfulImage';
+import { notFound } from 'next/navigation';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { Document } from '@contentful/rich-text-types';
+import Navbar from '@/app/components/Navbar';
 
-// Define the type for posts
+// Define the type for the blog post fields
 type BlogPost = {
-  sys: {
-    id: string;
-  };
   fields: {
-    title: string; // Blog post title
-    slug: string; // Slug for routing
-    shortDescription?: string; // Short description
+    title: string;
+    slug: string;
     featuredImage?: {
       fields: {
         file: {
           url: string;
+          details: {
+            image: {
+              width: number;
+              height: number;
+            };
+          };
         };
       };
-    }; // Featured image
-    publishedDate?: string; // Published date
+    };
+    shortDescription?: string;
+    content: Document; // Rich text content
+    publishedDate?: string;
+    author?: {
+      fields: {
+        name: string;
+        picture?: {
+          fields: {
+            file: {
+              url: string;
+            };
+          };
+        };
+      };
+    };
+    RelatedBlogPosts?: Array<{
+      fields: {
+        title: string;
+        slug: string;
+      };
+    }>;
   };
 };
 
-const PAGE_SIZE = 6; // Number of posts per page
-
-// Fetch posts for a specific page
-async function fetchPosts(page: number): Promise<{ posts: BlogPost[]; total: number }> {
-  const skip = (page - 1) * PAGE_SIZE; // Skip posts based on the page number
+// Fetch blog post data by slug
+async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const response = await client.getEntries({
     content_type: 'pageBlogPost',
-    order: '-fields.publishedDate',
-    skip,
-    limit: PAGE_SIZE,
+    'fields.slug': slug,
+    limit: 1,
   });
 
-  return {
-    posts: response.items as BlogPost[],
-    total: response.total,
-  };
+  return response.items.length > 0 ? (response.items[0] as BlogPost) : null;
 }
 
-const BlogPage: React.FC<{ searchParams: { page?: string } }> = async ({ searchParams }) => {
-  const currentPage = parseInt(searchParams.page || '1', 10); // Default to page 1
-  const { posts, total } = await fetchPosts(currentPage);
+// Corrected Blog Post Page Component
+const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = params;
 
-  const totalPages = Math.ceil(total / PAGE_SIZE);
+  const post = await getPostBySlug(slug);
+
+  if (!post) {
+    notFound(); // Return a 404 page if the blog post doesn't exist
+  }
+
+  const {
+    title,
+    featuredImage,
+    shortDescription,
+    content,
+    publishedDate,
+    author,
+    RelatedBlogPosts,
+  } = post.fields;
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8">Blog</h1>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map((post) => (
-          <PostCard key={post.sys.id} post={post} />
-        ))}
-      </ul>
+    <div>
+      <Navbar />
+      <div className="container p-6 mx-20 my-40">
+        {/* Title */}
+        <h1 className="text-4xl font-bold mb-4">{title}</h1>
 
-      {/* Pagination Controls */}
-      <div className="flex justify-center mt-8 gap-4">
-        {/* Previous Button */}
-        {currentPage > 1 && (
-          <a
-            href={`/blog?page=${currentPage - 1}`}
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
-          >
-            Previous
-          </a>
+        {/* Published Date */}
+        <p className="text-sm text-gray-500">
+          Published on:{' '}
+          {publishedDate
+            ? new Date(publishedDate).toLocaleDateString()
+            : 'Unknown Date'}
+        </p>
+
+        {/* Author */}
+        {author && (
+          <div className="flex items-center gap-2 mt-4">
+            {author.fields.picture?.fields.file.url && (
+              <ContentfulImage
+                src={author.fields.picture.fields.file.url}
+                alt={author.fields.name}
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+            )}
+            <span className="text-sm">{author.fields.name}</span>
+          </div>
         )}
 
-        {/* Page Numbers */}
-        {Array.from({ length: totalPages }, (_, index) => (
-          <a
-            key={index}
-            href={`/blog?page=${index + 1}`}
-            className={`px-4 py-2 rounded ${
-              currentPage === index + 1
-                ? 'bg-blue-500 text-white'
-                : 'bg-gray-200 hover:bg-gray-300'
-            }`}
-          >
-            {index + 1}
-          </a>
-        ))}
+        {/* Featured Image */}
+        {featuredImage && (
+          <div className="mt-6">
+            <ContentfulImage
+              src={featuredImage.fields.file.url}
+              alt={`Cover Image for ${title}`}
+              width={featuredImage.fields.file.details.image.width}
+              height={featuredImage.fields.file.details.image.height}
+              className="rounded-md"
+            />
+          </div>
+        )}
 
-        {/* Next Button */}
-        {currentPage < totalPages && (
-          <a
-            href={`/blog?page=${currentPage + 1}`}
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
-          >
-            Next
-          </a>
+        {/* Short Description */}
+        {shortDescription && (
+          <p className="mt-4 text-lg text-gray-700">{shortDescription}</p>
+        )}
+
+        {/* Content */}
+        <div className="mt-8">
+          {content && documentToReactComponents(content)}
+        </div>
+
+        {/* Related Blog Posts */}
+        {RelatedBlogPosts && RelatedBlogPosts.length > 0 && (
+          <div className="mt-10">
+            <h3 className="text-2xl font-bold mb-4">Related Posts</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {RelatedBlogPosts.map((relatedPost, index) => (
+                <li key={index} className="p-4 bg-gray-100 rounded-md shadow-md">
+                  <a
+                    href={`/blog/${relatedPost.fields.slug}`}
+                    className="text-blue-500 hover:underline"
+                  >
+                    {relatedPost.fields.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
       </div>
     </div>
   );
 };
 
-export default BlogPage;
+export default BlogPostPage;
