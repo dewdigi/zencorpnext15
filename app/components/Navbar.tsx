@@ -112,9 +112,9 @@ const Navbar = () => {
           <Link href="/blog" className="mx-2 p-2 hover:text-emerald-500">
             BLOG
           </Link>
-          <Link href="/career" className="mx-2 p-2 hover:text-emerald-500">
+          {/*<Link href="/career" className="mx-2 p-2 hover:text-emerald-500">
             CAREER
-          </Link>
+          </Link>*/}
           <Link href="/contact" className="mx-2 p-2 hover:text-emerald-500">
             CONTACT
           </Link>
@@ -253,12 +253,12 @@ const Navbar = () => {
           >
             BLOG
           </Link>
-          <Link
+          {/*<Link
             href="/career"
             className="block p-4 hover:bg-Primary-1/70 rounded-sm"
           >
             CAREER
-          </Link>
+          </Link>*/}
           <Link
             href="/contact"
             className="block p-4 hover:bg-Primary-1/70 rounded-sm"

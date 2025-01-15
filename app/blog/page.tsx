@@ -1,75 +1,89 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Image from 'next/image'
+import React from 'react';
+import PostCard from '@/app/components/posts/PostsCard';
+import { client } from '@/lib/contentful/client';
+import Link from 'next/link';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
-const page = () => {
-  return (
-    <div>
-      <Navbar />
+const PAGE_SIZE = 6; // Number of posts per page
 
-      <div className='flex flex-col items-center m-8 gap-6'>
-          <h1 className='text-6xl font-bold text-Secondary-2/70'> BLOG </h1>
-          <h2 className='text-4xl'> Coming Soon </h2>
-          <Image src='/images/maintenance.jpg' width={751} height={400} alt='maintenance' ></Image>
-          </div>
+// Fetch posts for a specific page
+async function fetchPosts(page: number) {
+  const skip = (page - 1) * PAGE_SIZE; // Skip posts based on the page number
+  const response = await client.getEntries({
+    content_type: 'pageBlogPost',
+    order: '-fields.publishedDate',
+    skip, // Start fetching posts after skipping these many
+    limit: PAGE_SIZE, // Fetch only PAGE_SIZE posts
+  });
 
-          <section>
-      <div className="container mx-auto">
-        <div className="lg:flex">
-          {/* First Feature */}
-          <div className="lg:flex">
-            <Image
-              className="object-cover w-full h-56 rounded-lg lg:w-64"
-              src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80"
-              alt="Feature 1"
-              width={256}
-              height={224}
-            />
-            <div className="flex flex-col justify-between py-6 lg:mx-6">
-              <a
-                href="#"
-                className="text-xl font-semibold text-gray-800 hover:underline dark:text-white"
-              >
-                All the features you want to know
-              </a>
-              <span className="text-sm text-gray-500 dark:text-gray-300">
-                On: 30 September 2020
-              </span>
-            </div>
-          </div>
-
-          {/* Second Feature */}
-          <div className="lg:flex">
-            <Image
-              className="object-cover w-full h-56 rounded-lg lg:w-64"
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1484&q=80"
-              alt="Feature 2"
-              width={256}
-              height={224}
-            />
-            <div className="flex flex-col justify-between py-6 lg:mx-6">
-              <a
-                href="#"
-                className="text-xl font-semibold text-gray-800 hover:underline dark:text-white"
-              >
-                Minimal workspace for your inspirations
-              </a>
-              <span className="text-sm text-gray-500 dark:text-gray-300">
-                On: 13 October 2019
-              </span>
-            </div>
-          </div>
-
-          {/* Third Feature */}
-          
-        </div>
-      </div>
-    </section>
-
-      <Footer/>
-    </div>
-  )
+  return {
+    posts: response.items,
+    total: response.total, // Total number of posts
+  };
 }
 
-export default page
+const BlogPage = async ({ searchParams }: { searchParams: { page?: string } }) => {
+  const currentPage = parseInt(searchParams.page || '1', 10); // Default to page 1
+  const { posts, total } = await fetchPosts(currentPage);
+
+  const totalPages = Math.ceil(total / PAGE_SIZE);
+
+  return (
+
+    <div>
+      <Navbar/>
+    <div className="container mx-auto mt-40 p-6">
+
+      <h1 className="text-4xl font-bold mb-8">Blog</h1>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post: any) => (
+          <PostCard key={post.sys.id} post={post} />
+        ))}
+      </ul>
+
+      {/* Pagination Controls */}
+      <div className="flex justify-center mt-8 gap-4">
+        {/* Previous Button */}
+        {currentPage > 1 && (
+          <Link
+            href={`/blog?page=${currentPage - 1}`}
+            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+          >
+            Previous
+          </Link>
+        )}
+
+        {/* Page Numbers */}
+        {Array.from({ length: totalPages }, (_, index) => (
+          <Link
+            key={index}
+            href={`/blog?page=${index + 1}`}
+            className={`px-4 py-2 rounded ${
+              currentPage === index + 1
+                ? 'bg-blue-500 text-white dark:text-black'
+                : 'bg-gray-200 hover:bg-gray-300 dark:text-black'
+            }`}
+          >
+            {index + 1}
+          </Link>
+        ))}
+
+        {/* Next Button */}
+        {currentPage < totalPages && (
+          <Link
+            href={`/blog?page=${currentPage + 1}`}
+            className="px-4 py-2 bg-gray-200  rounded hover:bg-gray-300 dark:text-black"
+          >
+            Next
+          </Link>
+        )}
+      </div>
+      
+    </div>
+    <Footer/>
+    </div>
+  );
+};
+
+export default BlogPage;
