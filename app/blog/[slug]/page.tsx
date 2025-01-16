@@ -56,7 +56,7 @@ async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   return response.items.length > 0 ? (response.items[0] as BlogPost) : null;
 }
 
-const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   if (!slug) {
@@ -95,7 +95,7 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
             {author.fields.picture?.fields.file.url && (
               <ContentfulImage
                 src={author.fields.picture.fields.file.url}
-                alt={author.fields.name}
+                alt={author.fields.name || 'Author picture'}
                 width={40}
                 height={40}
                 className="rounded-full"
@@ -144,6 +144,13 @@ const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
       </div>
     </div>
   );
-};
+}
 
-export default BlogPostPage;
+// Updated generateStaticParams with proper typing
+export async function generateStaticParams() {
+  const response = await client.getEntries({ content_type: 'pageBlogPost' });
+
+  return response.items.map((post: { fields: { slug: string } }) => ({
+    slug: post.fields.slug,
+  }));
+}
