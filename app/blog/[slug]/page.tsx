@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Document } from '@contentful/rich-text-types';
 import Navbar from '@/app/components/Navbar';
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 
 type BlogPost = {
   fields: {
@@ -57,8 +56,8 @@ async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   return response.items.length > 0 ? (response.items[0] as BlogPost) : null;
 }
 
-const BlogPostPage = async ({ params }: { params: Params }) => {
-  const slug = params?.slug;
+const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = params;
 
   if (!slug) {
     notFound();
