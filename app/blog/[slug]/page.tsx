@@ -56,9 +56,7 @@ async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   return response.items.length > 0 ? (response.items[0] as BlogPost) : null;
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-
+const BlogPostPage = async ({ slug }: { slug: string }) => {
   if (!slug) {
     notFound();
   }
@@ -144,9 +142,11 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       </div>
     </div>
   );
-}
+};
 
-// Updated generateStaticParams with proper typing
+export default BlogPostPage;
+
+// Pre-generate static paths for known slugs
 export async function generateStaticParams() {
   const response = await client.getEntries({ content_type: 'pageBlogPost' });
 
