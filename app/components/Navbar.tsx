@@ -8,8 +8,9 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false); // Submenu state
   const [hasScrolled, setHasScrolled] = useState(false); // Scroll state
+  const [theme, setTheme] = useState<"light" | "dark">("light"); // Theme state
 
-  // Toggle menu visibility
+  // Handle menu visibility
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -18,14 +19,29 @@ const Navbar = () => {
     setIsSubMenuOpen(!isSubMenuOpen);
   };
 
+  // Handle theme detection
+  useEffect(() => {
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(isDark ? "dark" : "light");
+
+    const listener = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? "dark" : "light");
+    };
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", listener);
+
+    return () =>
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", listener);
+  }, []);
+
   // Update scroll state on window scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setHasScrolled(true);
-      } else {
-        setHasScrolled(false);
-      }
+      setHasScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -44,25 +60,28 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-2xl font-bold dark:text-white">
+        <Link href="/">
           <Image
-            src="/images/zencorp_Black.svg"
+            src={
+              theme === "dark"
+                ? "/images/zencorp_White.svg" // Dark mode logo
+                : "/images/zencorp_Black.svg" // Light mode logo
+            }
             width={249}
             height={40}
             alt="zencorp"
+            className="cursor-pointer"
           />
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex bg-Primary-1/10 p-4 rounded-md text-slate-600">
-          <Link href="/#" className="mx-2 p-2 hover:text-emerald-500">
+          <Link href="/" className="mx-2 p-2 hover:text-emerald-500">
             HOME
           </Link>
           <Link href="/about" className="mx-2 p-2 hover:text-emerald-500">
             ABOUT
           </Link>
-
-          {/* Products Menu with Submenu */}
           <div className="relative group py-2">
             <Link href="#" className="mx-2 p-4 hover:text-emerald-500">
               PRODUCTS
@@ -80,7 +99,6 @@ const Navbar = () => {
               >
                 Building Materials
               </Link>
-              
               <Link
                 href="/products/healthcare_accessibility"
                 className="block px-4 py-2 hover:text-emerald-500"
@@ -88,37 +106,31 @@ const Navbar = () => {
                 Healthcare Accessibility & Equipment
               </Link>
               <Link
-                href="/products/shipping"
-                className="block px-4 py-2 hover:text-emerald-500"
-              >
-                Shipping & Logistics
-              </Link>
-              <Link
-                href="/products/hospitality_supplies"
-                className="block px-4 py-2 hover:text-emerald-500"
-              >
-                Hospitality Supplies
-              </Link>
-              <Link
-                href="/products/fmcg"
-                className="block px-4 py-2 hover:text-emerald-500"
-              >
-                FMCG
-              </Link>
+                  href="/products/shipping"
+                  className="block px-4 py-2 hover:text-emerald-500"
+                >
+                  Shipping & Logistics Services
+                </Link>
+                <Link
+                  href="/products/hospitality_supplies"
+                  className="block px-4 py-2 hover:text-emerald-500"
+                >
+                  Hospitality Supplies
+                </Link>
+                <Link
+                  href="/products/fmcg"
+                  className="block px-4 py-2 hover:text-emerald-500"
+                >
+                  FMCG
+                </Link>
             </div>
           </div>
-
-          
           <Link href="/blog" className="mx-2 p-2 hover:text-emerald-500">
             BLOG
           </Link>
-          {/*<Link href="/career" className="mx-2 p-2 hover:text-emerald-500">
-            CAREER
-          </Link>*/}
           <Link href="/contact" className="mx-2 p-2 hover:text-emerald-500">
             CONTACT
           </Link>
-          
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -168,101 +180,64 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-full right-0 w-3/4 bg-emerald-50 text-slate-600 m-2 rounded-xl shadow-lg z-10 lg:hidden">
-          <Link
-            href="/#"
-            className="block p-4 hover:text-slate-600 hover:bg-Primary-1/70 rounded-sm"
-          >
+          <Link href="/" className="block p-4 hover:text-emerald-500">
             HOME
           </Link>
-          <Link
-            href="/about"
-            className="block p-4 hover:text-slate-600 hover:bg-Primary-1/70 rounded-sm"
-          >
+          <Link href="/about" className="block p-4 hover:text-emerald-500">
             ABOUT
           </Link>
           <div>
-            {/* Products Submenu */}
             <button
               onClick={toggleSubMenu}
-              className="block w-full text-left p-4 hover:text-slate-600 hover:bg-Primary-1/70 rounded-sm"
+              className="block w-full text-left p-4 hover:text-emerald-500"
             >
               PRODUCTS
-              <svg
-                className={`inline w-5 h-5 ml-2 transform ${
-                  isSubMenuOpen ? "rotate-180" : ""
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
             </button>
             {isSubMenuOpen && (
               <div className="pl-4">
                 <Link
                   href="/products/copper"
-                  className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
+                  className="block px-4 py-2 hover:text-emerald-500"
                 >
                   Copper Ecosystem
                 </Link>
                 <Link
-                  href="/products/shipping"
-                  className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
-                >
-                  Shipping & Logistics
-                </Link>
-                <Link
                   href="/products/building"
-                  className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
+                  className="block px-4 py-2 hover:text-emerald-500"
                 >
                   Building Materials
                 </Link>
-               
                 <Link
                   href="/products/healthcare_accessibility"
-                  className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
+                  className="block px-4 py-2 hover:text-emerald-500"
                 >
                   Healthcare Accessibility & Equipment
                 </Link>
                 <Link
+                  href="/products/shipping"
+                  className="block px-4 py-2 hover:text-emerald-500"
+                >
+                  Shipping & Logistics Services
+                </Link>
+                <Link
                   href="/products/hospitality_supplies"
-                  className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
+                  className="block px-4 py-2 hover:text-emerald-500"
                 >
                   Hospitality Supplies
                 </Link>
                 <Link
                   href="/products/fmcg"
-                  className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
+                  className="block px-4 py-2 hover:text-emerald-500"
                 >
                   FMCG
                 </Link>
               </div>
             )}
           </div>
-          
-          <Link
-            href="/blog"
-            className="block p-4 hover:bg-Primary-1/70 rounded-sm"
-          >
+          <Link href="/blog" className="block p-4 hover:text-emerald-500">
             BLOG
           </Link>
-          {/*<Link
-            href="/career"
-            className="block p-4 hover:bg-Primary-1/70 rounded-sm"
-          >
-            CAREER
-          </Link>*/}
-          <Link
-            href="/contact"
-            className="block p-4 hover:bg-Primary-1/70 rounded-sm"
-          >
+          <Link href="/contact" className="block p-4 hover:text-emerald-500">
             CONTACT
           </Link>
         </div>

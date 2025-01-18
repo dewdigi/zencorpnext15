@@ -5,6 +5,8 @@ import { GET_BLOG_POST_BY_SLUG } from "@/graphql/queries";
 import { useParams } from "next/navigation";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 
 const BlogPostPage = () => {
   const { slug } = useParams(); // Dynamically get slug from URL
@@ -18,7 +20,9 @@ const BlogPostPage = () => {
   const post = data.pageBlogPostCollection.items[0];
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
+    <div>
+      <Navbar/>
+    <div className="max-w-3xl mx-auto lg:my-40 p-4">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
       <p className="text-gray-600">
         Published on: {new Date(post.publishedDate).toLocaleDateString()}
@@ -33,6 +37,8 @@ const BlogPostPage = () => {
       <div className="prose">
         {documentToReactComponents(post.content.json)}
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import ApolloClientProvider from "@/app/providers/ApolloProvider";
 
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",

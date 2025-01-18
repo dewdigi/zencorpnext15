@@ -1,69 +1,75 @@
-import React from 'react'
-import Image from 'next/image'
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { gql, useQuery } from "@apollo/client";
+
+const GET_LATEST_BLOGS = gql`
+  query GetLatestBlogs {
+    pageBlogPostCollection(limit: 3, order: publishedDate_DESC) {
+      items {
+        slug
+        title
+        featuredImage {
+          url
+        }
+        publishedDate
+      }
+    }
+  }
+`;
 
 const NewsSection = () => {
+  const { data, loading, error } = useQuery(GET_LATEST_BLOGS);
+
+  if (loading) {
+    return <div>Loading latest news...</div>;
+  }
+
+  if (error) {
+    return <div>Error loading news: {error.message}</div>;
+  }
+
+  const blogs = data.pageBlogPostCollection.items;
+
   return (
-    <div className='flex flex-col gap-8 mx-4 lg:mx-28 my-24 p-8 bg-white rounded-3xl drop-shadow-2xl dark:text-gray-800'>
-
-      <h3 className='font-normal text-4xl'>Latest <span className='text-zencorp-green underline'>News</span> from Zencorp</h3>
-      <div className='flex flex-col md:flex-row gap-12'>
-        {/*
-        <div className='flex flex-row gap-4 md:w-1/2'>
-          <div className='md:w-1/2'>
-            <Image src='/images/News-1.png' width={309} height={537} alt='News-Post'></Image>
-          </div>
-          <div className='w-1/2'>
-              <div className='flex flex-row mb-4 justify-between items-center'> 
-                <button type="button" className="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">TIPS</button>
-                <p className='text-xs'>Date: Dec-1-2024</p>
-              </div>
-              <div className='flex flex-col gap-4'>
-                <h4 className='text-xl'>Lorem ipsum dolor sit amet conse ctetur. Viverr</h4>
-                <p className='text-xs text-accent-3/50'>Lorem ipsum dolor sit amet consectetur. Suspendisse tristique eros a aliquam tristique. Consectetur potenti convallis tellus semper.</p>  
-                <p className='text-xs text-accent-3/50'>Lorem ipsum dolor sit amet consectetur. Suspendisse tristique eros a aliquam tristique. Consectetur potenti convallis tellus semper.</p>  
-                <p className='text-xs text-Primary-1/80 hover:text-gray-600'>Read More</p>
-              </div> 
-          </div>
-        </div>
-          */}
-          <div className='flex md:flex-row flex-col gap-12 Items-start justify-start md:w-full'>
-            <div className='flex flex-col gap-4 Items-center justify-center w-full md:w-2/6 md:m-2 md:p-2'>
-              <Image className='rounded-xl flex items-center' src='/images/copper-wire.jpg' width={350} height={283} alt='blogimage'></Image>
-              <div className='flex flex-row flex-wrap mb-4 justify-between items-center'> 
-                <button type="button" className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ARTICLES</button>
-                <p className='text-xs'>Date: Dec-1-2024</p>                
-              </div>
-              <h4>The Role of Zencorp in the Global Copper Ecosystem</h4>              
-              <p className='text-xs text-Primary-1/80 hover:text-gray-600'>Read More</p>
+    <div className="flex flex-col gap-8 mx-4 lg:mx-28 my-24 p-8 bg-white rounded-3xl drop-shadow-2xl dark:text-gray-800">
+      <h3 className="font-normal text-4xl">
+        Latest <span className="text-zencorp-green underline">News</span> from Zencorp
+      </h3>
+      <div className="flex flex-col md:flex-row gap-12 ">
+        {blogs.map((blog: any) => (
+          <Link
+            key={blog.slug}
+            href={`/blog/${blog.slug}`}
+            className="flex flex-col gap-4 items-center justify-center w-full md:w-2/6 md:m-2 md:p-2 hover:shadow-lg transition-shadow p-4 rounded-xl"
+          >
+            <Image
+              className="rounded-xl"
+              src={blog.featuredImage.url}
+              width={350}
+              height={283}
+              alt={blog.title}
+            />
+            <div className="flex flex-row flex-wrap mb-4 justify-between items-center">
+              <button
+                type="button"
+                className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              >
+                ARTICLES
+              </button>
+              <p className="text-xs">
+                {new Date(blog.publishedDate).toLocaleDateString()}
+              </p>
             </div>
-
-            <div className='flex flex-col gap-4 Items-center justify-center w-full md:w-2/6 md:m-2 md:p-2'>
-              <Image className='rounded-xl' src='/images/sustainwindmill.jpg' width={350} height={283} alt='blogimage'></Image>
-              <div className='flex flex-row flex-wrap mb-4 justify-between items-center'> 
-                <button type="button" className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ARTICLES</button>
-                <p className='text-xs'>Date: Dec-1-2024</p>
-              </div>
-              <h4>Why Copper is Key to a Sustainable Future</h4>
-              
-              <p className='text-xs text-Primary-1/80 hover:text-gray-600'>Read More</p>
-            </div>
-
-            <div className='flex flex-col gap-4 Items-center justify-center w-full md:w-2/6 md:m-2 md:p-2'>
-              <Image className='rounded-xl' src='/images/copper-pipes.JPG' width={350} height={283} alt='blogimage'></Image>
-              <div className='flex flex-row  flex-wrap mb-4 justify-between items-center'> 
-                <button type="button" className="py-2.5 px-5 me-2 mb-2 text-xs font-medium text-[#5AB778] focus:outline-none bg-[#F6FFF9] rounded-xl  border border-[#5AB778] hover:bg-gray-100 hover:text-emerald-600 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">ARTICLES</button>
-                <p className='text-xs'>Date: Dec-1-2024</p>
-              </div>
-              <h4>High-Purity Copper: The Future of Precision Applications</h4>
-              
-              <p className='text-xs text-Primary-1/80 hover:text-gray-600'>Read More</p>
-            </div>
-          </div>
-        
-
+            <h4 className="text-center font-semibold">{blog.title}</h4>
+            <p>Read More..</p>
+          </Link>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NewsSection
+export default NewsSection;
