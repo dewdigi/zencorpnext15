@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.ctfassets.net", // Add Contentful's image domain
       },
+      
     ],
   },
   /* other config options here */

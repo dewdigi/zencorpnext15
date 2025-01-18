@@ -1,47 +1,37 @@
-import React from 'react';
-import PostCard from '@/app/components/posts/PostsCard';
-import { client } from '@/lib/contentful/client';
+"use client";
 
-type BlogPost = {
-  sys: {
-    id: string;
-  };
-  fields: {
-    title: string;
-    slug: string;
-    shortDescription?: string;
-    featuredImage?: {
-      fields: {
-        file: {
-          url: string;
-        };
-      };
-    };
-    publishedDate?: string;
-  };
-};
+import { useQuery } from "@apollo/client";
+import { GET_BLOG_POSTS } from "@/graphql/queries";
+import Link from "next/link";
 
-// Fetch all posts
-async function fetchPosts(): Promise<BlogPost[]> {
-  const response = await client.getEntries({
-    content_type: 'pageBlogPost',
-    order: '-fields.publishedDate', // Order by the most recent
+const BlogPage = () => {
+  const { data, loading, error } = useQuery(GET_BLOG_POSTS, {
+    variables: { preview: false, limit: 10 },
   });
 
-  return response.items as BlogPost[];
-}
-
-const BlogPage: React.FC = async () => {
-  const posts = await fetchPosts();
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8">Blog</h1>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map((post) => (
-          <PostCard key={post.sys.id} post={post} />
-        ))}
-      </ul>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+      {data.pageBlogPostCollection.items.map((post: any) => (
+        <Link href={`/blog/${post.slug}`} key={post.slug}>
+          <div className="border rounded-lg shadow hover:shadow-lg transition">
+            <img
+              src={post.featuredImage.url}
+              alt={post.featuredImage.description}
+              className="w-full h-48 object-cover rounded-t-lg"
+            />
+            <div className="p-4">
+              <h2 className="text-lg font-bold">{post.title}</h2>
+              <p className="text-sm text-gray-600">
+                {new Date(post.publishedDate).toLocaleDateString()}
+              </p>
+              <p className="mt-2 text-gray-800">{post.shortDescription}</p>
+            </div>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };
