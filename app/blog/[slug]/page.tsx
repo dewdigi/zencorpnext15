@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 import { GET_BLOG_POST_BY_SLUG } from "@/graphql/queries";
 import { useParams } from "next/navigation";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Image from "next/image";
 
 const BlogPostPage = () => {
   const { slug } = useParams(); // Dynamically get slug from URL
@@ -22,11 +23,13 @@ const BlogPostPage = () => {
       <p className="text-gray-600">
         Published on: {new Date(post.publishedDate).toLocaleDateString()}
       </p>
-      <img
-        src={post.featuredImage.url}
-        alt={post.featuredImage.description}
-        className="w-full h-64 object-cover rounded-lg my-4"
-      />
+      <Image
+  src={post.featuredImage.url}
+  alt={post.featuredImage.description}
+  width={800} // Set an appropriate width
+  height={400} // Set an appropriate height
+  className="rounded-lg my-4"
+/>
       <div className="prose">
         {documentToReactComponents(post.content.json)}
       </div>
