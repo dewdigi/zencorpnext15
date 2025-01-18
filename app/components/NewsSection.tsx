@@ -31,19 +31,19 @@ const NewsSection = () => {
     return <div>Error loading news: {error.message}</div>;
   }
 
-  const blogs = data.pageBlogPostCollection.items;
+  // Ensure that data is typed correctly
+  const blogs: Blog[] = data.pageBlogPostCollection.items;
 
   return (
     <div className="flex flex-col gap-8 mx-4 lg:mx-28 my-24 p-8 bg-white rounded-3xl drop-shadow-2xl dark:text-gray-800">
       <h3 className="font-normal text-4xl">
         Latest <span className="text-zencorp-green underline">News</span> from Zencorp
       </h3>
-      <div className="flex flex-col md:flex-row gap-12 ">
-        {blogs.map((blog: any) => (
-          <Link
+      <div className="flex flex-col md:flex-row gap-12">
+        {blogs.map((blog) => (
+          <div
             key={blog.slug}
-            href={`/blog/${blog.slug}`}
-            className="flex flex-col gap-4 items-center justify-center w-full md:w-2/6 md:m-2 md:p-2 hover:shadow-lg transition-shadow p-4 rounded-xl"
+            className="flex flex-col gap-4 items-center justify-center w-full md:w-2/6 md:m-2 md:p-2"
           >
             <Image
               className="rounded-xl"
@@ -63,9 +63,13 @@ const NewsSection = () => {
                 {new Date(blog.publishedDate).toLocaleDateString()}
               </p>
             </div>
-            <h4 className="text-center font-semibold">{blog.title}</h4>
-            <p>Read More..</p>
-          </Link>
+            <h4>{blog.title}</h4>
+            <Link href={`/blog/${blog.slug}`}>
+              <span className="text-xs text-Primary-1/80 hover:text-gray-600">
+                Read More
+              </span>
+            </Link>
+          </div>
         ))}
       </div>
     </div>
