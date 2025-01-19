@@ -22,7 +22,7 @@ const BlogPostPage = () => {
   return (
     <div>
       <Navbar/>
-    <div className="max-w-3xl mx-auto lg:my-40 p-4">
+    <div className="max-w-3xl mx-auto my-20 lg:my-40 p-4">
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
       <p className="text-gray-600">
         Published on: {new Date(post.publishedDate).toLocaleDateString()}

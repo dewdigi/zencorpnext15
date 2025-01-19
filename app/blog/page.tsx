@@ -19,7 +19,8 @@ const BlogPage = () => {
   return (
     <div >
       <Navbar/>
-    <div className="grid grid-cols-1 m-40 md:grid-cols-3 gap-6 p-4">
+    <div className="grid grid-cols-1 my-20 items-center justify-center lg:m-40 md:grid-cols-3 gap-6 p-4">
+      <h1 className="text-6xl">Our Blogs</h1>
       {data.pageBlogPostCollection.items.map((post: BlogPost) => (
         <Link href={`/blog/${post.slug}`} key={post.slug}>
           <div className="border rounded-lg shadow hover:shadow-lg transition">
