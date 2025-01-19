@@ -65,10 +65,10 @@ const page = () => {
     </div>    
     </div>
 
-    <div className='flex lg:flex-row m-24 p-10  gap-32'>
+    <div className='flex lg:flex-row flex-col lg:m-24 my-10 p-10  lg:gap-32 gap-8'>
 
-    <div className='w-1/2'> <Image src='/images/a-about3.jpg' width={800} height={800} alt=''/></div>
-      <div className='w-1/2'>
+    <div className='lg:w-1/2'> <Image src='/images/a-about3.jpg' width={800} height={800} alt=''/></div>
+      <div className='lg:w-1/2'>
         <h3 className='text-6xl font-bold my-4'>What We Do</h3>
         <p> With a deep understanding of industry-specific requirements, our team of experienced professionals ensures that we provide:</p>
         <ul className='list-disc p-4'>
@@ -99,11 +99,11 @@ const page = () => {
     
     </div>
 
-      <div className='flex lg:flex-row m-24 p-10  gap-32'>
+      <div className='flex lg:flex-row flex-col lg:m-24 my-10 p-10  lg:gap-32 gap-8 '>
         
 
         
-          <div className='w-1/2'>
+          <div className='lg:w-1/2'>
             <h3 className='text-6xl font-bold my-4'>Commitment to Africa</h3>
             <p> &#8216;Partnering for a Sustainable Africa&#8217; </p>
             
@@ -126,7 +126,7 @@ const page = () => {
 
 
         </div>
-        <div className='w-1/2'> <Image src='/images/a-about-4.jpg' width={800} height={800} alt=''/></div>
+        <div className='lg:w-1/2'> <Image src='/images/a-about-4.jpg' width={800} height={800} alt=''/></div>
 
         
 
@@ -134,11 +134,11 @@ const page = () => {
       
       </div>
 
-      <div className='flex lg:flex-row m-24 p-10  gap-32'>
+      <div className='flex lg:flex-row lg:m-24 p-10  lg:gap-32'>
 
-      <div className='w-1/2'> <Image src='/images/a-about2.jpg' width={800} height={800} alt=''/></div>
+      <div className='lg:w-1/2'> <Image src='/images/a-about2.jpg' width={800} height={800} alt=''/></div>
         
-          <div className='w-1/2'>
+          <div className='lg:w-1/2'>
             <h3 className='text-6xl font-bold my-4'>Corporate Social Responsibility</h3>
             <p className='my-2 text-4xl text-Secondary-2/20 font-bold' > &#8216;Partnering for a Sustainable Africa&#8217; </p>
             

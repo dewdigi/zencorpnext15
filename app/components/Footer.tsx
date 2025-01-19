@@ -22,7 +22,7 @@ return (
             <div className=' lg:w-1/2 m-2 lg:px-4 lg:py-8  rounded-md  flex flex-col justify-self text-white '>
                 
                 <ul className='px-4 rounded-md'>
-                    <li className='p-2 rounded-md bg-Primary-1/90' >COMPANY</li>
+                    <li className='p-2 px-14 rounded-md bg-Primary-1/90' >COMPANY</li>
                     
                     <li><Link rel="stylesheet" href="/" className="mx-2   hover:text-emerald-500 text-xs">HOME</Link></li>
             
@@ -39,9 +39,9 @@ return (
 
             </div>
             
-            <div className=' lg:w-1/2 m-2 lg:px-4 lg:py-8  rounded-md items-start  flex flex-col  text-left  text-white'>
-                <ul className=' px-4 rounded-md'>
-                    <li className='px-2 py-2 rounded-md bg-[#287340]'>PRODUCTS</li>
+            <div className=' lg:w-1/2 m-2 lg:px-4 lg:py-8  rounded-md  flex flex-col  lg:text-left  text-white'>
+                <ul className=' px-4 rounded-md   '>
+                    <li className='px-14 py-2 rounded-md bg-[#287340]'>PRODUCTS</li>
                     <li><Link rel="stylesheet" href="/products/copper" className="m-2  hover:text-emerald-500 text-xs">Copper Ecosystem</Link></li>
             
                     <li><Link rel="stylesheet" href="/products/shipping" className="m-2 hover:text-emerald-500 text-xs" >Shipping & Logistics</Link></li>
@@ -62,13 +62,10 @@ return (
             </div>
             <div className=' lg:w-3/12  items-center rounded-md lg:items-start m-2 lg:px-4 lg:py-8 flex flex-col text-left  text-white'>
                 
-                    <p className='px-8 rounded-lg py-2 bg-[#287340] lg:text-left'>CONTACT</p>
+                    <p className='px-20 rounded-lg py-2 bg-[#287340] lg:text-left'>CONTACT</p>
                     <p className='m-2 text-xs text-center lg:text-left'><span className='font-bold'>Address: </span> </p>
-                        <p className='lg:mx-2 text-xs text-center lg:text-left'>ZENCORP Trading CO. LLC</p>
-                        <p className='lg:mx-2 text-xs text-center lg:text-left'>No.8, Bin Dasmal Building</p>
-                        <p className='lg:mx-2 text-xs text-center lg:text-left'>Mezanine Floor, Al Garhoud,</p>
-                        <p className='lg:mx-2 text-xs text-center lg:text-left'>Airport Road, Dubai, UAE.</p>
-                        <p className='lg:mx-2 my-2 text-xs text-center lg:text-left'><span className='font-bold'>TRN:</span> 100315782100003 </p>
+                        <p className='lg:mx-2 text-xs text-center lg:text-left flex-wrap'>ZENCORP Trading CO. LLC, No.8, Bin Dasmal Building, Mezanine Floor, Al Garhoud,Airport Road, Dubai, UAE., <span className='font-bold'>TRN:</span> 100315782100003 </p>
+                        
                         
             <button type="button" className="px-5 py-2.5 my-4 text-sm  font-medium text-white flex items-center bg-Secondary-2/70 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-Secondary-2/70 dark:hover:bg-Primary-1/70 dark:focus:ring-blue-800" onClick={() => window.location.href = 'tel:+971564466924'}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-telephone" viewBox="0 0 16 16">
