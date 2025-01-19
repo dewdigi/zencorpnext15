@@ -23,6 +23,8 @@ const GET_LATEST_BLOGS = gql`
 const NewsSection = () => {
   const { data, loading, error } = useQuery(GET_LATEST_BLOGS);
 
+  console.log("Fetched data:", data); // Log the data for debugging
+
   if (loading) {
     return <div>Loading latest news...</div>;
   }
@@ -31,8 +33,11 @@ const NewsSection = () => {
     return <div>Error loading news: {error.message}</div>;
   }
 
-  // Ensure that data is typed correctly
-  const blogs: Blog[] = data.pageBlogPostCollection.items;
+  const blogs = data?.pageBlogPostCollection?.items || [];
+
+  if (blogs.length === 0) {
+    return <div>No blogs available</div>;
+  }
 
   return (
     <div className="flex flex-col gap-8 mx-4 lg:mx-28 my-24 p-8 bg-white rounded-3xl drop-shadow-2xl dark:text-gray-800">
@@ -41,7 +46,8 @@ const NewsSection = () => {
       </h3>
       <div className="flex flex-col md:flex-row gap-12">
         {blogs.map((blog) => (
-          <div
+          <Link
+            href={`/blog/${blog.slug}`}
             key={blog.slug}
             className="flex flex-col gap-4 items-center justify-center w-full md:w-2/6 md:m-2 md:p-2"
           >
@@ -64,12 +70,10 @@ const NewsSection = () => {
               </p>
             </div>
             <h4>{blog.title}</h4>
-            <Link href={`/blog/${blog.slug}`}>
-              <span className="text-xs text-Primary-1/80 hover:text-gray-600">
-                Read More
-              </span>
-            </Link>
-          </div>
+            <span className="text-xs text-Primary-1/80 hover:text-gray-600">
+              Read More
+            </span>
+          </Link>
         ))}
       </div>
     </div>

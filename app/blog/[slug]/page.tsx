@@ -34,7 +34,7 @@ const BlogPostPage = () => {
   height={400} // Set an appropriate height
   className="rounded-lg my-4"
 />
-      <div className="prose">
+      <div className="prose leading-6 space-y-4">
         {documentToReactComponents(post.content.json)}
       </div>
     </div>
