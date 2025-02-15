@@ -66,22 +66,22 @@ const page = () => {
           </div>
 
           <div className='flex lg:flex-row flex-col gap-8  dark:text-gray-700 '>
-            <div className='flex flex-col lg:w-1/2 bg-gray-100 p-8 rounded-2xl '>
-              <div className='lg:p-8'> 
+            <div className='flex flex-col lg:w-1/2 bg-gray-100 p-8 rounded-2xl lg:gap-8'>
+              <div className='lg:p-8 lg:gap-8'> 
                 <p className='text-xl md:text-left text-center  dark:text-gray-700 font-bold'>Upstream Copper Raw Materials</p>
-                <p className='text-lg  py-2'>We source and trade:</p>
+                <p className='text-lg  py-4'>We source and trade:</p>
                 <div className='p-4 bg-white rounded-2xl'>
-                 <ul className='list-disc p-2 mx-2 ' >             
-                   <li ><span className='font-bold py-2 '>Copper Ores: </span> <span className='text-sm'>Mined from top locations like Africa and processed into concentrates.</span></li>
-                   <li><span className='font-bold py-2'>Copper Concentrates: </span> <span className='text-sm'>Graded at 15-35% copper content for smelting and refining. </span></li>
-                   <li ><span className='font-bold py-2'>Copper Blister: </span> <span className='text-sm'>Produced at 90-95% purity for manufacturing copper anodes.</span></li>
-                   <li><span className='font-bold py-2'>Copper Cathodes: </span> <span className='text-sm'>Electrolytic copper (99.99% pure) traded globally</span></li>
-                 </ul> 
-                 </div>
+                  <ul className='list-disc p-2 mx-2'>             
+                    <li ><span className='font-bold py-2 '>Copper Ores: </span> <span className='text-sm'>Mined from top locations like Africa and processed into concentrates.</span></li>
+                    <li><span className='font-bold py-2'>Copper Concentrates: </span> <span className='text-sm'>Graded at 15-35% copper content for smelting and refining. </span></li>
+                    <li ><span className='font-bold py-2'>Copper Blister: </span> <span className='text-sm'>Produced at 90-95% purity for manufacturing copper anodes.</span></li>
+                    <li><span className='font-bold py-2'>Copper Cathodes: </span> <span className='text-sm'>Electrolytic copper (99.99% pure) traded globally</span></li>
+                  </ul> 
               </div>
-            
-              <div className='p-4 m-2 '>
-               <Image src="/images/upstream.avif" width={600} height={600} alt="copper"/>
+            </div>            
+              <div className='p-4 m-2'>
+
+                <Image src="/images/upstream.avif" width={600} height={600} alt="copper"/>
 
               </div>
             </div>

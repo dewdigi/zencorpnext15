@@ -21,7 +21,7 @@ const page = () => {
     <div className='flex flex-col py-20 lg:py-40 lg:px-20'>   
 
     <div className='flex flex-col p-8 gap-8 items-center lg:flex-row justify-center '> 
-    <div className='lg:w-1/2 p-4 flex flex-col '>
+    <div className='lg:w-1/2 p-4 flex flex-col h-full'>
     <h1 className='text-6xl font-bold text-Primary-1/80 p-4 bg-Secondary-2/10 rounded-xl'> Our Story </h1>
     <p className='text-md  font-normal my-10 text-accent-3/20'> ZENCORP Trading LLC, headquartered in Dubai, UAE, is a leading trading house with a proven track record of delivering exceptional products and services across the Middle East and Africa. We specialize in catering to diverse industries, including construction, hospitality, automobiles, healthcare, and FMCG, making us a trusted partner for governments and businesses alike. 
       </p>
@@ -29,9 +29,9 @@ const page = () => {
       <p className='text-xl font-bold text-Primary-1/10 my-2'>Purpose: </p>
       <p>At ZENCORP, our purpose is to bridge gaps and connect communities by delivering exceptional products and services while actively contributing to societal and environmental well-being.</p>
     </div>
-    <div className='lg:w-1/2  flex p-4 flex-col gap-8  '> 
+    <div className='lg:w-1/2  flex p-4 flex-col gap-8 h-full '> 
       
-    <Image className='p-2 rounded-2xl' src='/images/a-about-1.jpg' width={700} height={400} alt='maintenance' ></Image></div>
+    <Image className='p-2 rounded-2xl w-full h-full' src='/images/a-about-1.jpg' width={700} height={400} alt='maintenance' ></Image></div>
     </div>
 
     </div>
