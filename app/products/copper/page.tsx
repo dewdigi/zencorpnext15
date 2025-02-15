@@ -88,7 +88,7 @@ const page = () => {
 
 
             <div className='flex flex-col lg:w-1/2 bg-gray-100 p-8 rounded-2xl '>
-              <div className='lg:p-8'> 
+              <div className='lg:p-6'> 
                 <p className='text-xl md:text-left text-center font-bold'>Downstream Copper Products</p>
                 <p className='text-lg py-2'>Our partnerships extend to manufacturers and distributors of:</p>
                 <div className='p-4 bg-white rounded-2xl'>
