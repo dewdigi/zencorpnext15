@@ -67,7 +67,7 @@ const page = () => {
 
           <div className='flex lg:flex-row flex-col gap-8  dark:text-gray-700 '>
             <div className='flex flex-col lg:w-1/2 bg-gray-100 p-8 rounded-2xl lg:gap-8'>
-              <div className='lg:p-8 lg:gap-8'> 
+              <div className='lg:p-8 lg:gap-6'> 
                 <p className='text-xl md:text-left text-center  dark:text-gray-700 font-bold'>Upstream Copper Raw Materials</p>
                 <p className='text-lg  py-4'>We source and trade:</p>
                 <div className='p-4 bg-white rounded-2xl'>
