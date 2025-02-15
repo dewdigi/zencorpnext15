@@ -27,7 +27,7 @@ const page = () => {
       </p>
 
       <p className='text-xl font-bold text-Primary-1/10 my-2'>Purpose: </p>
-      <p>At ZENCORP, our purpose is to bridge gaps and connect communities by delivering exceptional products and services while actively contributing to societal and environmental well-being.</p>
+      <p className='text-md  font-normal my-10 text-accent-3/20'>At ZENCORP, our purpose is to bridge gaps and connect communities by delivering exceptional products and services while actively contributing to societal and environmental well-being.</p>
     </div>
     <div className='lg:w-1/2  flex p-4 flex-col gap-8 h-full '> 
       
