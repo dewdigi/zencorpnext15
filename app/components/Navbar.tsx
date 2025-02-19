@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import TopNavbar from "./Topnavbar";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
@@ -51,13 +52,15 @@ const Navbar = () => {
   }, []);
 
   return (
+        
     <nav
-      className={`fixed top-0 left-0 w-full z-50 p-4 md:p-6 shadow transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 p-4 lg:pt-2 shadow transition-all duration-300 ${
         hasScrolled
           ? "bg-white/50 backdrop-blur-md text-black"
           : "bg-transparent text-white"
       }`}
     >
+      <TopNavbar/>
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
@@ -67,8 +70,8 @@ const Navbar = () => {
                 ? "/images/zencorp_White.svg" // Dark mode logo
                 : "/images/zencorp_Black.svg" // Light mode logo
             }
-            width={249}
-            height={40}
+            width={200}
+            height={36}
             alt="zencorp"
             className="cursor-pointer"
           />
@@ -172,9 +175,11 @@ const Navbar = () => {
         </button>
 
         {/* Contact Us Button */}
+        <Link href="/contact">
         <button className="bg-emerald-50 text-emerald-500 m-2 p-4 hover:bg-emerald-800 rounded-md hidden lg:block">
           CONTACT US
         </button>
+        </Link>
       </div>
 
       {/* Mobile Menu */}
@@ -243,6 +248,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+    
   );
 };
 

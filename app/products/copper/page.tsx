@@ -5,10 +5,12 @@ import Navbar from '@/app/components/Navbar';
 const dynamicImage = "/images/Copper-Heading-Page.png";
 
 import Image from 'next/image';
+import Topnavbar from '@/app/components/Topnavbar';
 
 const page = () => {
   return (
     <div>
+      <Topnavbar/>
       <div
         className="min-v-screen bg-cover bg-center bg-no-repeat rounded-bl-[100px]"
         style={{ backgroundImage: `url("${dynamicImage}")` }}

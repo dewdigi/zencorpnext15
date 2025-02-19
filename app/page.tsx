@@ -126,9 +126,11 @@ const Page = () => {
         Welcome to the Zen of business—where growth is nurtured, and <br />
         sustainability is the essence of all our endeavors.
       </p>
-      <button className="bg-emerald-500 w-3/4 md:w-1/4 p-4 hover:bg-emerald-800 rounded-md">
+      <Link href="/contact" className="w-3/4 md:w-1/4">
+      <button className="bg-emerald-500  p-4 hover:bg-emerald-800 rounded-md">
         CONTACT US
       </button>
+      </Link>
     </div>
   </div>
 </div>

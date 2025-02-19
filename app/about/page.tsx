@@ -22,7 +22,7 @@ const page = () => {
 
     <div className='flex flex-col p-8 gap-8 items-center lg:flex-row justify-center '> 
     <div className='lg:w-1/2 p-4 flex flex-col h-full'>
-    <h1 className='text-6xl font-bold text-Primary-1/80 p-4 bg-Secondary-2/10 rounded-xl'> Our Story </h1>
+    <h1 className='lg:text-6xl text-4xl font-bold text-Primary-1/80 p-4 bg-Secondary-2/10 rounded-xl'> Our Story </h1>
     <p className='text-md  font-normal my-10 text-accent-3/20'> ZENCORP Trading LLC, headquartered in Dubai, UAE, is a leading trading house with a proven track record of delivering exceptional products and services across the Middle East and Africa. We specialize in catering to diverse industries, including construction, hospitality, automobiles, healthcare, and FMCG, making us a trusted partner for governments and businesses alike. 
       </p>
 
@@ -43,7 +43,7 @@ const page = () => {
     <div className='flex flex-col bg-white p-8 gap-16 items-start lg:me-20 lg:rounded-r-xl lg:flex-row justify-center '> 
 
     <div className='lg:w-1/2 flex flex-col p-4 gap-8 lg:px-40 lg:rounded-r-xl text-gray-800 hover:text-Secondary-2/10 lg:py-32 bg-white hover:bg-Primary-1/90 lg:bg-Secondary-2/10'> 
-      <h2 className='text-6xl font-bold  '> Vision </h2>
+      <h2 className='lg:text-6xl text-5xl font-bold  '> Vision </h2>
       <p className='text-md  font-normal  '> To become a leading global trade house recognized for innovative, sustainable, and reliable solutions across various industries.</p>
    </div>
 
@@ -51,7 +51,7 @@ const page = () => {
     
 
     <div className='lg:w-1/2 flex flex-col p-4 lg:px-20 lg:py-10 text-gray-800  hover:text-Secondary-2/10 lg:rounded-r-xl  bg-white hover:bg-Primary-1/90 lg:bg-Primary-1/10 '>
-    <h1 className='text-6xl font-bold my-4 '> Mission </h1>
+    <h1 className='lg:text-6xl text-5xl font-bold my-4 '> Mission </h1>
     <p className='text-xl font-bold '>Our Mission is to:</p>
     <ul className='list-disc p-4'>
       <li>Deliver the highest quality products and services tailored to meet the unique needs of our clients.</li>
@@ -69,7 +69,7 @@ const page = () => {
 
     <div className='lg:w-1/2'> <Image src='/images/a-about3.jpg' width={800} height={800} alt=''/></div>
       <div className='lg:w-1/2'>
-        <h3 className='text-6xl font-bold my-4'>What We Do</h3>
+        <h3 className='lg:text-6xl text-4xl font-bold my-4'>What We Do</h3>
         <p> With a deep understanding of industry-specific requirements, our team of experienced professionals ensures that we provide:</p>
         <ul className='list-disc p-4'>
           <li> <b>Customized Solutions:</b> <span className='text-gray-400'>Tailored products and services for construction, healthcare, FMCG, and more.</span>
@@ -104,7 +104,7 @@ const page = () => {
 
         
           <div className='lg:w-1/2'>
-            <h3 className='text-6xl font-bold my-4'>Commitment to Africa</h3>
+            <h3 className='lg:text-6xl text-3xl font-bold my-4'>Commitment to Africa</h3>
             <p> &#8216;Partnering for a Sustainable Africa&#8217; </p>
             
             <p>At ZENCORP Trading LLC, we are deeply committed to Africa&#8216;s growth and development. Our focus spans across key industries such as infrastructure, food, and healthcare, aiming to unlock the continent&#8216;s immense potential while driving sustainable change.</p>
@@ -134,12 +134,12 @@ const page = () => {
       
       </div>
 
-      <div className='flex lg:flex-row lg:m-24 p-10  lg:gap-32'>
+      <div className='flex lg:flex-row flex-col-reverse  lg:m-24 p-10 lg:gap-32'>
 
       <div className='lg:w-1/2'> <Image src='/images/a-about2.jpg' width={800} height={800} alt=''/></div>
         
           <div className='lg:w-1/2'>
-            <h3 className='text-6xl font-bold my-4'>Corporate Social Responsibility</h3>
+            <h3 className='lg:text-6xl text-3xl font-bold my-4'>Corporate Social Responsibility</h3>
             <p className='my-2 text-4xl text-Secondary-2/20 font-bold' > &#8216;Partnering for a Sustainable Africa&#8217; </p>
             
             <p>At ZENCORP, we take our corporate social responsibility seriously. We actively seek ways to:</p>

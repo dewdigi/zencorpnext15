@@ -1,7 +1,9 @@
 import React from 'react'
+import Link from 'next/link';
 
 import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
+
 const dynamicImage = "/images/Copper-Heading-Page.png";
 
 import Image from 'next/image';
@@ -9,11 +11,13 @@ import Image from 'next/image';
 const page = () => {
   return (
     <div>
+      
       <div
         className="min-v-screen bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url("${dynamicImage}")` }}
       >
         <div>
+
           <Navbar />
           <div className="flex flex-col justify-center my-32 sm:m-32 p-10 text-white gap-22">
             <h1 className="text-5xl md:text-6xl leading-36 my-4 text-center sm:text-left">
@@ -25,9 +29,11 @@ const page = () => {
               sustainability is the essence of all our endeavors.
             </p>
             <br></br>
-            <button className=" bg-emerald-500 sm:w-3/12 w-auto hover:bg-Secondary-2/70 hover:drop-shadow-xl p-4 rounded-md">
-              CONTACT US
-            </button>            
+            <Link href="/contact-us">
+  <button className="bg-emerald-500 sm:w-3/12 w-auto hover:bg-Secondary-2/70 hover:drop-shadow-xl p-4 rounded-md">
+    CONTACT US
+  </button>
+</Link>            
           </div>
         </div>
 

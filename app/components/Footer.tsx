@@ -5,6 +5,10 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import NewsSection from './NewsSection'
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 
 const Footer = () => {
@@ -16,6 +20,20 @@ return (
             <div className='m-2  p-8 flex flex-col items-center lg:items-start lg:justify-start p-2 lg:w-1/2 gap-4'>  
                 <a href="#" className="text-2xl font-bold"> <Image src="/images/logo-zencorp.svg" width={249} height={40} alt="zencorp" /></a>
                 <p className='text-xs text-white lg:w-9/12 lg:text-left text-center'>At ZENCORP, we are committed to fostering growth and development in Africa&#39;s infrastructure, food, healthcare, and other key industries. By leveraging Africa&#39;s immense potential, we work with partners and clients to create a brighter future for the continent. </p>
+                <div className='flex space-x-4 text-white py-4'>
+                        <a href='https://www.facebook.com' className='hover:text-blue-500' aria-label='Facebook'>
+                          <FaFacebookF />
+                        </a>
+                        <a href='https://www.instagram.com' className='hover:text-pink-500' aria-label='Instagram'>
+                          <FaInstagram />
+                        </a>
+                        <a href='https://www.twitter.com' className='hover:text-blue-400' aria-label='Twitter'>
+                          <FaTwitter />
+                        </a>
+                        <a href='https://www.linkedin.com' className='hover:text-blue-400' aria-label='Twitter'>
+                          <FaLinkedinIn />
+                        </a>
+                      </div>
             </div >
             <div className='flex flex-row lg:w-1/2 place-content-center items-start'>
 
