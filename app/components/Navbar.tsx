@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import TopNavbar from "./Topnavbar";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
@@ -61,7 +62,7 @@ const Navbar = () => {
       }`}
     >
       <TopNavbar/>
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container lg:mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <Image
@@ -175,11 +176,16 @@ const Navbar = () => {
         </button>
 
         {/* Contact Us Button */}
-        <Link href="/contact">
-        <button className="bg-emerald-50 text-emerald-500 m-2 p-4 hover:bg-emerald-800 rounded-md hidden lg:block">
-          CONTACT US
-        </button>
-        </Link>
+        <a 
+  href="https://wa.me/971564466924?text=Hi%20I%20am%20interested%20in%20your%20Zencorp%20products" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="hidden lg:block"
+>
+  <button className="bg-emerald-50 text-emerald-500 m-2 p-4 hover:bg-emerald-800 rounded-md flex items-center gap-2">
+    <FaWhatsapp /> Whatsapp us
+  </button>
+</a>
       </div>
 
       {/* Mobile Menu */}
