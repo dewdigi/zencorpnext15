@@ -62,7 +62,7 @@ const Navbar = () => {
       }`}
     >
       <TopNavbar/>
-      <div className="container lg:mx-auto flex justify-between items-center">
+      <div className="container lg:mx-auto lg:px-12 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <Image
