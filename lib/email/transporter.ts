@@ -6,7 +6,7 @@ type TransportConfig = {
 };
 
 function hasResendConfig() {
-  return Boolean(process.env.RESEND_SMTP_PASSWORD || process.env.RESEND_SMTP_USER);
+  return Boolean(process.env.RESEND_SMTP_PASSWORD || process.env.RESEND_API_KEY || process.env.RESEND_SMTP_USER);
 }
 
 export function createMailTransport(): TransportConfig {
@@ -15,11 +15,11 @@ export function createMailTransport(): TransportConfig {
     const port = Number(process.env.RESEND_SMTP_PORT || "465");
     const secure = (process.env.RESEND_SMTP_SECURE || "true").toLowerCase() !== "false";
     const user = process.env.RESEND_SMTP_USER || "resend";
-    const pass = process.env.RESEND_SMTP_PASSWORD;
+    const pass = process.env.RESEND_SMTP_PASSWORD || process.env.RESEND_API_KEY;
     const fromAddress = process.env.EMAIL_FROM || process.env.EMAIL_USER;
 
     if (!pass || !fromAddress) {
-      throw new Error("Missing RESEND_SMTP_PASSWORD or EMAIL_FROM/EMAIL_USER for Resend SMTP");
+      throw new Error("Missing RESEND_SMTP_PASSWORD/RESEND_API_KEY or EMAIL_FROM/EMAIL_USER for Resend SMTP");
     }
 
     const transporter = nodemailer.createTransport({
