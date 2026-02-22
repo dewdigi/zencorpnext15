@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { FiMail, FiMapPin, FiPhoneCall } from "react-icons/fi";
 import Navbar from "../components/Navbar";
@@ -70,17 +71,27 @@ const page = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-6 pb-16 lg:px-12">
-        <div className="mb-5 rounded-2xl border border-[#d7e1da] bg-white px-5 py-4 text-sm text-[#1b3327] shadow-[0_20px_40px_-30px_rgba(10,30,20,0.7)]">
-          <p className="font-semibold">TRN: 100315782100003</p>
-          <Link
-            href="https://maps.google.com/?q=AL+KHABEESI+BLDG+Office+No3+Dubai+UAE"
-            className="mt-1 inline-block text-[#165029] underline underline-offset-4"
-          >
-            Open in Google Maps
-          </Link>
+      <section className="container mx-auto grid gap-6 px-6 pb-16 lg:grid-cols-5 lg:px-12">
+        <div className="overflow-hidden rounded-2xl border border-[#d7e1da] bg-white text-sm text-[#1b3327] shadow-[0_20px_40px_-30px_rgba(10,30,20,0.7)] lg:col-span-2">
+          <div className="relative h-52 w-full">
+            <Image src="/images/warehousing.jpg" alt="Business details" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#10271b]/70 to-transparent" />
+          </div>
+          <div className="px-5 py-5">
+            <h2 className="text-xl font-semibold text-[#0f261b]">Business Details</h2>
+            <p className="mt-2 leading-7 text-[#344a3d]">
+              ZENCORP TRADING CO. LLC serves clients across multiple sectors with a responsive and structured team.
+            </p>
+            <p className="mt-3 font-semibold">TRN: 100315782100003</p>
+            <Link
+              href="https://maps.google.com/?q=AL+KHABEESI+BLDG+Office+No3+Dubai+UAE"
+              className="mt-1 inline-block text-[#165029] underline underline-offset-4"
+            >
+              Open in Google Maps
+            </Link>
+          </div>
         </div>
-        <div className="rounded-3xl border border-[#d7e1da] bg-white p-2 shadow-[0_20px_40px_-30px_rgba(10,30,20,0.7)]">
+        <div className="rounded-3xl border border-[#d7e1da] bg-white p-2 shadow-[0_20px_40px_-30px_rgba(10,30,20,0.7)] lg:col-span-3">
           <GetInTuch />
         </div>
       </section>
