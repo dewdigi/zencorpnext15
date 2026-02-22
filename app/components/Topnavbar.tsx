@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
@@ -12,7 +12,7 @@ const TopNavbar = () => {
       <div>
         <Link href="mailto:info@zencorp.ae">
         <p className='text-sm'>
-        📧 Info@zencorp.ae 
+        info@zencorp.ae 
         </p>
         </Link>
       </div>
@@ -36,3 +36,6 @@ const TopNavbar = () => {
 };
 
 export default TopNavbar;
+
+
+

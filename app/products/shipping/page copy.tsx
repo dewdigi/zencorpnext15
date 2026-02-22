@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import React, { useState } from 'react';
 import Footer from '@/app/components/Footer';
 import Navbarwhite from '@/app/components/Navbarwhite';
@@ -355,8 +355,8 @@ const ShippingAndLogistics = () => {
         <p className="mb-6">Ready to optimize your supply chain and streamline your logistics operations?
           <br></br> Let ZenCorp Trading Co. LLC be your trusted partner for all your shipping and logistics needs.</p>
         <p className="mb-2"><strong>Email:</strong> <a href="mailto:info@zencorp.ae" className="text-blue-600">info@zencorp.ae</a></p>
-        <p className="mb-2"><strong>Phone:</strong> +971 (04) 451 6924</p>
-        <p className="mb-2"><strong>Address:</strong> A2205, The Four A Block, Al Nahda-1, Dubai, UAE</p>
+        <p className="mb-2"><strong>Phone:</strong> +971 564466924</p>
+        <p className="mb-2"><strong>Address:</strong> AL KHABEESI BLDG - Office No3, Dubai, UAE</p>
         <p className="mb-6"><strong>Website:</strong> <a href="https://zencorp.ae" className="text-blue-600">https://zencorp.ae</a></p>
       </div>
 
@@ -371,3 +371,4 @@ const ShippingAndLogistics = () => {
 };
 
 export default ShippingAndLogistics;
+
