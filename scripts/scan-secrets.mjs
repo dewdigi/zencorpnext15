@@ -4,11 +4,8 @@ import { execFileSync } from "node:child_process";
 const isHistoryMode = process.argv.includes("--history");
 const knownLeakedValues = [process.env.LEAKED_KEY_TO_CHECK].filter(Boolean);
 
-const patternDefinitions = [
-  { name: "Resend API key-like token", regex: /\bre_[A-Za-z0-9_]{20,}\b/g },
-  { name: "RESEND_API_KEY assignment", regex: /RESEND_API_KEY\s*=\s*[^\s#]+/g },
-  { name: "RESEND_SMTP_PASSWORD assignment", regex: /RESEND_SMTP_PASSWORD\s*=\s*[^\s#]+/g },
-];
+const tokenPattern = /\bre_[A-Za-z0-9_]{20,}\b/g;
+const sensitiveEnvKeys = ["RESEND_API_KEY", "RESEND_SMTP_PASSWORD"];
 
 function runGit(args) {
   return execFileSync("git", args, { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
@@ -40,10 +37,50 @@ function scanContent(content, sourceLabel) {
     }
   }
 
-  for (const pattern of patternDefinitions) {
-    const matches = content.match(pattern.regex);
-    if (matches?.length) {
-      findings.push(`${sourceLabel}: ${pattern.name}`);
+  const tokenMatches = content.match(tokenPattern);
+  if (tokenMatches?.length) {
+    findings.push(`${sourceLabel}: Resend API key-like token`);
+  }
+
+  const lines = content.split(/\r?\n/);
+  for (const [index, line] of lines.entries()) {
+    for (const key of sensitiveEnvKeys) {
+      const match = line.match(new RegExp(`^\\s*${key}\\s*=\\s*(.*)$`));
+      if (!match) {
+        continue;
+      }
+      const value = match[1].trim();
+      if (!value) {
+        continue;
+      }
+      if (value === '""' || value === "''") {
+        continue;
+      }
+      const normalized = value.replace(/^['"]|['"]$/g, "");
+      if (/^<.+>$/.test(normalized)) {
+        continue;
+      }
+      if (normalized.toLowerCase().includes("changeme")) {
+        continue;
+      }
+      if (normalized.toLowerCase().includes("replace_me")) {
+        continue;
+      }
+      if (normalized.toLowerCase().includes("your_")) {
+        continue;
+      }
+      if (normalized.toLowerCase().includes("example")) {
+        continue;
+      }
+      if (normalized.toLowerCase().startsWith("process.env.")) {
+        continue;
+      }
+      if (normalized === "${RESEND_API_KEY}" || normalized === "${RESEND_SMTP_PASSWORD}") {
+        continue;
+      }
+      if (normalized.length >= 8) {
+        findings.push(`${sourceLabel}:${index + 1}: ${key} appears to have a real value`);
+      }
     }
   }
   return findings;
@@ -72,7 +109,7 @@ function scanHistory() {
   for (const sha of commits) {
     let snapshot = "";
     try {
-      snapshot = runGit(["grep", "-nE", "re_[A-Za-z0-9_]{20,}|RESEND_API_KEY\\s*=|RESEND_SMTP_PASSWORD\\s*=", sha]);
+      snapshot = runGit(["grep", "-nE", "re_[A-Za-z0-9_]{20,}", sha]);
     } catch {
       continue;
     }
