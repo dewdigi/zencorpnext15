@@ -10,7 +10,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false); // Submenu state
   const [hasScrolled, setHasScrolled] = useState(false); // Scroll state
-  const [theme, setTheme] = useState<"light" | "dark">("light"); // Theme state
 
   // Handle menu visibility
   const toggleMenu = () => {
@@ -20,25 +19,6 @@ const Navbar = () => {
   const toggleSubMenu = () => {
     setIsSubMenuOpen(!isSubMenuOpen);
   };
-
-  // Handle theme detection
-  useEffect(() => {
-    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setTheme(isDark ? "dark" : "light");
-
-    const listener = (e: MediaQueryListEvent) => {
-      setTheme(e.matches ? "dark" : "light");
-    };
-
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", listener);
-
-    return () =>
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .removeEventListener("change", listener);
-  }, []);
 
   // Update scroll state on window scroll
   useEffect(() => {
@@ -66,11 +46,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/">
           <Image
-            src={
-              theme === "dark"
-                ? "/images/zencorp_White.svg" // Dark mode logo
-                : "/images/zencorp_Black.svg" // Light mode logo
-            }
+            src={hasScrolled ? "/images/zencorp_Black.svg" : "/images/zencorp_White.svg"}
             width={200}
             height={36}
             alt="zencorp"
