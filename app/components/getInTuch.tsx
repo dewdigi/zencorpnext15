@@ -34,11 +34,14 @@ export default function GetInTuch() {
         const payload = {
           name: formData.name,
           email: formData.email,
-          subject: `${formData.service ? `${formData.service} | ` : ""}${formData.subject}`,
-          comments: `Phone: ${formData.phone || "N/A"}\nCompany: ${formData.company || "N/A"}\n\n${formData.comments}`,
+          phone: formData.phone,
+          company: formData.company,
+          service: formData.service,
+          subject: formData.subject,
+          message: formData.comments,
         };
 
-        const response = await fetch("/api/contact", {
+        const response = await fetch("/api/inquiries", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

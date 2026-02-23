@@ -89,6 +89,32 @@ const page = () => {
             >
               Open in Google Maps
             </Link>
+            <div className="mt-5">
+              <p className="text-sm font-semibold text-[#0f261b]">Our Products</p>
+              <div className="mt-2 grid grid-cols-1 gap-1 text-sm">
+                <Link href="/products/copper" className="text-[#165029] hover:underline">
+                  Copper Ecosystem
+                </Link>
+                <Link href="/products/shipping" className="text-[#165029] hover:underline">
+                  Shipping & Logistics
+                </Link>
+                <Link href="/products/healthcare_accessibility" className="text-[#165029] hover:underline">
+                  Healthcare Accessibility
+                </Link>
+                <Link href="/products/building" className="text-[#165029] hover:underline">
+                  Building Materials
+                </Link>
+                <Link href="/products/hospitality_supplies" className="text-[#165029] hover:underline">
+                  Hospitality Supplies
+                </Link>
+                <Link href="/products/fmcg" className="text-[#165029] hover:underline">
+                  FMCG
+                </Link>
+                <Link href="/products/aircraft-refueling-truck" className="text-[#165029] hover:underline">
+                  Aircraft Refueling Truck (18,000L)
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         <div className="rounded-3xl border border-[#d7e1da] bg-white p-2 shadow-[0_20px_40px_-30px_rgba(10,30,20,0.7)] lg:col-span-3">

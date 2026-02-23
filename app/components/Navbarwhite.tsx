@@ -105,6 +105,12 @@ const Navbar = () => {
               >
                 FMCG
               </Link>
+              <Link
+                href="/products/aircraft-refueling-truck"
+                className="block px-4 py-2 hover:text-emerald-500"
+              >
+                Aircraft Refueling Truck (18,000L)
+              </Link>
             </div>
           </div>
 
@@ -242,6 +248,12 @@ const Navbar = () => {
                   className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
                 >
                   FMCG
+                </Link>
+                <Link
+                  href="/products/aircraft-refueling-truck"
+                  className="block px-4 py-2 hover:bg-Secondary-2/70 rounded-sm"
+                >
+                  Aircraft Refueling Truck (18,000L)
                 </Link>
               </div>
             )}
