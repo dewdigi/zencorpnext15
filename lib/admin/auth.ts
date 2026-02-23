@@ -1,4 +1,5 @@
-import { createSupabaseServerClient, createSupabaseServiceClient } from "@/lib/supabase/server";
+import { createClient } from "@supabase/supabase-js";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type AdminCheckResult = {
   userId: string;
@@ -18,12 +19,31 @@ export function isAdminEmailAllowlisted(email: string) {
   return list.includes(email.trim().toLowerCase());
 }
 
+function createAuthAdminClient() {
+  const { url, serviceRoleKey } = getAuthAdminEnv();
+
+  return createClient(url, serviceRoleKey, {
+    auth: { autoRefreshToken: false, persistSession: false },
+  });
+}
+
+export function getAuthAdminEnv() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!url || !serviceRoleKey) {
+    throw new Error("Missing required server environment variables: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY");
+  }
+
+  return { url, serviceRoleKey };
+}
+
 export async function isAdminEmailEligibleForReset(emailInput: string): Promise<boolean> {
   const email = emailInput.trim().toLowerCase();
   if (!email) return false;
   if (isAdminEmailAllowlisted(email)) return true;
 
-  const service = createSupabaseServiceClient();
+  const service = createAuthAdminClient();
   const pageSize = 200;
 
   for (let page = 1; page <= 10; page += 1) {

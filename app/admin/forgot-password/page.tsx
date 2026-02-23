@@ -21,13 +21,22 @@ export default function AdminForgotPasswordPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      const data = await res.json();
+      let data: Record<string, unknown> = {};
+      try {
+        data = (await res.json()) as Record<string, unknown>;
+      } catch {
+        data = {};
+      }
+
       if (!res.ok) {
-        setError(data.error || "Failed to request password reset.");
+        const apiError = typeof data.error === "string" ? data.error : "Failed to request password reset.";
+        setError(apiError);
         return;
       }
 
-      setMessage(data.message || "If an account exists, a reset link has been sent.");
+      const apiMessage =
+        typeof data.message === "string" ? data.message : "If an account exists, a reset link has been sent.";
+      setMessage(apiMessage);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to request password reset.");
     } finally {
