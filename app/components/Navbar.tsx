@@ -5,11 +5,18 @@ import Link from "next/link";
 import Image from "next/image";
 import TopNavbar from "./Topnavbar";
 import { FaWhatsapp } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
-const Navbar = () => {
+type NavbarProps = {
+  forceSolid?: boolean;
+};
+
+const Navbar = ({ forceSolid = false }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Mobile menu state
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false); // Submenu state
   const [hasScrolled, setHasScrolled] = useState(false); // Scroll state
+  const pathname = usePathname();
+  const forceSolidNavbar = forceSolid || pathname.startsWith("/blog");
 
   // Handle menu visibility
   const toggleMenu = () => {
@@ -36,7 +43,7 @@ const Navbar = () => {
         
     <nav
       className={`fixed top-0 left-0 w-full z-50 p-4 lg:pt-2 shadow transition-all duration-300 ${
-        hasScrolled
+        hasScrolled || forceSolidNavbar
           ? "bg-white/50 backdrop-blur-md text-black"
           : "bg-transparent text-white"
       }`}
@@ -46,7 +53,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/">
           <Image
-            src={hasScrolled ? "/images/zencorp_Black.svg" : "/images/zencorp_White.svg"}
+            src={hasScrolled || forceSolidNavbar ? "/images/zencorp_Black.svg" : "/images/zencorp_White.svg"}
             width={200}
             height={36}
             alt="zencorp"
@@ -97,12 +104,18 @@ const Navbar = () => {
                 >
                   Hospitality Supplies
                 </Link>
-                <Link
-                  href="/products/fmcg"
-                  className="block px-4 py-2 hover:text-emerald-500"
-                >
-                  FMCG
-                </Link>
+              <Link
+                href="/products/fmcg"
+                className="block px-4 py-2 hover:text-emerald-500"
+              >
+                FMCG
+              </Link>
+              <Link
+                href="/products/aircraft-refueling-truck"
+                className="block px-4 py-2 hover:text-emerald-500"
+              >
+                Aircraft Refueling Truck (18,000L)
+              </Link>
             </div>
           </div>
           <Link href="/blog" className="mx-2 p-2 hover:text-emerald-500">
@@ -217,6 +230,12 @@ const Navbar = () => {
                   className="block px-4 py-2 hover:text-emerald-500"
                 >
                   FMCG
+                </Link>
+                <Link
+                  href="/products/aircraft-refueling-truck"
+                  className="block px-4 py-2 hover:text-emerald-500"
+                >
+                  Aircraft Refueling Truck (18,000L)
                 </Link>
               </div>
             )}

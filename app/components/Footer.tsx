@@ -23,6 +23,7 @@ const productLinks = [
   { label: "Building Materials", href: "/products/building" },
   { label: "Hospitality Supplies", href: "/products/hospitality_supplies" },
   { label: "FMCG", href: "/products/fmcg" },
+  { label: "Aircraft Refueling Truck (18,000L)", href: "/products/aircraft-refueling-truck" },
 ];
 
 const Footer = () => {
