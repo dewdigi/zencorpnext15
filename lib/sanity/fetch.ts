@@ -21,7 +21,8 @@ export async function getPosts() {
   if (!isSanityConfigured) return [];
   try {
     return await sanityClient.fetch<SanityPost[]>(POSTS_QUERY);
-  } catch {
+  } catch (error) {
+    console.error("Sanity getPosts failed:", error);
     return [];
   }
 }
@@ -30,7 +31,8 @@ export async function getPostBySlug(slug: string) {
   if (!isSanityConfigured) return null;
   try {
     return await sanityClient.fetch<SanityPost | null>(POST_BY_SLUG_QUERY, { slug });
-  } catch {
+  } catch (error) {
+    console.error("Sanity getPostBySlug failed:", error);
     return null;
   }
 }
@@ -39,7 +41,8 @@ export async function getLatestPosts(limit = 3) {
   if (!isSanityConfigured) return [];
   try {
     return await sanityClient.fetch<SanityPost[]>(LATEST_POSTS_QUERY, { limit });
-  } catch {
+  } catch (error) {
+    console.error("Sanity getLatestPosts failed:", error);
     return [];
   }
 }

@@ -1,39 +1,35 @@
 import nodemailer from "nodemailer";
+import { getServerEnv } from "@/lib/env/server";
 
 type TransportConfig = {
   transporter: nodemailer.Transporter;
   fromAddress: string;
 };
 
-function hasResendConfig() {
-  return Boolean(process.env.RESEND_SMTP_PASSWORD || process.env.RESEND_API_KEY || process.env.RESEND_SMTP_USER);
-}
-
 export function createMailTransport(): TransportConfig {
-  if (hasResendConfig()) {
-    const host = process.env.RESEND_SMTP_HOST || "smtp.resend.com";
-    const port = Number(process.env.RESEND_SMTP_PORT || "465");
-    const secure = (process.env.RESEND_SMTP_SECURE || "true").toLowerCase() !== "false";
-    const user = process.env.RESEND_SMTP_USER || "resend";
-    const pass = process.env.RESEND_SMTP_PASSWORD || process.env.RESEND_API_KEY;
-    const fromAddress = process.env.EMAIL_FROM || process.env.EMAIL_USER;
+  const env = getServerEnv();
+  const hasResendConfig = Boolean(env.resendApiKey || env.resendSmtpPassword);
+
+  if (hasResendConfig) {
+    const pass = env.resendSmtpPassword || env.resendApiKey;
+    const fromAddress = env.emailFrom || env.emailUser;
 
     if (!pass || !fromAddress) {
       throw new Error("Missing RESEND_SMTP_PASSWORD/RESEND_API_KEY or EMAIL_FROM/EMAIL_USER for Resend SMTP");
     }
 
     const transporter = nodemailer.createTransport({
-      host,
-      port,
-      secure,
-      auth: { user, pass },
+      host: env.resendSmtpHost,
+      port: env.resendSmtpPort,
+      secure: env.resendSmtpSecure,
+      auth: { user: env.resendSmtpUser, pass },
     });
 
     return { transporter, fromAddress };
   }
 
-  const user = process.env.EMAIL_USER;
-  const pass = process.env.EMAIL_PASSWORD;
+  const user = env.emailUser;
+  const pass = env.emailPassword;
   if (!user || !pass) {
     throw new Error("Missing EMAIL_USER or EMAIL_PASSWORD");
   }
@@ -43,5 +39,5 @@ export function createMailTransport(): TransportConfig {
     auth: { user, pass },
   });
 
-  return { transporter, fromAddress: process.env.EMAIL_FROM || user };
+  return { transporter, fromAddress: env.emailFrom || user };
 }

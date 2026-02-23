@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createSupabaseServiceClient, createSupabaseServerClient } from "@/lib/supabase/server";
+import { assertServerEnvForContact, getServerEnv } from "@/lib/env/server";
 import { createMailTransport } from "@/lib/email/transporter";
 
 export async function POST(request: NextRequest) {
   try {
+    assertServerEnvForContact();
+    const env = getServerEnv();
     const { name, email, subject, comments } = await request.json();
 
     if (!name || !email || !subject || !comments) {
@@ -29,7 +32,7 @@ export async function POST(request: NextRequest) {
       const mailOptions = {
         from: `"ZENCORP Website" <${fromAddress}>`,
         replyTo: email,
-        to: process.env.EMAIL_TO || "dewdigitalgr@gmail.com",
+        to: env.emailTo,
         subject,
         text: comments,
         html: `<p><strong>Name:</strong> ${name}</p>
@@ -48,6 +51,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: "Message sent successfully!" });
   } catch (error) {
     console.error("Error sending email:", error);
-    return NextResponse.json({ error: "Failed to send message." }, { status: 500 });
+    const message =
+      error instanceof Error && error.message.startsWith("Missing required")
+        ? error.message
+        : "Failed to send message.";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
