@@ -1,4 +1,4 @@
-export const POSTS_QUERY = `*[_type == "post" && status == "published"] | order(coalesce(publishedAt, _createdAt) desc){
+export const POSTS_QUERY = `*[_type == "post" && (!defined(status) || status == "published")] | order(coalesce(publishedAt, _createdAt) desc){
   _id,
   title,
   "slug": slug.current,
@@ -12,7 +12,7 @@ export const POSTS_QUERY = `*[_type == "post" && status == "published"] | order(
   seo
 }`;
 
-export const POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug][0]{
+export const POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug && (!defined(status) || status == "published")][0]{
   _id,
   title,
   "slug": slug.current,
@@ -33,7 +33,7 @@ export const POST_BY_SLUG_QUERY = `*[_type == "post" && slug.current == $slug][0
   seo
 }`;
 
-export const LATEST_POSTS_QUERY = `*[_type == "post" && status == "published"] | order(coalesce(publishedAt, _createdAt) desc)[0...$limit]{
+export const LATEST_POSTS_QUERY = `*[_type == "post" && (!defined(status) || status == "published")] | order(coalesce(publishedAt, _createdAt) desc)[0...$limit]{
   _id,
   title,
   "slug": slug.current,

@@ -5,10 +5,6 @@ export type PublicEnv = {
   sanityDataset: string;
 };
 
-function isVercelPreviewOrProduction() {
-  return process.env.VERCEL_ENV === "preview" || process.env.VERCEL_ENV === "production";
-}
-
 function requirePublicVars(entries: Array<[key: string, value: string | undefined]>): Record<string, string> {
   const missing = entries.filter(([, value]) => !value).map(([key]) => key);
   if (missing.length > 0) {
@@ -28,15 +24,6 @@ export function getPublicEnv(): PublicEnv {
 
   if (!sanityProjectId) {
     throw new Error("Missing required public environment variables: NEXT_PUBLIC_SANITY_PROJECT_ID");
-  }
-
-  if (isVercelPreviewOrProduction()) {
-    const missing: string[] = [];
-    if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) missing.push("NEXT_PUBLIC_SANITY_PROJECT_ID");
-    if (!process.env.NEXT_PUBLIC_SANITY_DATASET) missing.push("NEXT_PUBLIC_SANITY_DATASET");
-    if (missing.length > 0) {
-      throw new Error(`Missing required public environment variables: ${missing.join(", ")}`);
-    }
   }
 
   return {

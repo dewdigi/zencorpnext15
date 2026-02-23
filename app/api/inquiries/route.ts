@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createSupabaseServerClient, createSupabaseServiceClient } from "@/lib/supabase/server";
 import { enforceRateLimit } from "@/lib/rate-limit";
+import { assertServerEnvForInquiryNotification } from "@/lib/env/server";
 import {
   buildInquiryNotificationHtml,
   buildInquiryNotificationText,
@@ -70,7 +71,9 @@ export async function POST(request: NextRequest) {
     inquiryId: data.id,
   });
 
+  let emailQueued = false;
   try {
+    assertServerEnvForInquiryNotification();
     const { transporter, fromAddress } = createMailTransport();
 
     await transporter.sendMail({
@@ -81,13 +84,11 @@ export async function POST(request: NextRequest) {
       text,
       html,
     });
+    emailQueued = true;
   } catch (mailError) {
-    console.error("Inquiry email delivery failed", { inquiryId: data.id, error: mailError });
-    return NextResponse.json(
-      { error: "Inquiry saved but email delivery failed. Please try again." },
-      { status: 500 }
-    );
+    const message = mailError instanceof Error ? mailError.message : "Unknown mail error";
+    console.error("Inquiry email delivery failed", { inquiryId: data.id, message });
   }
 
-  return NextResponse.json({ message: "Inquiry created", id: data.id });
+  return NextResponse.json({ message: "Inquiry created", id: data.id, emailQueued });
 }

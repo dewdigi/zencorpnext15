@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createSupabaseServiceClient, createSupabaseServerClient } from "@/lib/supabase/server";
-import { assertServerEnvForContact, getServerEnv } from "@/lib/env/server";
+import { assertServerEnvForInquiryNotification, getServerEnv } from "@/lib/env/server";
 import { createMailTransport } from "@/lib/email/transporter";
 
 export async function POST(request: NextRequest) {
   try {
-    assertServerEnvForContact();
     const env = getServerEnv();
     const { name, email, subject, comments } = await request.json();
 
@@ -26,7 +25,9 @@ export async function POST(request: NextRequest) {
       status: "new",
     });
 
+    let emailQueued = false;
     try {
+      assertServerEnvForInquiryNotification({ requireEmailTo: true });
       const { transporter, fromAddress } = createMailTransport();
 
       const mailOptions = {
@@ -43,12 +44,13 @@ export async function POST(request: NextRequest) {
       };
 
       await transporter.sendMail(mailOptions);
+      emailQueued = true;
     } catch (mailError) {
-      console.error("Contact email delivery failed:", mailError);
-      return NextResponse.json({ error: "Message saved but email delivery failed." }, { status: 500 });
+      const message = mailError instanceof Error ? mailError.message : "Unknown mail error";
+      console.error("Contact email delivery failed:", { message, email, subject });
     }
 
-    return NextResponse.json({ message: "Message sent successfully!" });
+    return NextResponse.json({ message: "Message saved successfully!", emailQueued });
   } catch (error) {
     console.error("Error sending email:", error);
     const message =

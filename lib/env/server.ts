@@ -70,3 +70,18 @@ export function assertServerEnvForContact(): void {
     throw new Error(`Missing required contact environment variables: ${missing.join(", ")}`);
   }
 }
+
+export function assertServerEnvForInquiryNotification(options?: { requireEmailTo?: boolean }): void {
+  const env = getServerEnv();
+  const missing: string[] = [];
+
+  if (!env.emailFrom && !env.emailUser) missing.push("EMAIL_FROM or EMAIL_USER");
+  if (options?.requireEmailTo && !env.emailTo) missing.push("EMAIL_TO");
+  if (!env.resendApiKey && !env.resendSmtpPassword && !(env.emailUser && env.emailPassword)) {
+    missing.push("RESEND_API_KEY or RESEND_SMTP_PASSWORD or (EMAIL_USER + EMAIL_PASSWORD)");
+  }
+
+  if (missing.length > 0) {
+    throw new Error(`Missing required inquiry notification environment variables: ${missing.join(", ")}`);
+  }
+}

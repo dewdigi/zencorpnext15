@@ -11,11 +11,11 @@ export function createMailTransport(): TransportConfig {
   const hasResendConfig = Boolean(env.resendApiKey || env.resendSmtpPassword);
 
   if (hasResendConfig) {
-    const pass = env.resendSmtpPassword || env.resendApiKey;
+    const pass = env.resendApiKey || env.resendSmtpPassword;
     const fromAddress = env.emailFrom || env.emailUser;
 
     if (!pass || !fromAddress) {
-      throw new Error("Missing RESEND_SMTP_PASSWORD/RESEND_API_KEY or EMAIL_FROM/EMAIL_USER for Resend SMTP");
+      throw new Error("Missing RESEND_API_KEY/RESEND_SMTP_PASSWORD or EMAIL_FROM/EMAIL_USER for Resend SMTP");
     }
 
     const transporter = nodemailer.createTransport({
