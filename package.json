@@ -13,7 +13,8 @@
     "sanity": "sanity",
     "studio": "sanity dev --host 0.0.0.0",
     "migrate:contentful:sanity": "node scripts/migrate-contentful-to-sanity.mjs",
-    "seed:blogs:copper": "node scripts/seed-copper-blogs.mjs"
+    "seed:blogs:copper": "node scripts/seed-copper-blogs.mjs",
+    "seed:blogs:aircraft": "node scripts/seed-aircraft-refueler-blogs.mjs"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.4",

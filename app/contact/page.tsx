@@ -111,7 +111,7 @@ const page = () => {
                   FMCG
                 </Link>
                 <Link href="/products/aircraft-refueling-truck" className="text-[#165029] hover:underline">
-                  Aircraft Refueling Truck (18,000L)
+                  18000L Aircraft Refueling Truck (Ready Stock)
                 </Link>
               </div>
             </div>

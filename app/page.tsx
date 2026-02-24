@@ -131,6 +131,13 @@ const Page = () => {
         CONTACT US
       </button>
       </Link>
+      <p className="text-sm text-center sm:text-left">
+        Explore our{" "}
+        <Link href="/products/aircraft-refueling-truck" className="font-semibold underline underline-offset-4">
+          aircraft refueler truck for sale
+        </Link>{" "}
+        with immediate export support from Dubai.
+      </p>
     </div>
   </div>
 </div>

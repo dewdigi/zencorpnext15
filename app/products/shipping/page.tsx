@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 
 import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
@@ -23,6 +24,13 @@ const page = () => {
             </h1>
             <p className='lg:mr-80 lg:text-left text-center'>
               At ZenCorp Trading Co. LLC, we understand that efficient shipping and logistics are critical to the success of any business. Our specialized Shipping & Logistics Division is dedicated to delivering tailored transportation and supply chain solutions that meet the dynamic demands of businesses across the Middle East and Africa. With a commitment to reliability, speed, and cost-effectiveness, we ensure that your goods are transported safely and on time.
+            </p>
+            <p className='lg:mr-80 lg:text-left text-center text-sm text-white/90'>
+              For aviation operators, we also support rapid export workflows for our{" "}
+              <Link href="/products/aircraft-refueling-truck" className="font-semibold underline underline-offset-4">
+                airport refueling truck ready stock
+              </Link>
+              .
             </p>
 
             <button className=" bg-emerald-500 sm:w-3/12 lg:w-auto w-1/2 hover:bg-Secondary-2/70 hover:drop-shadow-xl p-4 rounded-md">

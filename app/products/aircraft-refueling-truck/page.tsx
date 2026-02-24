@@ -1,10 +1,48 @@
 import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 import AircraftRefuelerCtas from "@/app/components/products/AircraftRefuelerCtas";
 import AircraftRefuelerLeadForm from "@/app/components/products/AircraftRefuelerLeadForm";
+
+const pagePath = "/products/aircraft-refueling-truck";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.zencorp.ae";
+const pageUrl = `${siteUrl}${pagePath}`;
+
+export const metadata: Metadata = {
+  title: "18000L Aircraft Refueling Truck | Ready Stock for Export | Zencorp",
+  description:
+    "Brand new 18000L aircraft refueling truck available now in Dubai. Get specs, pricing, inspection, and global export delivery support.",
+  alternates: {
+    canonical: pagePath,
+  },
+  openGraph: {
+    title: "18000L Aircraft Refueling Truck | Ready Stock for Export | Zencorp",
+    description:
+      "Brand new 18000L aircraft refueling truck available now in Dubai. Get specs, pricing, inspection, and global export delivery support.",
+    url: pagePath,
+    siteName: "Zencorp",
+    type: "website",
+    images: [
+      {
+        url: "/images/products/aircraft-refueler-real/02-front-angle.jpg",
+        width: 1200,
+        height: 900,
+        alt: "18000L aircraft refueling truck front three-quarter view",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "18000L Aircraft Refueling Truck | Ready Stock for Export | Zencorp",
+    description:
+      "Brand new 18000L aircraft refueling truck available now in Dubai. Get specs, pricing, inspection, and global export delivery support.",
+    images: ["/images/products/aircraft-refueler-real/02-front-angle.jpg"],
+  },
+};
 
 type ProductImage = {
   src: string;
@@ -129,20 +167,46 @@ const faq = [
     a: "Yes. SGS or Bureau Veritas.",
   },
   {
+    q: "Is this an aircraft refueler truck for sale or only for lease?",
+    a: "It is an aircraft refueler truck for sale, with quotation and technical documentation provided on request.",
+  },
+  {
+    q: "Do you offer an aviation fuel bowser 18000L configuration?",
+    a: "Yes. This unit is configured as an aviation fuel bowser 18000L with high-flow pumping and aviation filtration.",
+  },
+  {
     q: "How fast can delivery happen?",
     a: "Typically within weeks after confirmation and shipping arrangements.",
+  },
+];
+
+const buyerGuides = [
+  {
+    href: "/blog/how-to-choose-aircraft-refueling-truck-fast-turnaround",
+    title: "How to Choose an Aircraft Refueling Truck for Fast Turnaround",
+    anchor: "ready stock aircraft refueling truck selection guide",
+  },
+  {
+    href: "/blog/aircraft-refueling-truck-lead-time-oem-vs-ready-stock",
+    title: "Aircraft Refueling Truck Lead Time: OEM vs Ready Stock",
+    anchor: "compare OEM lead time vs ready stock aircraft refueler",
+  },
+  {
+    href: "/blog/export-checklist-aviation-refueler-procurement",
+    title: "Export Checklist for Aviation Refueler Procurement",
+    anchor: "18000L refueler quote and export checklist",
   },
 ];
 
 const productImages: ProductImage[] = [
   {
     src: "/images/products/aircraft-refueler-real/01-side-profile.jpg",
-    alt: "Aircraft refueling truck side profile on neutral background",
+    alt: "18000L aircraft refueling truck side profile on neutral background",
     orientation: "landscape",
   },
   {
     src: "/images/products/aircraft-refueler-real/02-front-angle.jpg",
-    alt: "Aircraft refueling truck front three-quarter view",
+    alt: "18000L aircraft refueling truck front three-quarter view",
     orientation: "landscape",
   },
   {
@@ -157,7 +221,7 @@ const productImages: ProductImage[] = [
   },
   {
     src: "/images/products/aircraft-refueler-real/05-yard-side-wide.jpg",
-    alt: "Aircraft refueling truck side view in Dubai yard",
+    alt: "18000L aircraft refueling truck side view in Dubai yard",
     orientation: "landscape",
   },
   {
@@ -274,8 +338,80 @@ export default function AircraftRefuelingTruckPage() {
   const mediaStrip = [productImages[0], productImages[3], productImages[6]];
   const inspectionGallery = [productImages[0], productImages[1], productImages[3], productImages[4], productImages[6], productImages[8]];
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "18000L Aircraft Refueling Truck",
+    description:
+      "Brand new 18000L aircraft refueling truck ready stock in Dubai with immediate inspection, export support, and rapid deployment.",
+    category: "Aircraft Refueling Truck",
+    brand: {
+      "@type": "Organization",
+      name: "ZENCORP TRADING CO. LLC",
+    },
+    image: productImages.slice(0, 5).map((image) => `${siteUrl}${image.src}`),
+    sku: "AIRCRAFT-REFUELER-18000L",
+    offers: {
+      "@type": "Offer",
+      url: pageUrl,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@type": "Organization",
+        name: "ZENCORP TRADING CO. LLC",
+      },
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "USD",
+        valueAddedTaxIncluded: false,
+      },
+    },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${siteUrl}/products`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Aircraft Refueling Truck",
+        item: pageUrl,
+      },
+    ],
+  };
+
   return (
     <div className="bg-[#f3f6f8] text-[#0f1d2d]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="relative overflow-hidden bg-[radial-gradient(ellipse_at_top_left,#e2ecf7_0%,#d3dde8_36%,#c4d0dc_58%,#b7c4d1_100%)]">
         <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(140deg,rgba(15,27,41,0.03)_0px,rgba(15,27,41,0.03)_1px,transparent_1px,transparent_8px)]" />
         <Navbar />
@@ -285,10 +421,10 @@ export default function AircraftRefuelingTruckPage() {
               Ready Stock - Dubai, UAE
             </p>
             <h1 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-tight text-[#0e1f31] sm:text-5xl lg:text-[3.3rem]">
-              Immediate Aircraft Refueler Available. No 6-Month OEM Waiting.
+              18000L Aircraft Refueling Truck Available Now. No 6-Month OEM Waiting.
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-[#29425a]">
-              Brand new 18,000L aviation refueling truck ready for export from Dubai. Deploy within weeks, not months.
+              Brand new 18000L Aircraft Refueling Truck ready for export from Dubai. Deploy within weeks, not months.
             </p>
             <HandList items={keyBenefits} className="mt-6 grid gap-2 text-sm text-[#32495f]" />
             <AircraftRefuelerCtas />
@@ -357,7 +493,7 @@ export default function AircraftRefuelingTruckPage() {
           </div>
           <div className="order-1 lg:order-2">
             <InfoBand title="The Immediate Solution" tone="accent">
-              <p>ZENCORP offers a brand new, export-ready aircraft refueling truck available now.</p>
+              <p>ZENCORP offers a brand new 18000L Aircraft Refueling Truck, export-ready and available now.</p>
               <p className="mt-3">No manufacturing delay. No production queue. No uncertainty.</p>
               <p className="mt-3 font-semibold text-[#142c43]">Just:</p>
               <HandList items={immediateSolution} className="mt-2 grid gap-2" />
@@ -377,7 +513,7 @@ export default function AircraftRefuelingTruckPage() {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <InfoBand title="Technical Overview">
+            <InfoBand title="Technical Specifications (18000L)">
               <p>Designed for high-efficiency airport and airfield fueling operations.</p>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 {technicalSpecs.map((spec) => (
@@ -402,7 +538,7 @@ export default function AircraftRefuelingTruckPage() {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <InfoBand title="Aviation Safety and Control Systems">
+            <InfoBand title="Safety & Filtration Systems">
               <p>Engineered for operational safety and compliance.</p>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 {safetySystems.map((item) => (
@@ -442,7 +578,7 @@ export default function AircraftRefuelingTruckPage() {
                   Verified Inventory
                 </p>
                 <h2 className="mt-3 text-2xl font-semibold tracking-tight lg:text-3xl">
-                  Real Equipment - Ready for Inspection
+                  Inspection & Assurance
                 </h2>
                 <p className="mt-3 max-w-2xl text-[#304356]">
                   This is not conceptual inventory. The unit is physically available and can be inspected immediately.
@@ -510,7 +646,7 @@ export default function AircraftRefuelingTruckPage() {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <InfoBand title="Export and Delivery Support" tone="accent">
+            <InfoBand title="Immediate Delivery & Export Terms" tone="accent">
               <p>Located in Dubai, a global logistics hub.</p>
               <p className="mt-3 font-semibold text-[#162e45]">Delivery options available:</p>
               <HandList items={deliveryTerms} className="mt-2 grid gap-2 md:grid-cols-2" />
@@ -564,7 +700,7 @@ export default function AircraftRefuelingTruckPage() {
         <section id="request-offer" className="rounded-3xl border border-[#cfd9e2] bg-white p-7 lg:p-10">
           <div className="grid gap-6 lg:grid-cols-[1.45fr_0.55fr]">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight">Request Technical Details</h2>
+              <h2 className="text-2xl font-semibold tracking-tight">Request 18000L Refueling Truck Quote</h2>
               <p className="mt-3 text-[#304356]">Get full technical specifications, pricing, and delivery terms.</p>
               <div className="mt-6">
                 <AircraftRefuelerLeadForm />
@@ -582,12 +718,31 @@ export default function AircraftRefuelingTruckPage() {
         </section>
 
         <section className="rounded-3xl border border-[#cfd9e2] bg-white p-7 lg:p-10">
-          <h2 className="text-2xl font-semibold tracking-tight">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-semibold tracking-tight">FAQ</h2>
           <div className="mt-4 grid gap-3">
             {faq.map((item) => (
               <article key={item.q} className="rounded-2xl border border-[#d2dce4] bg-[#f8fafc] p-4">
                 <h3 className="font-semibold">{item.q}</h3>
                 <p className="mt-1.5 text-sm text-[#304356]">{item.a}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-3xl border border-[#cfd9e2] bg-white p-7 lg:p-10">
+          <h2 className="text-2xl font-semibold tracking-tight">Buyer Guides</h2>
+          <p className="mt-3 text-[#304356]">
+            Review these guides before you request a quotation for an aircraft refueler truck for sale.
+          </p>
+          <div className="mt-4 grid gap-3">
+            {buyerGuides.map((item) => (
+              <article key={item.href} className="rounded-2xl border border-[#d2dce4] bg-[#f8fafc] p-4">
+                <h3 className="font-semibold text-[#10263b]">{item.title}</h3>
+                <p className="mt-2 text-sm text-[#304356]">
+                  <Link href={item.href} className="text-[#14532d] underline underline-offset-4">
+                    {item.anchor}
+                  </Link>
+                </p>
               </article>
             ))}
           </div>
